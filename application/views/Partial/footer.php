@@ -1,9 +1,9 @@
-<div class="container" style="max-width: 1340px; font-size:15px">
+<div class="container" style="max-width: 1640px; font-size:15px">
 		<footer class="text-center text-lg-start bg-primary" style="background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
 			<!-- Section: Links  -->
 			<section class="pt-3" style="background: #F7476E; ">
 				
-				<div class="container text-left text-White;" style="max-width: 1340px;">
+				<div class="container text-left text-White;" style="max-width: 1440px;">
 				<!-- Grid row -->
 				<div class="row mt-3" style="color: #fff;">
 					
@@ -85,7 +85,7 @@
 			</section>
 			<!-- Section: Links  -->
 			<!-- Copyright -->
-			<div class="container" style="max-width: 1340px; background: #F7476E; ">
+			<div class="container" style="max-width: 1640px; background: #F7476E; ">
 				<div class="text-white text-center p-4" style="background-color:#F7476E; font-size:15px; font-style: normal; ">
 					© 2021 Copyright:
 					<a class="text-white" href="#" style="font-weight: 600;">Bicarawanita</a>
