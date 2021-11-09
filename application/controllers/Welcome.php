@@ -20,6 +20,16 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('halaman_utama');
+		// untuk menampilkan blog
+		$data['show_data'] = $this->Model_welcome->Show_blog()->result();
+		$this->load->view('halaman_utama',$data);
+	}
+
+	public function detail($id_blog)
+	{
+		$this->load->model('Model_detail_blog');
+		$detail = $this->Model_detail_blog->detail_data($id_blog);
+		$data['detail'] = $detail;
+		$this->load->view('detail_blog',$data);
 	}
 }

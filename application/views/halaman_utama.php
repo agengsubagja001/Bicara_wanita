@@ -64,176 +64,31 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
+                        <?php foreach($show_data as $show) : ?>
                         <!-- awal artikel untuk di lopping -->
                            <div class="col-md-6">
                                <!-- Conten Artikel -->
                                 <div class="row">
                                     <div class="col-md-6 mt-3">
-                                        <img src="assets/img/artikel.png" style="width: 100%; height: auto;" alt="">
+                                        <img src="<?php echo base_url().'assets/img_Sampul/'. $show->gambar ?>" style="width: 100%; height: auto;" alt="">
                                     </div>
                                     <div class="col-md-6 mt-3">
-                                        <div class="bulet" style="border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;">Kesehatan</span></div>
-                                        <a href="#" style="color:black; text-decoration: none;">
+                                        <div class="bulet" style="text-transform: capitalize; border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;"><?php echo $show->kategori ?></span></div>
+                                        <a href="<?php echo base_url().'halaman_utama/detail_blog/'.$show->id_blog ?>" style="color:black; text-decoration: none;">
                                             <div class="mt-3">
-                                            <span style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Bersihkan Tubuh Secara Alami dengan 5 Makanan Ini.</span>
+                                                <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;"><?php echo $show->judul ?></span>
                                             </div>
                                         </a>
                                         <div class="mt-4">
-                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">04 November 2021</span>
+                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;"><?php echo $show->date ?></span>
                                         </div>
                                     </div> 
                                 </div>
                                 <hr>
                                 <!-- Akhir Content Artikel -->
                            </div>
+                        <?php endforeach ?>
                         <!-- akhir aktikel -->
-                            <div class="col-md-6">
-                               <!-- Conten Artikel -->
-                                <div class="row">
-                                    <div class="col-md-6 mt-3">
-                                        <img src="assets/img/artikel.png" style="width: 100%; height: auto;" alt="">
-                                    </div>
-                                    <div class="col-md-6 mt-3">
-                                        <div class="bulet" style="border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;">Kesehatan</span></div>
-                                        <a href="#" style="color:black; text-decoration: none;">
-                                            <div class="mt-3">
-                                            <span style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Bersihkan Tubuh Secara Alami dengan 5 Makanan Ini.</span>
-                                            </div>
-                                        </a>
-                                        <div class="mt-4">
-                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">04 November 2021</span>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <hr>
-                                <!-- Akhir Content Artikel -->
-                           </div>
-                           <div class="col-md-6">
-                               <!-- Conten Artikel -->
-                                <div class="row">
-                                    <div class="col-md-6 mt-3">
-                                        <img src="assets/img/artikel.png" style="width: 100%; height: auto;" alt="">
-                                    </div>
-                                    <div class="col-md-6 mt-3">
-                                        <div class="bulet" style="border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;">Kesehatan</span></div>
-                                        <a href="#" style="color:black; text-decoration: none;">
-                                            <div class="mt-3">
-                                            <span style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Bersihkan Tubuh Secara Alami dengan 5 Makanan Ini.</span>
-                                            </div>
-                                        </a>
-                                        <div class="mt-4">
-                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">04 November 2021</span>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <hr>
-                                <!-- Akhir Content Artikel -->
-                           </div>
-                           <div class="col-md-6">
-                               <!-- Conten Artikel -->
-                                <div class="row">
-                                    <div class="col-md-6 mt-3">
-                                        <img src="assets/img/artikel.png" style="width: 100%; height: auto;" alt="">
-                                    </div>
-                                    <div class="col-md-6 mt-3">
-                                        <div class="bulet" style="border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;">Kesehatan</span></div>
-                                        <a href="#" style="color:black; text-decoration: none;">
-                                            <div class="mt-3">
-                                            <span style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Bersihkan Tubuh Secara Alami dengan 5 Makanan Ini.</span>
-                                            </div>
-                                        </a>
-                                        <div class="mt-4">
-                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">04 November 2021</span>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <hr>
-                                <!-- Akhir Content Artikel -->
-                           </div>
-                           <div class="col-md-6">
-                               <!-- Conten Artikel -->
-                                <div class="row">
-                                    <div class="col-md-6 mt-3">
-                                        <img src="assets/img/artikel.png" style="width: 100%; height: auto;" alt="">
-                                    </div>
-                                    <div class="col-md-6 mt-3">
-                                        <div class="bulet" style="border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;">Kesehatan</span></div>
-                                        <a href="#" style="color:black; text-decoration: none;">
-                                            <div class="mt-3">
-                                            <span style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Bersihkan Tubuh Secara Alami dengan 5 Makanan Ini.</span>
-                                            </div>
-                                        </a>
-                                        <div class="mt-4">
-                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">04 November 2021</span>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <hr>
-                                <!-- Akhir Content Artikel -->
-                           </div>
-                           <div class="col-md-6">
-                               <!-- Conten Artikel -->
-                                <div class="row">
-                                    <div class="col-md-6 mt-3">
-                                        <img src="assets/img/artikel.png" style="width: 100%; height: auto;" alt="">
-                                    </div>
-                                    <div class="col-md-6 mt-3">
-                                        <div class="bulet" style="border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;">Kesehatan</span></div>
-                                        <a href="#" style="color:black; text-decoration: none;">
-                                            <div class="mt-3">
-                                            <span style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Bersihkan Tubuh Secara Alami dengan 5 Makanan Ini.</span>
-                                            </div>
-                                        </a>
-                                        <div class="mt-4">
-                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">04 November 2021</span>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <hr>
-                                <!-- Akhir Content Artikel -->
-                           </div>
-                           <div class="col-md-6">
-                               <!-- Conten Artikel -->
-                                <div class="row">
-                                    <div class="col-md-6 mt-3">
-                                        <img src="assets/img/artikel.png" style="width: 100%; height: auto;" alt="">
-                                    </div>
-                                    <div class="col-md-6 mt-3">
-                                        <div class="bulet" style="border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;">Kesehatan</span></div>
-                                        <a href="#" style="color:black; text-decoration: none;">
-                                            <div class="mt-3">
-                                            <span style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Bersihkan Tubuh Secara Alami dengan 5 Makanan Ini.</span>
-                                            </div>
-                                        </a>
-                                        <div class="mt-4">
-                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">04 November 2021</span>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <hr>
-                                <!-- Akhir Content Artikel -->
-                           </div>
-                           <div class="col-md-6">
-                               <!-- Conten Artikel -->
-                                <div class="row">
-                                    <div class="col-md-6 mt-3">
-                                        <img src="assets/img/artikel.png" style="width: 100%; height: auto;" alt="">
-                                    </div>
-                                    <div class="col-md-6 mt-3">
-                                        <div class="bulet" style="border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;">Kesehatan</span></div>
-                                        <a href="#" style="color:black; text-decoration: none;">
-                                            <div class="mt-3">
-                                            <span style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Bersihkan Tubuh Secara Alami dengan 5 Makanan Ini.</span>
-                                            </div>
-                                        </a>
-                                        <div class="mt-4">
-                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">04 November 2021</span>
-                                        </div>
-                                    </div> 
-                                </div>
-                                <hr>
-                                <!-- Akhir Content Artikel -->
-                           </div>
                                 
                     </div>
                 </div>
@@ -293,23 +148,13 @@
             <div class="row">
             <div class="col-md-12">
                 <div class="row">
+                    <?php foreach($show_podcast as $podcast): ?>
                     <!-- awal content podcast -->
                     <div class="col-md-3 mt-3">
-                    <a href="#"><img src="assets/img/foto.png" class="img-responsive"  style="width: 100%; height: auto;" alt=""></a>
+                        <a href="#"><img src="<?php echo base_url().'assets/img_podcast/'. $podcast->gambar ?>" class="img-responsive"  style="width: 100%; height: auto;" alt=""></a>
                     </div>
                     <!-- akhir content podcast -->
-                    <div class="col-md-3 mt-3">
-                    <a href="#"><img src="assets/img/foto.png" class="img-responsive"  style="width: 100%; height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-md-3 mt-3">
-                    <a href="#"><img src="assets/img/foto.png" class="img-responsive"  style="width: 100%; height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-md-3 mt-3">
-                    <a href="#"><img src="assets/img/foto.png" class="img-responsive"  style="width: 100%; height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-md-12 text-right mt-5">
-                    <a href="#"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
-                    </div>
+                    <?php endforeach ?>
                 </div>
 
             </div>
@@ -389,25 +234,17 @@
                                     </ul>
                         <!-- The slideshow -->
                         <div class="carousel-inner">
-                        <div class="carousel-item active carousel-item-left">
+                            <div class="carousel-item active carousel-item-left">
                                 <div class="d-flex">
+                                    <?php foreach ($show_vidio as $vidio): ?>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                                            <iframe width="100%" height="300" src="<?php echo $vidio->isi_vidio ?>">
                                             </iframe>
                                         </div>
-                                        <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                            </iframe>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                            </iframe>
-                                        </div>
-                                        
+                                    <?php endforeach ?>
                                 </div>
-
                             </div>	
-                            <div class="carousel-item carousel-item-next carousel-item-left">
+                                <div class="carousel-item carousel-item-next carousel-item-left">
                                     <div class="d-flex">
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
                                             <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
@@ -424,7 +261,7 @@
                                     </div>
 
                                 </div>
-                                <div class="carousel-item ">
+                                    <div class="carousel-item ">
                                         <div class="d-flex">
                                             <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
                                                 <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">

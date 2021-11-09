@@ -1,14 +1,14 @@
 		
 		<!-- Navbar Baru -->
-		<nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #FFFFFF;color:#3333;margin-bottom:20px; position: fixed; z-index: 20; width: 100%">
-     <table>
-       <tr>
-         <td><a class="navbar-brand" href="" style="font-family: Prata; font-style: normal; font-weight: normal; font-size: 25px; line-height: 20px;color:#F7476E">BICARA</a></td>
-       </tr>
-       <tr>
-         <td><a class="navbar-brand" href="" style="font-family: Prata; font-style: normal; font-weight: normal; font-size: 25px; line-height: 20px;color:#F7476E">WANITA</a></td>
-       </tr>
-     </table>
+		<nav class="navbar navbar-expand-lg navbar-dark" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%); background-color: #FFFFFF;color:#3333;margin-bottom:20px; position: fixed; z-index: 20; width: 100%">
+			<table>
+			<tr>
+				<td><a class="navbar-brand" href="<?php echo base_url('halaman_utama'); ?>" style="font-family: Prata; font-style: normal; font-weight: normal; font-size: 25px; line-height: 20px;color:#F7476E">BICARA</a></td>
+			</tr>
+			<tr>
+				<td><a class="navbar-brand" href="<?php echo base_url('halaman_utama'); ?>" style="font-family: Prata; font-style: normal; font-weight: normal; font-size: 25px; line-height: 20px;color:#F7476E">WANITA</a></td>
+			</tr>
+			</table>
 			<button class="navbar-toggler" style="background-color:#F7476E;" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -37,7 +37,7 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>
-          <li class="nav-item" style="margin-left: 500px;">
+          <li class="nav-item" style="margin-left: 400px;">
 						
 					</li>
 					<li class="nav-item">
