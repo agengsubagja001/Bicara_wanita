@@ -28,7 +28,7 @@
                         <!-- kontent -->
                         <nav class="mt-3 navbar navbar-light bg-light justify-content-between" style="background-color: #dfe5f1!important;">
                             <a class="navbar-brand">
-                                <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">ADD BLOG</b>
+                                <b class="" style="margin-left: 20px; left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">ADD VIDIO</b>
                             </a>
                         </nav>
                         <form action="<?php echo base_url(). 'admin/vidio/upload'?>" method="post" enctype="multipart/form-data">
@@ -55,16 +55,16 @@
                                     <!-- konten upload gambar -->
                                     <div class="card col-md-4">
                                         <div class="card-header">
-                                            <span>upload vidio</span>
+                                            <span>upload</span>
                                         </div>
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-12 text-center">
-                                                    <!-- <label for="newbtn">
-                                                        <span id="blah">Vidio</span>
+                                                    <label for="newbtn">
+                                                        <span id="blah">gambar thumbnail</span>
                                                         <br>
-                                                        <input name="vidio" type="file" class="form-control">
-                                                    </label> -->
+                                                        <input name="gambar_tubnail" type="file" class="form-control">
+                                                    </label>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <hr style="widht:100%">

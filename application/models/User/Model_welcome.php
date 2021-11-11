@@ -21,6 +21,11 @@ class Model_welcome extends CI_Model
 		return $this->db->limit(9)->get('vidio');
 	}
 
+	public function show_vidio1(){
+		$this->db->order_by('tanggal', 'desc');
+		return $this->db->limit(12)->get('vidio');
+	}
+
 	// tampil data program
 	public function show_program(){
 		$this->db->order_by('tanggal', 'desc');

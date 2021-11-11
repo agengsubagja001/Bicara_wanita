@@ -239,8 +239,9 @@
                                 <div class="d-flex">
                                     <?php foreach ($show_vidio as $vidio): ?>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column" style="width:100%; height:300;">
-                                            <iframe width="100%" height="300" src="<?php echo $vidio->isi_vidio ?>">
-                                            </iframe>
+                                        <a href="">
+                                            <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
+                                        </a>
                                         </div>
                                     <?php endforeach ?>
                                 </div>

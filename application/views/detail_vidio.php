@@ -23,92 +23,16 @@
                    <span style="font-size:30px;font-weight:bold">Vidio One Minute</span>
                 </div> 
                 <div class="row">
+                    <?php foreach ($show_vidio1 as $vidio): ?>
                     <!-- konten infografik -->
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="<?php echo base_url('isi_vidio') ?>">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$vidio->id_vidio ?>">
+                            <img src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
                         </a>
                     </div>
                     <!-- akhir konten infografik -->
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
-                        </a>
-                    </div>
+                    <?php endforeach ?>
+                    
 
 
                 </div>
