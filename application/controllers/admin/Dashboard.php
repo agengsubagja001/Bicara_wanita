@@ -20,8 +20,14 @@ class Dashboard extends CI_Controller {
 	 */
 	public function index()
 	{
+		// untuk menampilkan jumlah program
+		$data['total_program'] = $this->Model_dashboardd->jml_program();
+		// untuk menampilkan jumlah podcast
+		$data['total_podcast'] = $this->Model_dashboardd->jml_podcast();
+		// untuk menampilkan jumlah infografik
+		$data['total_infografik'] = $this->Model_dashboardd->jml_infografik();
 		// untuk menampilkan jumlah blog
-		$data['show_blg'] = $this->Model_dashboardd->Show_jml()->result();
+		$data['total_blog'] = $this->Model_dashboardd->jml_blog();
 		// untuk menampilkan data blog
 		$data['show_blog'] = $this->Model_dashboardd->Show_data_blog()->result();
 		$this->load->view('admin/dashboard',$data);
