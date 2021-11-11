@@ -22,7 +22,7 @@
                     <p style="position: relative; top: 100px; white-space: pre-wrap; color: rgba(0,0,0,.8); font-size: .875rem; overflow: hidden; text-overflow: ellipsis; line-height: 1.875rem;">Rutin diperingati setiap tanggal 1 Desember setiap tahunnya, Hari AIDS sedunia di tahun 2019 mengangkat thema ‘Komunitas Membuat Perbedaan.’ Oleh WHO, Thema ini diangkat dan dinilai dapat menjadi kesempatan penting untuk mengetahui peran yang telah dilakukan masyarakat dalam penanggulangan AIDS baik di tingkat internasional, nasional, maupun lokal. Berdasarkan data UNAIDS, pada akhir 2018, sebanyak 37,9 juta orang di dunia hidup dengan HIV dan 770.000 orang meninggal karena AIDS. Masih banyak orang yang tidak dapat mengakses layanan pencegahan HIB karena adanya diskriminasi, kekerasan, bahkan penganiayaan. Oleh karena itu, masyarakat diingatkan untuk memainkan peran penting dalam memberikan layanan penyelamatan jiwa ini kepada orang-orang yang paling membutuhkannya. Indonesia, melalui Kementerian Kesehatan juga turut merayakan Hari AIDS sedunia dengan mengambil lokasi di Kota Bandung, Jawa Barat. “Jawa Barat menjadi tempat Puncak Hari HIV/AIDS kerena Pemerintah Daerah memahami betul dan mengedepankan koordinasi di tingkat lokal untuk upaya pencegahan dan pengendalian HIV/AIDS,” kata Direktur Jenderal Pencegahan dan Pengendalian Penyakit, Kemenkes RI, Anung Sugihantono dalam keterangan resminya jelang Peringatan Hari AIDS sedunia akhir November lalu.Anung mengungkapkan, sesuai dengan thema peringatan internasional, komunitas diharapkan dapat memimpin dan mendukung pemberian layanan HIV, membela hak asasi manusia, mendampingi dan mendukung rekan-rekan mereka. Mereka yang bekerja di akar rumput, memimpin dan berkampanye untuk memastikan bahwa respons AIDS tetap relevan.</p>
                 </div>
                 <div class="col-md-12" style="position: relative; top: 140px;">
-                    <a href="#" style="text-decoration: none; color:white;"><button type="button" style=" border: 1px solid #F7476E; background: #F7476E; border-radius: 10px ">Program</a>
+                    <a href="#" style="text-decoration: none; color:white; padding:1px;  "><button type="button" style=" border: 1px solid #F7476E; background: #F7476E; border-radius: 10px ">Program</a>
                 </div>
                 <!-- conten bagikan -->
                 <div class="col-md-2" style="position: relative; top: 150px;">
@@ -41,9 +41,6 @@
                 </div>
                 <!-- akhir konten bagikan -->
                 <!-- akhir konten artikel -->
-            </div>
-            <div class="hrku" style="position: relative; top: 150px;">
-              <hr>
             </div>
         </div>
 </section> 
