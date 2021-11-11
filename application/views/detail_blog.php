@@ -23,7 +23,7 @@
                     <p style="position: relative; top: 100px; white-space: pre-wrap; color: rgba(0,0,0,.8); font-size: .875rem; overflow: hidden; text-overflow: ellipsis; line-height: 1.875rem;"><?php echo $detail->isi ?></p>
                 </div>
                 <div class="col-md-12" style="position: relative; top: 140px;">
-                    <a href="#"><button type="button" style=" border: 1px solid #F7476E; background: #F7476E; border-radius: 10px "><?php echo $detail->kategori ?></button></a>
+                    <a href="#" style="text-decoration: none; color:white; padding:1px;  "><button type="button" style=" border: 1px solid #F7476E; background: #F7476E; border-radius: 10px "><?php echo $detail->kategori ?></a>
                 </div>
                 <!-- conten bagikan -->
                 <div class="col-md-2" style="position: relative; top: 150px;">
@@ -89,19 +89,31 @@
                             <div class="col-md-4">
                                 <!-- Conten Artikel -->
                                     <div class="row">
-                                        <div class="col-md-6 mt-3">
+                                        <div class="col-md-12 mt-3">
                                             <img src="<?php echo base_url().'assets/img_Sampul/'. $new->gambar ?>" style="width: 100%; height: auto;" alt="">
                                         </div>
-                                        <div class="col-md-6 mt-2">
-                                            <div class="bulet" style="border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;"><?php echo $new->kategori ?></span></div>
+                                        <div class="col-md-12 mt-2">
                                             <a href="<?php echo base_url().'halaman_utama/detail_blog/'.$new->id_blog ?>" style="color:black; text-decoration: none;">
                                                 <div class="mt-2">
-                                                <span style="font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 30px;"><?php echo $new->judul ?></span>
+                                                  <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 25px; line-height: 28px;"><?php echo $new->judul ?></span>
                                                 </div>
                                             </a>
                                             <div class="mt-4">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                          <div class="bulet" style="text-transform: capitalize; border-radius:100%; width: 15px; height: 15px; background: #F7476E;"></div>
+                                                        </td>
+                                                        <td style="position: relative; left:10px; bottom:2px;">
+                                                          <span><?php echo $new->kategori ?></span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="mt-4">
                                                 <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;"><?php echo $new->date ?></span>
                                             </div>
+                                            
                                         </div> 
                                     </div>
                                     <hr>
@@ -159,7 +171,7 @@
                            <textarea style="width: 100%;" rows="10" name="comment" id="comment" placeholder="Tambahkan Komentar"></textarea>
                        </div>
                        <div class="col-md-12 text-right">
-                          <input style="background: #F7476E; border-radius: 15px; text-white" type="submit" name="submit" value="Kirim">
+                          <input style="background: #F7476E; border-radius: 15px; border: 1px solid #F7476E; color: #FFFFFF;" type="submit" name="submit" value="Kirim">
                        </div>
                     </div>
                 </div>

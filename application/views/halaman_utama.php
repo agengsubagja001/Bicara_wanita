@@ -66,27 +66,39 @@
                     <div class="row">
                         <?php foreach($show_data as $show) : ?>
                         <!-- awal artikel untuk di lopping -->
-                           <div class="col-md-6">
-                               <!-- Conten Artikel -->
-                                <div class="row">
-                                    <div class="col-md-6 mt-3">
-                                        <img src="<?php echo base_url().'assets/img_Sampul/'. $show->gambar ?>" style="width: 100%; height: auto;" alt="">
-                                    </div>
-                                    <div class="col-md-6 mt-3">
-                                        <div class="bulet" style="text-transform: capitalize; border-radius:100%; width: 15px; height: 15px; background: #F7476E;"> <span style="position: relative; left:25px; bottom:6px;"><?php echo $show->kategori ?></span></div>
-                                        <a href="<?php echo base_url().'halaman_utama/detail_blog/'.$show->id_blog ?>" style="color:black; text-decoration: none;">
-                                            <div class="mt-3">
-                                                <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;"><?php echo $show->judul ?></span>
-                                            </div>
-                                        </a>
-                                        <div class="mt-4">
-                                            <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;"><?php echo $show->date ?></span>
+                            <div class="col-md-6">
+                                <!-- Conten Artikel -->
+                                <div class="bungkus" style=" max-width: 100%; max-height: 300px;">
+                                    <div class="row">
+                                        <div class="col-md-6 mt-3">
+                                            <img src="<?php echo base_url().'assets/img_Sampul/'. $show->gambar ?>" style="width: 100%; height: auto;" alt="">
                                         </div>
-                                    </div> 
-                                </div>
-                                <hr>
-                                <!-- Akhir Content Artikel -->
-                           </div>
+                                        <div class="col-md-6 mt-3">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                    <div class="bulet" style="text-transform: capitalize; border-radius:100%; width: 15px; height: 15px; background: #F7476E;"></div>
+                                                    </td>
+                                                    <td style="position: relative; left:10px; bottom:2px;">
+                                                    <span><?php echo $show->kategori ?></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <a href="<?php echo base_url().'halaman_utama/detail_blog/'.$show->id_blog ?>" style="color:black; text-decoration: none;">
+                                                <div class="mt-3">
+                                                    <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 25px; line-height: 28px;"><?php echo $show->judul ?></span>
+                                                </div>
+                                            </a>
+                                            <div class="mt-4">
+                                                <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;"><?php echo $show->date ?></span>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <hr>
+                                </div>    
+                                    <!-- Akhir Content Artikel -->
+                            </div>
                         <?php endforeach ?>
                         <!-- akhir aktikel -->
                                 
@@ -146,18 +158,21 @@
                 <span style="font-size:30px;font-weight:bold">Podcast</span>
             </div>
             <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <?php foreach($show_podcast as $podcast): ?>
-                    <!-- awal content podcast -->
-                    <div class="col-md-3 mt-3">
-                        <a href="#"><img src="<?php echo base_url().'assets/img_podcast/'. $podcast->gambar ?>" class="img-responsive"  style="width: 100%; height: auto;" alt=""></a>
+                <div class="col-md-12">
+                    <div class="row">
+                        <?php foreach($show_podcast as $podcast): ?>
+                        <!-- awal content podcast -->
+                        <div class="col-md-3 mt-3">
+                            <a href="#"><img src="<?php echo base_url().'assets/img_podcast/'. $podcast->gambar ?>" class="img-responsive"  style="width: 100%; height: auto;" alt=""></a>
+                        </div>
+                        <!-- akhir content podcast -->
+                        <?php endforeach ?>
+                        
                     </div>
-                    <!-- akhir content podcast -->
-                    <?php endforeach ?>
                 </div>
-
-            </div>
+                <div class="col-md-12 text-right mt-3">
+                     <a href="#"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
+                </div>
             </div>
             <div class="mb-5"></div>
         </div>
@@ -176,13 +191,13 @@
                         <div class="col-md-6 mt-3">
                             <div class="story" style="position:relative;padding:20px;width:100%;height:auto;background: #FFFFFF; box-shadow: 0 5px 10px rgb(73 84 100 / 5%); border-radius: 5px;">
                                 <div class= "row">
-                                <div class="col-md-2">
-                                    <img src="assets/img/ikon.png" class="img-fluid" style="width:70px; height:70px;" alt="">
-                                </div>
-                                <div class="col-md-10 mt-2">
-                                    <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
-                                    <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
-                                </div>
+                                    <div class="col-md-2">
+                                        <img src="assets/img/ikon.png" class="img-fluid" style="width:70px; height:70px;" alt="">
+                                    </div>
+                                    <div class="col-md-10 mt-2">
+                                        <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
+                                        <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
+                                    </div>
                                 </div>
                                 <div style="bottom: 15px;margin-top:3%">
                                     <span>Nama Penulis</span>
