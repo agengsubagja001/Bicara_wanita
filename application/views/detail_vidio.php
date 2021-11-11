@@ -26,87 +26,93 @@
                     <!-- konten infografik -->
                     <div class="col-6 col-md-4 mt-5">
                         <a href="<?php echo base_url('isi_vidio') ?>">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <!-- akhir konten infografik -->
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
-                            <iframe width="100%" height="200"
-                                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                            </iframe>
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 mt-5">
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 mt-5">
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 mt-5">
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 mt-5">
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 mt-5">
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 mt-5">
+                        <a href="<?php echo base_url('isi_vidio') ?>">
+                            <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
                         </a>
                     </div>
 

@@ -16,53 +16,53 @@
             <div class="row">
                 <!-- awal konten daftar podcas -->
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <!-- akhir konten daftar podcast -->
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <div class="col-6 col-md-3 mt-5">
-                    <a href=""><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
             </div>
         </div>
@@ -99,7 +99,9 @@
                         <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">09/11/2021</span>
                     </div>
                     <div class="mt-5">
-                    <button type="button"class="btn btn-outline-danger"><i class="fa fa-play" aria-hidden="true"></i> play</button>
+                        <audio controls>
+                            <source src="assets/img/yu.mpeg" type="audio/mpeg">
+                        </audio>
                     </div>
                 </div> 
             </div>
@@ -121,9 +123,11 @@
                         <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">09/11/2021</span>
                     </div>
                     <div class="mt-5">
-                    <button type="button"class="btn btn-outline-danger"><i class="fa fa-play" aria-hidden="true"></i> play</button>
+                        <audio controls>
+                            <source src="assets/img/yu.mpeg" type="audio/mpeg">
+                        </audio>
                     </div>
-                </div> 
+                </div>
             </div>
             <!-- Akhir Content plyalist -->
         </div>
@@ -143,9 +147,11 @@
                         <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">09/11/2021</span>
                     </div>
                     <div class="mt-5">
-                    <button type="button"class="btn btn-outline-danger"><i class="fa fa-play" aria-hidden="true"></i> play</button>
+                        <audio controls>
+                            <source src="assets/img/yu.mpeg" type="audio/mpeg">
+                        </audio>
                     </div>
-                </div> 
+                </div>
             </div>
             <!-- Akhir Content plyalist -->
         </div>
@@ -165,9 +171,11 @@
                         <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">09/11/2021</span>
                     </div>
                     <div class="mt-5">
-                    <button type="button"class="btn btn-outline-danger"><i class="fa fa-play" aria-hidden="true"></i> play</button>
+                        <audio controls>
+                            <source src="assets/img/yu.mpeg" type="audio/mpeg">
+                        </audio>
                     </div>
-                </div> 
+                </div>
             </div>
             <!-- Akhir Content plyalist -->
         </div>

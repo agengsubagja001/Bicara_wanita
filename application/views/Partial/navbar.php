@@ -14,34 +14,30 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
-				    <li class="nav-item" style="">
-              <a class="nav-link" style="color:#000000;" href="">Program</a>
-					 </li>
 					<li class="nav-item">
-						<a class="nav-link" style="color:#000000;" href="">Kesehatan</a>
+						<a class="nav-link" style="font-family: Prata; font-style: normal; font-weight: normal; font-size: 20px; color: #000000;" href="<?php echo base_url('detail_podcast') ?>">Podcast</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" style="color:#000000;" href="">Ibu Dan Anak</a>
-					</li>
-          <li class="nav-item">
-						<a class="nav-link" style="color:#000000;" href="">Infografik</a>
-					</li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"  style="color:#000000;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Lainnya
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item" style="margin-left: 430px;">
-						
+						<a class="nav-link" style="font-family: Prata; font-style: normal; font-weight: normal; font-size: 20px; color: #000000;" href="<?php echo base_url('detail_story') ?>">Story</a>
 					</li>
 					<li class="nav-item">
-          <a href="#"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Masuk</button></a>
+						<a class="nav-link" style="font-family: Prata; font-style: normal; font-weight: normal; font-size: 20px; color: #000000;" href="<?php echo base_url('detail_infografik') ?>">Infografik</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  style="font-family: Prata; font-style: normal; font-weight: normal; font-size: 20px; color: #000000;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						 Lainnya
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Ibu Dan Anak</a>
+							<a class="dropdown-item" href="#">Kesehatan</a>
+							<a class="dropdown-item" href="#">Lifestyle</a>
+							<a class="dropdown-item" href="#">Fashion</a>
+						</div>
+					</li>
+                    <li class="nav-item" style="margin-left: 510px;">			
+					</li>
+					<li class="nav-item">
+                    <a href="#"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Masuk</button></a>
 					</li>
 				</ul>
 			</div>

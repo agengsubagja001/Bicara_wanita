@@ -50,7 +50,16 @@
     <!-- fotter -->
     <div class="fotter" style="position: relative; top: 180px;">
         <?php $this->load->view('partial/footer') ?> 
-    </div>
-
-       
+    </div>   
 </body>
+<!-- css button -->
+<style>
+    .btn.btn-social-icon {
+     width: 50px;
+     height: 50px;
+     padding: 1;
+ }
+    .btn.btn-rounded {
+     border-radius: 50px
+ }
+</style>    

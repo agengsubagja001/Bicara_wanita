@@ -46,10 +46,10 @@
             </div>
             <div class="row">     
                 <div class="col-md-6 mt-5">
-                    <a href="#"><img src="assets/img/podcast.png" class="img-responsive " style="width: 100%; height: auto;" alt=""></a>
+                    <a href="<?php echo base_url('detail_podcast') ?>"><img src="assets/img/podcast.png" class="img-responsive " style="width: 100%; height: auto;" alt=""></a>
                 </div>
                 <div class="col-md-6 mt-5">
-                    <a href="#"><img src="assets/img/story.png" class="img-responsive " style="width: 100%; height: auto;" alt=""></a>
+                    <a href="<?php echo base_url('detail_story') ?>"><img src="assets/img/story.png" class="img-responsive " style="width: 100%; height: auto;" alt=""></a>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                         <!-- awal artikel untuk di lopping -->
                             <div class="col-md-6">
                                 <!-- Conten Artikel -->
-                                <div class="bungkus" style=" max-width: 100%; max-height: 300px;">
+                                <div class="bungkus" style=" max-width: 100%;">
                                     <div class="row">
                                         <div class="col-md-6 mt-3">
                                             <img src="<?php echo base_url().'assets/img_Sampul/'. $show->gambar ?>" style="width: 100%; height: auto;" alt="">
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="col-md-12 text-right mt-3">
-                     <a href="#"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
+                     <a href="<?php echo base_url('detail_podcast') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
                 </div>
             </div>
             <div class="mb-5"></div>
@@ -241,8 +241,9 @@
                                 <div class="d-flex">
                                     <?php foreach ($show_vidio as $vidio): ?>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column" style="width:100%; height:300;">
-                                            <iframe width="100%" height="300" src="<?php echo $vidio->isi_vidio ?>">
-                                            </iframe>
+                                           <a href="<?php echo base_url('isi_vidio') ?>">
+                                             <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                           </a>
                                         </div>
                                     <?php endforeach ?>
                                 </div>
@@ -250,16 +251,19 @@
                                 <div class="carousel-item carousel-item-next carousel-item-left">
                                     <div class="d-flex">
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                            </iframe>
+                                           <a href="<?php echo base_url('isi_vidio') ?>">
+                                             <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                           </a>
                                         </div>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                            </iframe>
+                                            <a href="<?php echo base_url('isi_vidio') ?>">
+                                               <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                            </a>
                                         </div>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                            </iframe>
+                                            <a href="<?php echo base_url('isi_vidio') ?>">
+                                             <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                            </a>
                                         </div>
                                     </div>
 
@@ -267,16 +271,19 @@
                                     <div class="carousel-item ">
                                         <div class="d-flex">
                                             <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                                </iframe>
+                                                <a href="<?php echo base_url('isi_vidio') ?>">
+                                                    <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                                </a>
                                             </div>
                                             <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                                </iframe>
+                                                <a href="<?php echo base_url('isi_vidio') ?>">
+                                                    <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                                </a>
                                             </div>
                                             <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                                </iframe>
+                                                <a href="<?php echo base_url('isi_vidio') ?>">
+                                                    <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                                </a>
                                             </div> 
                                                 
                                         </div>

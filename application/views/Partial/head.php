@@ -23,7 +23,7 @@
             text-transform: capitalize; 
             font-style: normal;
             font-weight: bold; 
-            font-size: 9px; 
+            font-size: 25px; 
             
         
         }

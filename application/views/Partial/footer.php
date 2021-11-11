@@ -16,7 +16,7 @@
 					<!-- Grid column -->
 
 					<!-- Grid column -->
-					<div class="col-md-3 mt-3 " style="position: relative; left:20px;">
+					<div class="col-md-3" style="position: relative; left:20px;">
 						<h5 class="text-White fw-bold" style="font-weight: bold;">
 							Kontak
 						</h5>
@@ -39,7 +39,7 @@
 					<!-- Grid column -->
 
 					<!-- Grid column Toko -->
-					<div class="col-md-3 mt-3 " style="position: relative; left:20px;">
+					<div class="col-md-3" style="position: relative; left:20px;">
 						<h5 class="text-White fw-bold" style="font-weight: bold;">
 							KATEGORI	
 						</h5>
@@ -59,9 +59,12 @@
 							<tr>
 								<td>Fashion</td>
 							</tr>
+							<tr>
+								<td>Lifestyle</td>
+							</tr>
 						</table>
 					</div>
-					<div class="col-md-3 mt-3" style="position: relative; left:20px;">
+					<div class="col-md-3" style="position: relative; left:20px;">
 						<h5 class="text-White fw-bold" style="font-weight: bold;">
 							Ikuti Kami Juga	
 						</h5>

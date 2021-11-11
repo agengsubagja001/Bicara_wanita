@@ -94,7 +94,7 @@
                                             <img src="<?php echo base_url().'assets/img_Sampul/'. $new->gambar ?>" style="width: 100%; height: auto;" alt="">
                                         </div>
                                         <div class="col-md-12 mt-2">
-                                            <a class="judul" href="<?php echo base_url().'halaman_utama/detail_blog/'.$new->id_blog ?>"style="color:black; text-decoration: none;">
+                                            <a class="" href="<?php echo base_url().'halaman_utama/detail_blog/'.$new->id_blog ?>"style="color:black; text-decoration: none;">
                                                 <div class="mt-2">
                                                   <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 25px; line-height: 28px;"><?php echo $new->judul ?></span>
                                                 </div>
@@ -187,4 +187,14 @@
 <div class="fotter" style="position: relative; top: 140px;">
 <?php $this->load->view('partial/footer') ?> 
 </div>
-
+<!-- css button -->
+<style>
+    .btn.btn-social-icon {
+     width: 50px;
+     height: 50px;
+     padding: 1;
+ }
+    .btn.btn-rounded {
+     border-radius: 50px
+ }
+</style>
