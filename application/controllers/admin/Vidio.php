@@ -31,11 +31,33 @@ class Vidio extends CI_Controller {
 			$judul = $this->input->post('judul');
 			$vidio = $this->input->post('vidio');
 
+
+			// foto tubnail
+			$foto_img_sampul = $_FILES['gambar_tubnail']['name'];
+			$foto_tmp = $_FILES['gambar_tubnail']['tmp_name'];
+			
+			// Format
+			 // cek ekstensi foto
+			 $ekstensiGambarValid = ['jpg','jpeg','png','webp','PNG','JPG'];
+			 $ekstensiGambar = explode('.',$foto_img_sampul);
+			 $ekstensiGambar = strtolower(end($ekstensiGambar));
+			// akhir cek ekstensi foto
+
+			// GENERAT NAME PHOTO 1\
+			$encrypted = base64_encode($foto_img_sampul);
+			$encrypted .= '.';
+			$encrypted .= $ekstensiGambar;
+
+
+			// Upload foto
+			move_uploaded_file($foto_tmp,'assets/admin/vidio/gambar_tubnail/'.$encrypted);
+
 			
 
 			$dataa = array(
 				'judul'            => $judul,
 				'isi_vidio'        =>  $vidio,
+				'gambar_thubnail'   => $encrypted,
 				
    
 			);

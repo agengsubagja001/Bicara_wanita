@@ -28,7 +28,7 @@
                             <div class="card-header">
                                 <nav class="navbar navbar-light bg-light justify-content-between" style="">
                                     <a class="navbar-brand">
-                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST BLOG</b>
+                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST VIDIO</b>
                                     </a>
                                     <a href="<?php echo base_url('admin/tambah_vidio') ?>" class="" >
                                         <button class="btn btn-dark " style="width: 140px;">Tambah Baru</button>
@@ -41,6 +41,7 @@
                                             <tr>
                                                 <th scope="col">NO</th>
                                                 <th scope="col">VIDIO</th>
+                                                <th scope="col">GAMBAR THUMBNAIL</th>
 												<th scope="col">JUDUL</th>
 												<th scope="col">TANGGAL LIRIS</th>
 												<th scope="col">AKSI</th>
@@ -52,9 +53,11 @@
                                            <!-- Content pertama-->
                                             <tr>
                                                 <td><?php echo $no++ ?></td>
-                                                <td style="width: 150px">
-                                                    <iframe src="<?php echo $vidio->isi_vidio ?>" width="100%" height="auto" title="W3Schools Free Online Web Tutorials"></iframe>
-                                                    
+                                                <td>
+                                                    <iframe src="<?php echo $vidio->isi_vidio ?>" title="W3Schools Free Online Web Tutorials"></iframe>  
+                                                </td>
+                                                <td>
+                                                    <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="img-fluid">
                                                 </td>
 												<td style=""><?php echo $vidio->judul ?></td>
 												<td><?php echo $vidio->tanggal ?></td>

@@ -15,11 +15,11 @@
                     <div class="row">
                      <div class="col-md-12">
                         <iframe width="100%" height="400"
-                           src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                           src="<?php echo $detail->isi_vidio ?>">
                         </iframe>
                      </div> 
                      <div class="col-md-12 mb-2">
-                        <span style="font-family: Poppins; font-style: normal; font-weight: 600; font-size: 30px;">Pesan Cinta untuk PSSI APA YANG ANDA RASAKAN</span>
+                        <span style="font-family: Poppins; font-style: normal; font-weight: 600; font-size: 30px;"><?php echo $detail->judul ?></span>
                      </div>  
                     </div>
                 </div>
@@ -33,16 +33,17 @@
                         <!-- awal konten rekomndasi -->
                         <a href="#" style="text-decoration: none;">
                             <div class="col-md-12">
+                                <?php foreach ($terbaru1 as $new) : ?>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <iframe width="100%"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                        </iframe>
+                                        <img style="width:100px; height:100px;" src="<?php echo $new->gambar_thubnail ?>" alt="">
+                                        
                                     </div>
                                     <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000;">Tutorial Masker Anti Komedo</span>
+                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000;"><?php echo $new->judul ?></span>
                                     </div>
                                 </div>
+                                <?php endforeach ?>
                             </div>
                         </a>
                         <!-- akhir konten rekomendasi -->
