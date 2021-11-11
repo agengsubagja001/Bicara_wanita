@@ -31,9 +31,9 @@
                      <div class="col-md-12">
                      <table>
                           <tr>
-                              <td><a href="#"style="color:black; text-decoration: none;"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></td>
-                              <td style="position: relative; left:8px;"><a href="#" style="color:black; text-decoration: none;"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></td>
-                              <td style="position: relative; left:15px;"><a href="#" style="color:black; text-decoration: none;"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></td>
+                          <td><a href="#"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-facebook-official"></i></button></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-wa btn-rounded"><i class="fa fa-whatsapp"></i></button></a></td>
                           </tr>
                       </table>
                      </div>

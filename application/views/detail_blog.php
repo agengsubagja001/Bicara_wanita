@@ -32,9 +32,9 @@
                      <div class="col-md-12">
                      <table>
                           <tr>
-                              <td><a href="#"style="color:black; text-decoration: none;"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></td>
-                              <td><a href="#" style="color:black; text-decoration: none;"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></td>
-                              <td><a href="#" style="color:black; text-decoration: none;"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded " ><i class="fa fa-facebook-official"></i></button></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-wa btn-rounded"><i class="fa fa-whatsapp"></i></button></a></td>
                           </tr>
                       </table>
                      </div>
@@ -85,15 +85,16 @@
                     <div class="col-md-12">
                         <div class="row">
                             <!-- awal artikel untuk di lopping -->
-                            <?php foreach($terbaru as $new): ?>
+                            <?php foreach($terbaru as $new): ?>    
                             <div class="col-md-4">
                                 <!-- Conten Artikel -->
+                                <div class="ukuran" style="max-height: 500px;">
                                     <div class="row">
                                         <div class="col-md-12 mt-3">
                                             <img src="<?php echo base_url().'assets/img_Sampul/'. $new->gambar ?>" style="width: 100%; height: auto;" alt="">
                                         </div>
                                         <div class="col-md-12 mt-2">
-                                            <a href="<?php echo base_url().'halaman_utama/detail_blog/'.$new->id_blog ?>" style="color:black; text-decoration: none;">
+                                            <a class="judul" href="<?php echo base_url().'halaman_utama/detail_blog/'.$new->id_blog ?>"style="color:black; text-decoration: none;">
                                                 <div class="mt-2">
                                                   <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 25px; line-height: 28px;"><?php echo $new->judul ?></span>
                                                 </div>
@@ -117,6 +118,7 @@
                                         </div> 
                                     </div>
                                     <hr>
+                                </div>    
                                     <!-- Akhir Content Artikel -->
                             </div>
                             <?php endforeach ?>

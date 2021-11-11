@@ -2,6 +2,9 @@
 <?php $this->load->view('partial/head'); ?>
 
 <?php $this->load->view('partial/navbar'); ?>
+<br>
+<br>
+<br>
 <!-- awal section 1 slide promo -->
     <section>
             <div class="mt-2">
@@ -77,19 +80,18 @@
                                             <table>
                                                 <tr>
                                                     <td>
-                                                    <div class="bulet" style="text-transform: capitalize; border-radius:100%; width: 15px; height: 15px; background: #F7476E;"></div>
+                                                       <div class="bulet" style="text-transform: capitalize; border-radius:100%; width: 15px; height: 15px; background: #F7476E;"></div>
                                                     </td>
                                                     <td style="position: relative; left:10px; bottom:2px;">
-                                                    <span><?php echo $show->kategori ?></span>
+                                                       <span><?php echo $show->kategori ?></span>
                                                     </td>
                                                 </tr>
                                             </table>
-
-                                            <a href="<?php echo base_url().'halaman_utama/detail_blog/'.$show->id_blog ?>" style="color:black; text-decoration: none;">
-                                                <div class="mt-3">
-                                                    <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 25px; line-height: 28px;"><?php echo $show->judul ?></span>
-                                                </div>
-                                            </a>
+                                                <a class="judul" href="<?php echo base_url().'halaman_utama/detail_blog/'.$show->id_blog ?>" style="text-decoration: none; color:black;">
+                                                    <div class="mt-2">
+                                                      <span><?php echo $show->judul ?></span>
+                                                    </div>
+                                                </a>
                                             <div class="mt-4">
                                                 <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;"><?php echo $show->date ?></span>
                                             </div>
@@ -97,7 +99,7 @@
                                     </div>
                                     <hr>
                                 </div>    
-                                    <!-- Akhir Content Artikel -->
+                                <!-- Akhir Content Artikel -->
                             </div>
                         <?php endforeach ?>
                         <!-- akhir aktikel -->

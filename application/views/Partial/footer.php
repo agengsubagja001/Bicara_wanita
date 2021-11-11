@@ -5,24 +5,18 @@
 				
 				<div class="container text-left text-White;" style="max-width: 1440px;">
 				<!-- Grid row -->
-				<div class="row mt-3" style="color: #fff;">
-					
-					<!-- <div class="col-md-4 ">
-						
-					</div> -->
-
-					<!-- Grid column -->
-					<div class="col-md-3 ">
+				<div class="row mt-3" style="color: #fff;">		
+					<div class="col-md-3 " style="position: relative; left:20px;">
 						<!-- Content -->
 						<h5 class="text-white fw-bold" style="font-weight: bold;"><i class="fas fa-gem me-3"></i>TENTANG KAMI</h5>
 						<p class="text-white" style="color: #f7f7f9e0!important; letter-spacing: 1px;">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga id possimus perspiciatis laudantium suscipit doloremque ea delectus, blanditiis maiores numquam officiis amet dolor alias eos. Pariatur nemo quos saepe voluptatem.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga id possimus perspiciatis laudantium suscipit doloremque ea delectus, blanditiis numquam officiis amet dolor alias eos. Pariatur nemo quos saepe voluptatem.
 						</p>
 					</div>
 					<!-- Grid column -->
 
 					<!-- Grid column -->
-					<div class="col-md-3 ">
+					<div class="col-md-3 mt-3 " style="position: relative; left:20px;">
 						<h5 class="text-White fw-bold" style="font-weight: bold;">
 							Kontak
 						</h5>
@@ -45,7 +39,7 @@
 					<!-- Grid column -->
 
 					<!-- Grid column Toko -->
-					<div class="col-md-3 ">
+					<div class="col-md-3 mt-3 " style="position: relative; left:20px;">
 						<h5 class="text-White fw-bold" style="font-weight: bold;">
 							KATEGORI	
 						</h5>
@@ -67,15 +61,15 @@
 							</tr>
 						</table>
 					</div>
-					<div class="col-md-3 ">
+					<div class="col-md-3 mt-3" style="position: relative; left:20px;">
 						<h5 class="text-White fw-bold" style="font-weight: bold;">
 							Ikuti Kami Juga	
 						</h5>
 						<table>
 							<tr>
-								<td><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></td>
-								<td style="position: relative; left:10px;"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></td>
-								<td style="position: relative; left:20px;"><i  class="fa fa-instagram fa-2x" aria-hidden="true"></i></td>
+							  <td><a href="#"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded " style="background: #FFD4E5;"><i class="fa fa-facebook-official"></i></button></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded" style="background: #FFD4E5;"><i class="fa fa-instagram "></i></button></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-wa btn-rounded" style="background: #FFD4E5;"><i class="fa fa-whatsapp"></i></button></a></td>
 							</tr>	
 						</table>
 					</div>
