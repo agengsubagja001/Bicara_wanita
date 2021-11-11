@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('penulis/Model_blog','penulis/Model_dashboard','user/Model_welcome','user/Model_detail_blog','admin/Model_podcast','admin/Model_vidio','admin/Model_blog','admin/Model_dashboardd','admin/Model_program','admin/Model_infografik');
+$autoload['model'] = array('penulis/Model_blog','penulis/Model_dashboard','user/Model_welcome','user/Model_detail_blog','user/Model_detail_program','user/Model_detail_infografik','admin/Model_podcast','admin/Model_vidio','admin/Model_blog','admin/Model_dashboardd','admin/Model_program','admin/Model_infografik');

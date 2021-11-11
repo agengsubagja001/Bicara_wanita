@@ -37,7 +37,7 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>
-          <li class="nav-item" style="margin-left: 400px;">
+          <li class="nav-item" style="margin-left: 430px;">
 						
 					</li>
 					<li class="nav-item">

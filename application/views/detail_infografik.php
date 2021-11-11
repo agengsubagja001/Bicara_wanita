@@ -23,44 +23,15 @@
                    <span style="font-size:30px;font-weight:bold">Infografik</span>
                 </div> 
                 <div class="row">
+                    <?php foreach ($show_infografik as $infografik): ?>
                     <!-- konten infografik -->
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
+                        <a href="<?php echo base_url().'detail_infografik/artikel_infografik/'.$infografik->id_infografik ?>">
+                            <img src="<?php echo base_url().'assets/admin/infografik/img_infografik/'. $infografik->gambar_kontent ?>" style="max-width: 100%; max-height: auto;" alt="">
+                        </a>
                     </div>
                     <!-- akhir konten infografik -->
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
-                    <div class="col-6 col-md-4 mt-5">
-                        <a href="#"><img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto;" alt=""></a>
-                    </div>
+                    <?php endforeach ?>
                 </div>
             </div>
         </section>
