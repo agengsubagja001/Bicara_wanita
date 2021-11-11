@@ -25,7 +25,7 @@
                 <div class="row">
                     <!-- konten infografik -->
                     <div class="col-6 col-md-4 mt-5">
-                        <a href="#">
+                        <a href="<?php echo base_url('isi_vidio') ?>">
                             <iframe width="100%" height="200"
                                 src="https://www.youtube.com/embed/tgbNymZ7vqY">
                             </iframe>

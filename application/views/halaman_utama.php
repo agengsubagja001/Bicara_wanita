@@ -122,31 +122,17 @@
             <div class="row">
                 <div class="col-md-12">
                     <!-- card untuk di loping  -->
+                    <?php foreach($show_program as $program): ?>
                         <div class="mt-5"> 
                             <div class="card" style="width: 100%;">
-                                <img class="card-img-top" src="assets/img/banner_aids.png" alt="Card image cap">
+                                <img class="card-img-top" src="<?php echo base_url().'assets/admin/program/img_konten/'. $program->gambar_kontent ?>" alt="Card image cap">
                                 <div class="card-body">
-                                    <a href="#" style="color:black; text-decoration: none;"><p class="card-text" style="font-family: Roboto;font-style: normal; font-weight: bold; font-size: 30px; line-height: 56px; text-align: center;">Program Hindari Hiv</p></a>
+                                    <a href="<?php echo base_url().'halaman_utama/detail_program/'.$program->id_program ?>" style="color:black; text-decoration: none;"><p class="card-text" style="font-family: Roboto;font-style: normal; font-weight: bold; font-size: 30px; line-height: 56px; text-align: center;"><?php echo $program->judul ?></p></a>
                                 </div>
                             </div>
                         </div>
+                    <?php endforeach ?>
                     <!-- akhir card untuk di loping -->
-                        <div class="mt-5"> 
-                            <div class="card" style="width: 100%;">
-                                <img class="card-img-top" src="assets/img/banner_aids.png" alt="Card image cap">
-                                <div class="card-body">
-                                   <a href="#" style="color:black; text-decoration: none;"><p class="card-text" style="font-family: Roboto;font-style: normal; font-weight: bold; font-size: 30px; line-height: 56px; text-align: center;">Program Hindari Hiv</p></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-5"> 
-                            <div class="card" style="width: 100%;">
-                                <img class="card-img-top" src="assets/img/banner_aids.png" alt="Card image cap">
-                                <div class="card-body">
-                                   <a href="#" style="color:black; text-decoration: none;"><p class="card-text" style="font-family: Roboto;font-style: normal; font-weight: bold; font-size: 30px; line-height: 56px; text-align: center;">Program Hindari Hiv</p></a>
-                                </div>
-                            </div>
-                        </div>
                 </div>
             </div>
         </div>
@@ -224,7 +210,7 @@
                         </div>
                         <!-- akhir content story -->
                         <div class="col-md-12 text-right mt-5">
-                          <a href="#"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
+                          <a href="<?php echo base_url('detail_story') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
                         </div>
                     </div>
                 </div>
@@ -254,7 +240,7 @@
                             <div class="carousel-item active carousel-item-left">
                                 <div class="d-flex">
                                     <?php foreach ($show_vidio as $vidio): ?>
-                                        <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
+                                        <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column" style="width:100%; height:300;">
                                             <iframe width="100%" height="300" src="<?php echo $vidio->isi_vidio ?>">
                                             </iframe>
                                         </div>
@@ -299,9 +285,9 @@
                         </div>
                 </div>
                 <div class="col-md-12 text-right mt-5">
-                    <a href="#"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
+                    <a href="<?php echo base_url('detail_vidio') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
                 </div>
-             </div>
+            </div>
              <div class="mb-5"></div>     
     </section>
 <!-- akhir section 7 vidio -->
@@ -315,69 +301,62 @@
                 </div>
                 <div class="container" style="max-width: 1400px;">
                         <div class="row">
-                            
                             <div class="col-md-12">
-                            <!-- Carousel -->
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner" style=" padding: 2em;">
-                                <div class="carousel-item active">
-                                    <div class="cards-wrapper" style=" display: flex; justify-content: center;">
-                                        <div class="card1">
-                                            <a href="#">
-                                              <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
+                                <!-- Carousel -->
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner" style=" padding: 2em;">
+                                                <div class="carousel-item active">
+                                                    <div class="cards-wrapper" style=" display: flex; justify-content: center;">
+                                                        <?php foreach($show_infografik as $infografik): ?>
+                                                        <div class="card1">
+                                                            <a href="<?php echo base_url().'halaman_utama/artikel_infografik/'.$infografik->id_infografik ?>">
+                                                                <img src="<?php echo base_url().'assets/admin/infografik/img_infografik/'. $infografik->gambar_kontent ?>" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
+                                                            </a>
+                                                        </div>
+                                                        <?php endforeach ?>
+                                                    </div>
+                                                </div>
+                                                    <div class="carousel-item">
+                                                        <div class="cards-wrapper" style=" display: flex; justify-content: center;">
+                                                            <div class="card1">
+                                                                <a href="#">
+                                                                <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
+                                                                </a>
+                                                            
+                                                            </div>
+                                                            <div class="card1 d-none d-md-block">
+                                                                <a href="#">
+                                                                <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
+                                                                </a>
+                                                            
+                                                            </div>
+                                                            <div class="card1 d-none d-md-block">
+                                                                <a href="#">
+                                                                <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                            <a class="carousel-control-prev" style="background-color: #e1e1e1; width: 5vh; height: 5vh; border-radius: 50%; top: 50%; transform: translateY(-50%);" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" style="background-color: #e1e1e1; width: 5vh; height: 5vh; border-radius: 50%; top: 50%; transform: translateY(-50%);" href="#carouselExampleControls" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
                                             </a>
                                         </div>
-                                        <div class="card1 d-none d-md-block">
-                                            <a href="#">
-                                              <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                            </a>
-                                        </div>
-                                        <div class="card1 d-none d-md-block">
-                                            <a href="#">
-                                              <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                            </a>
-                                            
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="cards-wrapper" style=" display: flex; justify-content: center;">
-                                            <div class="card1">
-                                                <a href="#">
-                                                   <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                </a>
-                                            
-                                            </div>
-                                            <div class="card1 d-none d-md-block">
-                                                <a href="#">
-                                                   <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                </a>
-                                            
-                                            </div>
-                                            <div class="card1 d-none d-md-block">
-                                                <a href="#">
-                                                   <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                </a>
-                                            </div>
-                                        </div>
+                                    <!-- Akhir Carousel -->
+                                    <div class="col-md-12 text-right mt-5" style="position: relative; right:11px;">
+                                       <a href="<?php echo base_url('detail_infografik') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" style="background-color: #e1e1e1; width: 5vh; height: 5vh; border-radius: 50%; top: 50%; transform: translateY(-50%);" href="#carouselExampleControls" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" style="background-color: #e1e1e1; width: 5vh; height: 5vh; border-radius: 50%; top: 50%; transform: translateY(-50%);" href="#carouselExampleControls" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                            <!-- Akhir Carousel -->
-                                <div class="col-md-12 text-right mt-5" style="position: relative; right:11px;">
-                                   <a href="#"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
-                                </div>
-                            </div>
                                 
-                    </div>
+                            </div>
+                        </div>
+                </div>            
+
                     
     </section>
     <br>

@@ -51,6 +51,11 @@
                         </nav>
                     </div>
 
+                    <a class="nav-link mt-1" href="<?= base_url() ?>admin/kategori">
+                        <div class="sb-nav-link-icon"><i class="fab fa-buffer"></i></div>
+                        Kategori
+                    </a>
+
                     <a class="nav-link mt-1" href="<?= base_url() ?>admin/infografik">
                         <div class="sb-nav-link-icon"><i class="fas fa-images"></i></div>
                         Infografik

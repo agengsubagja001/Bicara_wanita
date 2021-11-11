@@ -10,8 +10,54 @@ class Model_dashboardd extends CI_Model
 	}
 
 	// menampilkan jumlah blog
-	public function show_jml(){
-		$this->db->select_sum('id_blog');
-		return $this->db->get('blog');
+	public function jml_blog(){
+		$query = $this->db->get('blog');
+		if($query->num_rows()>0)
+		{
+			return $query->num_rows();
+		}
+		else
+		{
+			return 0;
+		}
+	}
+
+	// menampilkan jumlah podcast
+	public function jml_podcast(){
+		$query = $this->db->get('podcast');
+		if($query->num_rows()>0)
+		{
+			return $query->num_rows();
+		}
+		else
+		{
+			return 0;
+		}
+	}
+
+	// menampilkan jumlah program
+	public function jml_program(){
+		$query = $this->db->get('program');
+		if($query->num_rows()>0)
+		{
+			return $query->num_rows();
+		}
+		else
+		{
+			return 0;
+		}
+	}
+
+	// menampilkan jumlah infografik
+	public function jml_infografik(){
+		$query = $this->db->get('infografik');
+		if($query->num_rows()>0)
+		{
+			return $query->num_rows();
+		}
+		else
+		{
+			return 0;
+		}
 	}
 }

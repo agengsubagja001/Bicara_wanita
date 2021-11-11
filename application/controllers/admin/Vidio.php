@@ -48,4 +48,11 @@ class Vidio extends CI_Controller {
 
 		}
 	}
+
+	public function hapus($id_vidio){
+		$del = array('id_vidio' => $id_vidio);
+		$this->Model_vidio->hapus_data($del,'vidio');
+		$this->session->set_flashdata('success1','Action Completed');
+		redirect('admin/vidio');
+	}
 }

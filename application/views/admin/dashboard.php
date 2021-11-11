@@ -1,7 +1,6 @@
-
-
 <!-- head -->
 <?php $this->load->view('admin/partial/head') ?>
+
 
 <!-- navbar -->
 <?php $this->load->view('admin/partial/navbar') ?>
@@ -19,19 +18,19 @@
                         </ol>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
-                            <?php $no = 1; foreach($show_blg as $blg) : ?>
+                            
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body"><span><?php echo $blg->id_blog ?> BLOG</span></div>
+                                    <div class="card-body"><span><?php echo $total_blog; ?> BLOG</span></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="#">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
-                            <?php endforeach ?>
+                            
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">10 PROGRAM</div>
+                                    <div class="card-body"><?php echo $total_program; ?> PROGRAM</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="#">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -40,7 +39,7 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">10 PODCAST</div>
+                                    <div class="card-body"><?php echo $total_podcast; ?> PODCAST</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="#">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -49,7 +48,7 @@
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">10 INFOGTAFIK</div>
+                                    <div class="card-body"><?php echo $total_infografik; ?> INFOGTAFIK</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="#">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
