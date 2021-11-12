@@ -74,7 +74,7 @@
                                 <div class="bungkus" style=" max-width: 100%;">
                                     <div class="row">
                                         <div class="col-md-6 mt-3">
-                                            <img src="<?php echo base_url().'assets/img_Sampul/'. $show->gambar ?>" style="width: 100%; height: auto;" alt="">
+                                            <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $show->gambar ?>" style="width: 100%; height: auto;" alt="">
                                         </div>
                                         <div class="col-md-6 mt-3">
                                             <table>
@@ -89,7 +89,7 @@
                                             </table>
                                                 <a class="judul" href="<?php echo base_url().'halaman_utama/detail_blog/'.$show->id_blog ?>" style="text-decoration: none; color:black;">
                                                     <div class="mt-2">
-                                                      <span><?php echo $show->judul ?></span>
+                                                      <span style="text-transform: capitalize;"><?php echo $show->judul ?></span>
                                                     </div>
                                                 </a>
                                             <div class="mt-4">

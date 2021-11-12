@@ -12,12 +12,12 @@
             <div class="row">
                 <!-- judul  -->
                 <div class="col-md-12 text-center">
-                    <h1 style="position: relative; top: 80px; font-family: Poppins; font-style: normal; font-weight: bold; font-size: 32px; color: #333333;"><?php echo $detail->judul ?></h1>
+                    <h1 style="text-transform: capitalize; position: relative; top: 80px; font-family: Poppins; font-style: normal; font-weight: bold; font-size: 32px; color: #333333;"><?php echo $detail->judul ?></h1>
                 </div>
                 <!-- akhir judul -->
                 <!-- awal konten artikel -->
                 <div class="col-md-12 text-center mt-5">
-                    <img src="<?php echo base_url().'assets/img_Sampul/'. $detail->gambar ?>" style="position: relative; top: 50px; width: 80%; height: auto" alt="">
+                    <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $detail->gambar ?>" style="object-contain:cover; position: relative; top: 50px; width: 80%; height: auto" alt="">
                 </div>
                 <div class="col-md-12">
                     <p style="position: relative; top: 100px; white-space: pre-wrap; color: rgba(0,0,0,.8); font-size: .875rem; overflow: hidden; text-overflow: ellipsis; line-height: 1.875rem;"><?php echo $detail->isi ?></p>

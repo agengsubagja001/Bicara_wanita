@@ -110,11 +110,11 @@ class Blog extends CI_Controller {
 			 $ekstensiGambar = explode('.',$foto_icon_brand);
 			 $ekstensiGambar = strtolower(end($ekstensiGambar));
 			// // GENERAT NAME PHOTO 1\
-			$encrypted = base64_encode($foto_icon_brand);
+			$encrypted = uniqid();
 			$encrypted .= '.';
 			$encrypted .= $ekstensiGambar;
 			// Upload Icon Brand
-			move_uploaded_file($icon_tmp,'assets/img_sampul/'.$encrypted);
+			move_uploaded_file($icon_tmp,'assets/admin/blog/img_sampul/'.$encrypted);
 
 			$dataa = array(
 				// 'id_blog'         => $id_blog,

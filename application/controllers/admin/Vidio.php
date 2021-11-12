@@ -44,7 +44,7 @@ class Vidio extends CI_Controller {
 			// akhir cek ekstensi foto
 
 			// GENERAT NAME PHOTO 1\
-			$encrypted = base64_encode($foto_img_sampul);
+			$encrypted = uniqid();
 			$encrypted .= '.';
 			$encrypted .= $ekstensiGambar;
 
