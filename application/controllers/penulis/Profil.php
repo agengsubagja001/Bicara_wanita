@@ -24,10 +24,61 @@ class Profil extends CI_Controller {
 		$this->load->view('penulis/profil',$data);
 	}
 
-	// edit data
+	// edit data profil
 	public function edit($id_akun){
 		$del = array('id_akun' => $id_akun);
-		$data['user'] = $this->Model_blog->edit_data($del,'akun')->result();
+		$data['show_edit'] = $this->Model_profil->edit_data($del,'akun')->result();
 		$this->load->view('penulis/edit_profil',$data);
 	}
+
+	// update data profil
+	public function update()
+		{
+			if (isset($_POST['btn_submit'])) {
+				$nama_lengkap = $this->input->post('nama_lengkap');
+				$id_akun = $this->input->post('id_akun');
+				$no_telepon = $this->input->post('no_telepon');
+				$deskripsi   = $this->input->post('deskripsi');
+	
+				// Foto
+				// blog
+				$foto_icon_brand = $_FILES['foto_profil']['name'];
+				$icon_tmp = $_FILES['foto_profil']['tmp_name'];
+				
+				// Format
+				 // cek ekstensi foto
+				 $ekstensiGambarValid = ['jpg','jpeg','png','webp','PNG','JPG'];
+				 $ekstensiGambar = explode('.',$foto_icon_brand);
+				 $ekstensiGambar = strtolower(end($ekstensiGambar));
+				// // GENERAT NAME PHOTO 1\
+				$encrypted = uniqid($foto_icon_brand);
+				$encrypted .= '.';
+				$encrypted .= $ekstensiGambar;
+				// Upload Icon Brand
+				move_uploaded_file($icon_tmp,'./assets/penulis/p_profil/'.$encrypted);
+	
+				$data = array(
+					
+					'nama_lengkap'            => $nama_lengkap,
+					'deskripsi'              => $deskripsi,
+					'no_telepon'         	=> $no_telepon,
+					'foto_profil'           => $encrypted
+	   
+				);
+
+				$where = array(
+					'id_akun' => $id_akun
+				);
+						
+					$this->Model_profil->update_data($where,$data, 'akun');
+					$this->session->set_flashdata('success_edit','Action Completed');
+					redirect('penulis/profil');
+					//  redirect('tambah_produk');
+					echo "<script>console.log('berhasil! pindah page')</script>";
+	
+			}else{
+				echo "GAGAL";
+	
+			}
+		}
 }
