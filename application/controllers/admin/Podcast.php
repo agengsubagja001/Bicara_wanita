@@ -54,7 +54,7 @@ class Podcast extends CI_Controller {
 			// Akhir cek ekstensi audio
 
 			// GENERAT NAME PHOTO 1\
-			$encrypted = base64_encode($foto_img_sampul);
+			$encrypted = uniqid();
 			$encrypted .= '.';
 			$encrypted .= $ekstensiGambar;
 

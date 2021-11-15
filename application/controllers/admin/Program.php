@@ -48,12 +48,12 @@ class Program extends CI_Controller {
 			 $ekstensiGambar = strtolower(end($ekstensiGambar));
 
 			// // GENERAT NAME PHOTO 1\
-			$encrypted = base64_encode($foto_sampul_program);
+			$encrypted = uniqid();
 			$encrypted .= '.';
 			$encrypted .= $ekstensiGambar;
 
 			// // GENERAT NAME PHOTO 1
-			$encrypteddua = base64_encode($foto_konten_program);
+			$encrypteddua = uniqid();
 			$encrypteddua .= '.';
 			$encrypteddua .= $ekstensiGambar;
 

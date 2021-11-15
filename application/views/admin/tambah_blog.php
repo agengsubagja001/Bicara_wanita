@@ -73,8 +73,8 @@
                                                         <option value="">Pilih</option>
                                                         <option value="ibu dan anak">Ibu dan anak</option>
                                                         <option value="Kesehatan">Kesehatan</option>
-                                                        <option value="rumah tangga">Rumah tangga</option>
-                                                        <option value="suami dan istri">suami dan istri</option>
+                                                        <option value="rumah tangga">Lifestyle</option>
+                                                        <option value="suami dan istri">Fashion</option>
                                                     </select>
                                                     <button class="btn btn-dark mt-2" type="submit" name="btn_submit">Posting</button>
                                                 </div>

@@ -1,23 +1,30 @@
 <!-- head -->
 <?php $this->load->view('partial/head'); ?>
+
+<?php 
+    $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $web = "www.bicarawanita.com";
+    // $posting = $_GET['posting'];
+?>
 <!-- navbar -->
 <?php $this->load->view('partial/navbar'); ?>
 <br>
 <br>
 <body>
 <!-- Awal Section Artikel -->
+
     <section>
         <div class="container" style="max-width: 1340px;">
-        
             <div class="row">
                 <!-- judul  -->
+
                 <div class="col-md-12 text-center mt-5">
                     <h1 style="font-family: Poppins; font-style: normal; font-weight: bold; font-size: 32px; color: #333333;"><?php echo $detail->judul ?></h1>
                 </div>
                 <!-- akhir judul -->
                 <!-- awal konten artikel -->
                 <div class="col-md-12 text-center mt-5">
-                    <img src="<?php echo base_url().'assets/img_Sampul/'. $detail->gambar ?>" style="width: 80%; height: auto" alt="">
+                    <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $detail->gambar ?>" style="object-fit:cover; width: 80%; height: auto" alt="">
                 </div>
                 <div class="col-md-12">
                     <p style="position: relative; top: 100px; white-space: pre-wrap; color: rgba(0,0,0,.8); font-size: .875rem; overflow: hidden; text-overflow: ellipsis; line-height: 1.875rem;"><?php echo $detail->isi ?></p>
@@ -32,10 +39,9 @@
                      <div class="col-md-12 mt-2">
                      <table>
                           <tr>
-                              
-                              <td><a href="https://facebook.com/sharer/sharer.php?u=https://teknologi.visitklaten.com/wordpress/membuat-tombol-whatsapp-di-website/"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded " style="width: 50px; height: 50px; padding: 1; border-radius: 50px" ><i class="fa fa-facebook-official"></i></button></a></td>
-                              <td><a href="https://instagram.com//sharer/sharer.php?u=https://teknologi.visitklaten.com/wordpress/membuat-tombol-whatsapp-di-website/""><button type="button" class="btn btn-social-icon btn-instagram btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px"><i class="fa fa-instagram"></i></button></a></td>
-                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-wa btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px"><i class="fa fa-whatsapp"></i></button></a></td>
+                              <td><a href="https://www.facebook.com/sharer.php?u=<?php echo site_url().'halaman_utama/detail_blog/'.$detail->judul ?>" target="_blank"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded " ><i class="fa fa-facebook-official"></i></button></a></td>
+                              <td><a href="http://www.instagram.com/sharer.php?url=<?php echo site_url().'halaman_utama/detail_blog/'.$detail->id_blog ?>"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button></a></td>
+                              <td><a href="https://wa.me/?text=<?php echo $detail->judul?>%0AKlik%20Untuk%20melihat%20selengkap%20nya%20Kunjungi%20web%20resmi%20kami%20<?php echo site_url().'halaman_utama/detail_blog/'.$detail->id_blog ?>" target="_blank"><button type="button" class="btn btn-social-icon btn-wa btn-rounded"><i class="fa fa-whatsapp"></i></button></a></td>
                           </tr>
                       </table>
                      </div>
@@ -58,14 +64,16 @@
                     <div class="col-md-6 mt-3">
                         <div class="story">
                             <div class= "row">
+        
                             <div class="col-md-2">
-                                <img src="assets/img/ikon.png" class="img-fluid" style="width:70px; height:70px;" alt="">
+                                <img src="<?php echo base_url().'assets/penulis/p_profil/'. $data_penulis->foto_profil ?>" class="img-fluid" style="object-fit:cover; width:70px; height:70px;" alt="">
                             </div>
                             <div class="col-md-10 mt-2">
-                                <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Pamungkas Setia</span>
-                                <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
+                                <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;"><?php echo $data_penulis->nama_lengkap ?></span>
+                                <div class="mb-2"><span><?php echo $data_penulis->deskripsi ?></span></div>
                             </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -74,6 +82,7 @@
             </div>
         </div>
     </section>
+
 <!-- akhir section penulis -->
 <!-- awal section artikel terbaru 1-->
     <section>
@@ -92,7 +101,7 @@
                                 <div class="ukuran">
                                     <div class="row">
                                         <div class="col-md-12 mt-3">
-                                            <img src="<?php echo base_url().'assets/img_Sampul/'. $new->gambar ?>" style="width: 100%; height: auto;" alt="">
+                                            <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $new->gambar ?>" style="object-fit:cover; width: 100%; height: auto;" alt="">
                                         </div>
                                         <div class="col-md-12 mt-2">
                                             <a class="judul" href="<?php echo base_url().'halaman_utama/detail_blog/'.$new->id_blog ?>"style="color:black; text-decoration: none;">
@@ -161,7 +170,7 @@
                             <div class="komen">
                                 <div class= "row">
                                 <div class="col-md-2">
-                                    <img src="assets/img/ikon.png" class="img-fluid" style="width:70px; height:70px;" alt="">
+                                    <img src="assets/img/ikon.png" class="img-fluid" style="object-fit:cover; width:70px; height:70px;" alt="">
                                 </div>
                                 <div class="col-md-10 mt-2">
                                     <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Udin Jamaludin</span>

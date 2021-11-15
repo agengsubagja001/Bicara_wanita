@@ -13,10 +13,8 @@
                 <!-- vidio play -->
                 <div class="col-md-8">
                     <div class="row">
-                     <div class="col-md-12">
-                        <iframe width="100%" height="400"
-                           src="<?php echo $detail->isi_vidio ?>">
-                        </iframe>
+                     <div class="col-md-12" style="width:100%; height:px;">
+                        <?php echo $detail->isi_vidio ?>
                      </div> 
                      <div class="col-md-12 mb-2">
                         <span style="font-family: Poppins; font-style: normal; font-weight: 600; font-size: 30px;"><?php echo $detail->judul ?></span>
@@ -36,7 +34,7 @@
                                 <?php foreach ($terbaru1 as $new) : ?>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <img style="width:100px; height:100px;" src="<?php echo $new->gambar_thubnail ?>" alt="">
+                                        <img style="object-contain:cover; width:100%; height:100px;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $new->gambar_thubnail ?>" alt="">
                                         
                                     </div>
                                     <div class="col-md-4">
