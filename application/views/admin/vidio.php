@@ -57,7 +57,7 @@
                                                     <iframe src="<?php echo $vidio->isi_vidio ?>" title="W3Schools Free Online Web Tutorials"></iframe>  
                                                 </td>
                                                 <td>
-                                                    <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="img-fluid">
+                                                    <img style="object-fit:cover; width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="img-fluid">
                                                 </td>
 												<td style=""><?php echo $vidio->judul ?></td>
 												<td><?php echo $vidio->tanggal ?></td>

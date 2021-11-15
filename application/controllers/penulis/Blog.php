@@ -114,7 +114,7 @@ class Blog extends CI_Controller {
 			$encrypted .= '.';
 			$encrypted .= $ekstensiGambar;
 			// Upload Icon Brand
-			move_uploaded_file($icon_tmp,'assets/img_sampul/'.$encrypted);
+			move_uploaded_file($icon_tmp,'assets/penulis/blog/img_sampul/'.$encrypted);
 
 			$dataa = array(
 				// 'id_blog'         => $id_blog,

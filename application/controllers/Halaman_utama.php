@@ -11,7 +11,7 @@ class Halaman_utama extends CI_Controller {
 		// untuk menampilkan program
 		$data['show_program'] = $this->Model_welcome->Show_program()->result();
 		// untuk menampilkan vidio
-		$data['show_vidio'] = $this->Model_welcome->Show_vidio()->result();
+		$data['show_vidio'] = $this->Model_detail_vidio->Show_vidio()->result();
 		// unutk menampilkan podcast
 		$data['show_podcast'] = $this->Model_welcome->Show_podcast()->result();
 		// untuk menampilkan blog
@@ -24,6 +24,9 @@ class Halaman_utama extends CI_Controller {
 	{
 		$this->load->model('Model_detail_blog');
 		$detail = $this->Model_detail_blog->detail_data($id_blog);
+		// menampilkan penulis berdasarkan join
+		$data_penulis = $this->Model_detail_blog->join_blog($id_blog);
+		$data['data_penulis'] = $data_penulis;
 		$data['detail'] = $detail;
 		$data['terbaru'] = $this->Model_detail_blog->Show_terbaru()->result();
 		$this->load->view('detail_blog',$data);
@@ -50,13 +53,14 @@ class Halaman_utama extends CI_Controller {
 		$this->load->view('artikel_infografik',$data);
 	}
 
+	// menampilkan detail_vidio berdasarkan id_vidio
 	public function isi_vidio($id_vidio)
 	{
-		$this->load->model('Model_detail_infografik');
-		$detail = $this->Model_detail_infografik->detail_data1($id_vidio);
+		$this->load->model('Model_detail_vidio');
+		$detail = $this->Model_detail_vidio->detail_data1($id_vidio);
 		$data['detail'] = $detail;
 		// untuk menampilkan di halaman utama
-		$data['terbaru1'] = $this->Model_detail_infografik->show_info_halaman_utama1()->result();
+		$data['terbaru1'] = $this->Model_detail_vidio->show_vidio_terbaru()->result();
 		$this->load->view('Isi_vidio',$data);
 	}
 

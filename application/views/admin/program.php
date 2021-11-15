@@ -53,7 +53,7 @@
                                             <tr>
                                                 <td><?php echo $no++ ?></td>
                                                 <td style="width: 150px">
-                                                    <img src="<?php echo base_url().'assets/admin/program/img_sampul/'.$program->gambar_sampul ?>" style="widht:100px; height:100px" class="img-fluid" alt="object-fit:contain;">
+                                                    <img src="<?php echo base_url().'assets/admin/program/img_sampul/'.$program->gambar_sampul ?>" style="object-fit:cover; width:100%; height:auto;" class="img-fluid" alt="object-fit:contain;">
                                                 </td>
 												<td style=""><?php echo $program->judul ?></td>
 												<td><?php echo $program->tanggal ?></td>

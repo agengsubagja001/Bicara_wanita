@@ -19,16 +19,16 @@
                             <br>
                             <!-- awal img podcast -->
                             <div class="col-md-6 p-5">
-                              <img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;">
+                              <img class="img-responsive " src="<?php echo base_url().'assets/img_podcast/'. $detail->gambar ?>" alt="" style="max-width: 100%; max-height: auto;">
                             </div>
                             <!-- akhir img podcast -->
                             <div class="col-md-6 p-5 mt-5">
                                 <!-- judul podcast -->
-                                <center><h5 class="mb-5">Koplo Kuy</h5></center>
+                                <center><h5 class="mb-5"><?php echo $detail->judul ?></h5></center>
                                 <!-- akhir judul podcast -->
                                 <!-- play podcast -->
                                 <audio controls>
-                                    <source src="assets/img/yu.mpeg" type="audio/mpeg">
+                                    <source src="<?php echo base_url().'assets/audio/'. $detail->isi ?>" type="audio/mpeg">
                                 </audio>
                                 <!-- akhir play podcast -->
                             </div>
@@ -40,136 +40,26 @@
                         <div class="col-md-12 mt-2" style="position: relative; top: -8px;">
                             <span style="font-family: Poppins;font-style: normal; font-weight: 600; font-size: 20px;">Podcast Terbaru</span>
                         </div>
+                        <?php foreach ($show_terbaru as $terbaru): ?>
                         <!-- awal konten rekomndasi -->
-                        <a href="#" style="text-decoration: none;">
+                        <a href="<?php echo base_url().'detail_podcast/isi_podcast/'.$terbaru->id_podcast ?>" style="text-decoration: none;">
                             <div class="col-md-12 mt-3">
                                 <div class="row">
                                     <!-- img podcast -->
                                     <div class="col-md-8">
-                                      <img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: 100%;">
+                                      <img class="img-responsive " src="<?php echo base_url().'assets/img_podcast/'. $terbaru->gambar ?>" alt="" style="max-width: 100%; max-height: 100%;">
                                     </div>
                                     <!-- akhir img -->
                                     <!-- judul podcast -->
                                     <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;">Kereta cepat</span>
+                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;"><?php echo $terbaru->judul ?></span>
                                     </div>
                                     <!-- akhir judul -->
                                 </div>
                             </div>
                         </a>
                         <!-- akhir konten rekomendasi -->
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12 mt-3">
-                                <div class="row">
-                                    <!-- img podcast -->
-                                    <div class="col-md-8">
-                                      <img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: 100%;">
-                                    </div>
-                                    <!-- akhir img -->
-                                    <!-- judul podcast -->
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;">Kereta cepat</span>
-                                    </div>
-                                    <!-- akhir judul -->
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12 mt-3">
-                                <div class="row">
-                                    <!-- img podcast -->
-                                    <div class="col-md-8">
-                                      <img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: 100%;">
-                                    </div>
-                                    <!-- akhir img -->
-                                    <!-- judul podcast -->
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;">Kereta cepat</span>
-                                    </div>
-                                    <!-- akhir judul -->
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12 mt-3">
-                                <div class="row">
-                                    <!-- img podcast -->
-                                    <div class="col-md-8">
-                                      <img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: 100%;">
-                                    </div>
-                                    <!-- akhir img -->
-                                    <!-- judul podcast -->
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;">Kereta cepat</span>
-                                    </div>
-                                    <!-- akhir judul -->
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12 mt-3">
-                                <div class="row">
-                                    <!-- img podcast -->
-                                    <div class="col-md-8">
-                                      <img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: 100%;">
-                                    </div>
-                                    <!-- akhir img -->
-                                    <!-- judul podcast -->
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;">Kereta cepat</span>
-                                    </div>
-                                    <!-- akhir judul -->
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12 mt-3">
-                                <div class="row">
-                                    <!-- img podcast -->
-                                    <div class="col-md-8">
-                                      <img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: 100%;">
-                                    </div>
-                                    <!-- akhir img -->
-                                    <!-- judul podcast -->
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;">Kereta cepat</span>
-                                    </div>
-                                    <!-- akhir judul -->
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12 mt-3">
-                                <div class="row">
-                                    <!-- img podcast -->
-                                    <div class="col-md-8">
-                                      <img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: 100%;">
-                                    </div>
-                                    <!-- akhir img -->
-                                    <!-- judul podcast -->
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;">Kereta cepat</span>
-                                    </div>
-                                    <!-- akhir judul -->
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12 mt-3">
-                                <div class="row">
-                                    <!-- img podcast -->
-                                    <div class="col-md-8">
-                                      <img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: 100%;">
-                                    </div>
-                                    <!-- akhir img -->
-                                    <!-- judul podcast -->
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;">Kereta cepat</span>
-                                    </div>
-                                    <!-- akhir judul -->
-                                </div>
-                            </div>
-                        </a>
+                        <?php endforeach ?>
                     </div>
                 </div>
             </div>

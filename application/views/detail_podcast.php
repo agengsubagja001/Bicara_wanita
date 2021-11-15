@@ -12,58 +12,15 @@
         <div class="container" style="max-width: 1340px;">
             <div class="mb-3">
                 <span style="font-size:30px;font-weight:bold">Daftar Podcast</span>
-            </div> 
+            </div>
             <div class="row">
+                <?php foreach($show_podcast as $podcast): ?> 
                 <!-- awal konten daftar podcas -->
                 <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
+                    <a href="<?php echo base_url().'detail_podcast/isi_podcast/'.$podcast->id_podcast ?>"><img class="img-responsive " src="<?php echo base_url().'assets/img_podcast/'. $podcast->gambar ?>" alt="" style="max-width: 100%; max-height: auto;"></a>
                 </div>
                 <!-- akhir konten daftar podcast -->
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
-                <div class="col-6 col-md-3 mt-5">
-                    <a href="<?php echo base_url('isi_podcast') ?>"><img class="img-responsive " src="assets/img/kereta.png" alt="" style="max-width: 100%; max-height: auto;"></a>
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
     </section>
@@ -83,102 +40,32 @@
 <section>
     <div class="container" style="max-width: 1340px;">
      <div class="row">
+        <?php foreach ($show_terbaru as $terbaru): ?>
         <div class="col-6 col-md-6 mt-3">
             <!-- Conten playlist -->
             <div class="row">
                 <div class="col-md-6 mt-3">
-                    <img src="assets/img/isi.png" style="width: 100%; height: auto;" alt="">
+                    <img src="<?php echo base_url().'assets/img_podcast/'. $terbaru->gambar ?>" style="width: 100%; height: auto;" alt="">
                 </div>
                 <div class="col-md-6 mt-3">
-                    <a href="#" style="color:black; text-decoration: none;">
+                    <a href="<?php echo base_url().'detail_podcast/isi_podcast/'.$podcast->id_podcast ?>" style="color:black; text-decoration: none;">
                         <div class="">
-                            <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Belajar mendidik anak sejak kecil</span>
+                            <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;"><?php echo $terbaru->judul ?></span>
                         </div>
                     </a>
                     <div class="mt-5">
-                        <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">09/11/2021</span>
+                        <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;"><?php echo $terbaru->tanggal ?></span>
                     </div>
                     <div class="mt-5">
                         <audio controls>
-                            <source src="assets/img/yu.mpeg" type="audio/mpeg">
+                            <source src="<?php echo base_url().'assets/audio/'. $terbaru->isi ?>" type="audio/mpeg">
                         </audio>
                     </div>
-                </div> 
+                </div>  
             </div>
             <!-- Akhir Content plyalist -->
         </div>
-        <div class="col-6 col-md-6 mt-3">
-            <!-- Conten playlist -->
-            <div class="row">
-                <div class="col-md-6 mt-3">
-                    <img src="assets/img/isi.png" style="width: 100%; height: auto;" alt="">
-                </div>
-                <div class="col-md-6 mt-3">
-                    <a href="#" style="color:black; text-decoration: none;">
-                        <div class="">
-                            <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Belajar mendidik anak sejak kecil</span>
-                        </div>
-                    </a>
-                    <div class="mt-5">
-                        <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">09/11/2021</span>
-                    </div>
-                    <div class="mt-5">
-                        <audio controls>
-                            <source src="assets/img/yu.mpeg" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
-            </div>
-            <!-- Akhir Content plyalist -->
-        </div>
-        <div class="col-6 col-md-6 mt-3">
-            <!-- Conten playlist -->
-            <div class="row">
-                <div class="col-md-6 mt-3">
-                    <img src="assets/img/isi.png" style="width: 100%; height: auto;" alt="">
-                </div>
-                <div class="col-md-6 mt-3">
-                    <a href="#" style="color:black; text-decoration: none;">
-                        <div class="">
-                            <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Belajar mendidik anak sejak kecil</span>
-                        </div>
-                    </a>
-                    <div class="mt-5">
-                        <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">09/11/2021</span>
-                    </div>
-                    <div class="mt-5">
-                        <audio controls>
-                            <source src="assets/img/yu.mpeg" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
-            </div>
-            <!-- Akhir Content plyalist -->
-        </div>
-        <div class="col-6 col-md-6 mt-3">
-            <!-- Conten playlist -->
-            <div class="row">
-                <div class="col-md-6 mt-3">
-                    <img src="assets/img/isi.png" style="width: 100%; height: auto;" alt="">
-                </div>
-                <div class="col-md-6 mt-3">
-                    <a href="#" style="color:black; text-decoration: none;">
-                        <div class="">
-                            <span style="text-transform: capitalize; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 28px; line-height: 33px;">Belajar mendidik anak sejak kecil</span>
-                        </div>
-                    </a>
-                    <div class="mt-5">
-                        <span style="font-family: Poppins; font-style: normal; font-weight: 300; font-size: 14px; line-height: 21px;">09/11/2021</span>
-                    </div>
-                    <div class="mt-5">
-                        <audio controls>
-                            <source src="assets/img/yu.mpeg" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
-            </div>
-            <!-- Akhir Content plyalist -->
-        </div>
+        <?php endforeach ?>
      </div>
     </div>
 </section>

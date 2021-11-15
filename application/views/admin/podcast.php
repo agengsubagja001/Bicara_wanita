@@ -54,7 +54,7 @@
                                             <tr>
                                                 <td><?php echo $no++ ?></td>
                                                 <td style="width: 150px">
-                                                    <img src="<?php echo base_url().'assets/img_podcast/'. $podcast->gambar ?>" style="width:100px; height:100px" class="img-fluid" alt="object-fit:contain;">
+                                                    <img src="<?php echo base_url().'assets/img_podcast/'. $podcast->gambar ?>" style="object-fit:cover; width:100%; height:auto;" class="img-fluid" alt="">
                                                 </td>
 												<td style=""><?php echo $podcast->judul ?></td>
                                                 <td>
