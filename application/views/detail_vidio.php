@@ -10,7 +10,7 @@
         <div class="container" style="max-width: 1540px;">
             <div class="row">
                 <div class="col-md-12">
-                  <img src="assets/img/infografik.png" class="img-responsive " style="width: 100%; height: auto;" alt="">
+                  <div class="paralax"></div>
                 </div>
             </div>
         </div>

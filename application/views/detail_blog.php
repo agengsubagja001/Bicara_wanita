@@ -62,7 +62,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-6 mt-3">
-                        <div class="story">
+                        <div class="penulis">
                             <div class= "row">
                             <div class="col-md-2">
                                 <img src="<?php echo base_url().'assets/penulis/p_profil/'. $data_penulis->foto_profil ?>" class="img-fluid" style="object-fit:cover; width:70px; height:70px;" alt="">
