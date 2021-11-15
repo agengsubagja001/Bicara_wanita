@@ -229,83 +229,37 @@
             </div>
             <div class="container" style="max-width: 1360px;">
                 <div id="demo" class="carousel slide position-relative" data-ride="carousel">
-                        <!-- Indicators -->
-                                    <ul class="carousel-indicators">
-                                        <li data-target="#demo" data-slide-to="0" class=""></li>
-                                        <li data-target="#demo" data-slide-to="1" class="active"></li>
-                                        <li data-target="#demo" data-slide-to="2" class=""></li>
-                                    </ul>
-                        <!-- The slideshow -->
+                       
+                        <!-- <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class=""></li>
+                            <li data-target="#demo" data-slide-to="1" class="active"></li>
+                            <li data-target="#demo" data-slide-to="2" class=""></li>
+                        </ul> 
+                         -->
                         <div class="carousel-inner">
-                            <div class="carousel-item active carousel-item-left">
-                                <div class="d-flex">
-                                    <?php foreach ($show_vidio as $vidio): ?>
-                                        <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column" style="width:100%; height:300;">
-                                            <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$vidio->id_vidio ?>">
-                                                <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
-                                            </a>
-                                        </div>
-                                    <?php endforeach ?>
-                                </div>
-                            </div>	
-                                <div class="carousel-item carousel-item-next carousel-item-left">
+                                <!-- <div class="carousel-item active">
                                     <div class="d-flex">
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                           <a href="<?php echo base_url('isi_vidio') ?>">
-                                             <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
-                                             <div class="middle">
-                                                 <div class="text">Play</div>
-                                             </div>
-                                           </a>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                            <a href="<?php echo base_url('isi_vidio') ?>">
-                                               <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
-                                               <div class="middle">
-                                                    <div class="text">Play</div>
-                                               </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                            <a href="<?php echo base_url('isi_vidio') ?>">
-                                             <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
-                                             <div class="middle">
-                                                  <div class="text">Play</div>
-                                             </div>
-                                            </a>
-                                        </div>
+                                                <a href="<?php echo base_url('isi_vidio') ?>">
+                                                    <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
+                                                    <div class="middle">
+                                                        <div class="text">Play</div>
+                                                    </div>
+                                                </a> 
+                                        </div> 
+                                    </div>
+                                </div>	 -->
+                                <div class="carousel-item active">
+                                    <div class="d-flex">
+                                       <?php foreach ($show_vidio as $vidio): ?>
+                                            <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column" style="width:100%; height:300;">
+                                                <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$vidio->id_vidio ?>">
+                                                    <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
+                                                </a>
+                                            </div>
+                                       <?php endforeach ?>
                                     </div>
                                 </div>
-                                    <div class="carousel-item ">
-                                        <div class="d-flex">
-                                            <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                                <a href="<?php echo base_url('isi_vidio') ?>">
-                                                    <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
-                                                    <div class="middle">
-                                                       <div class="text">Play</div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                                <a href="<?php echo base_url('isi_vidio') ?>">
-                                                    <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
-                                                    <div class="middle">
-                                                       <div class="text">Play</div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                                <a href="<?php echo base_url('isi_vidio') ?>">
-                                                    <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
-                                                    <div class="middle">
-                                                      <div class="text">Play</div>
-                                                    </div>
-                                                </a>
-                                            </div> 
-                                                
-                                        </div>
-
-                                    </div>
                         </div>
                 </div>
                 <div class="col-md-12 text-right mt-5">
@@ -326,7 +280,7 @@
                 <div class="container" style="max-width: 1400px;">
                         <div class="row">
                             <div class="col-md-12">
-                                <!-- Carousel -->
+                            
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner" style=" padding: 2em;">
                                                 <div class="carousel-item active">
@@ -340,27 +294,27 @@
                                                         <?php endforeach ?>
                                                     </div>
                                                 </div>
-                                                    <div class="carousel-item">
-                                                        <div class="cards-wrapper" style=" display: flex; justify-content: center;">
-                                                            <div class="card1">
-                                                                <a href="#">
-                                                                <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                                </a>
-                                                            
-                                                            </div>
-                                                            <div class="card1 d-none d-md-block">
-                                                                <a href="#">
-                                                                <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                                </a>
-                                                            
-                                                            </div>
-                                                            <div class="card1 d-none d-md-block">
-                                                                <a href="#">
-                                                                <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                                </a>
-                                                            </div>
+                                                <!-- <div class="carousel-item">
+                                                    <div class="cards-wrapper" style=" display: flex; justify-content: center;">
+                                                        <div class="card1">
+                                                            <a href="#">
+                                                            <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
+                                                            </a>
+                                                        
+                                                        </div>
+                                                        <div class="card1 d-none d-md-block">
+                                                            <a href="#">
+                                                            <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
+                                                            </a>
+                                                        
+                                                        </div>
+                                                        <div class="card1 d-none d-md-block">
+                                                            <a href="#">
+                                                            <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
+                                                            </a>
                                                         </div>
                                                     </div>
+                                                </div> -->
                                                 
                                             <a class="carousel-control-prev" style="background-color: #e1e1e1; width: 5vh; height: 5vh; border-radius: 50%; top: 50%; transform: translateY(-50%);" href="#carouselExampleControls" role="button" data-slide="prev">
                                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
