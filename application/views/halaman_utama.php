@@ -74,7 +74,7 @@
                                 <div class="bungkus" style=" max-width: 100%;">
                                     <div class="row">
                                         <div class="col-md-6 mt-3">
-                                            <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $show->gambar ?>" style="width: 100%; height: auto;" alt="">
+                                            <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $show->gambar ?>" style="object-fit:cover; width: 100%; height: auto;" alt="">
                                         </div>
                                         <div class="col-md-6 mt-3">
                                             <table>
@@ -241,12 +241,12 @@
                                 <div class="d-flex">
                                     <?php foreach ($show_vidio as $vidio): ?>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column" style="width:100%; height:300;">
-                                            <a href="">
-                                                <img style="width:200px; height:auto;" class="gambar"  src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
-                                                <div class="middle">
-                                                    <div class="text">Play</div>
-                                                </div>
-                                            </a>
+                                            <div class="middle">
+                                                  <div class="text">Play</div>
+                                                    <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$vidio->id_vidio ?>">
+                                                        <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
+                                                    </a>
+                                            </div>    
                                         </div>
                                     <?php endforeach ?>
                                 </div>

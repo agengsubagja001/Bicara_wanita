@@ -9,11 +9,6 @@ class Model_detail_infografik extends CI_Model
         return $query;
 	}
 
-	// vidio
-	public function detail_data1($id_vidio){		
-		$query = $this->db->get_where('vidio', array('id_vidio' => $id_vidio))->row();
-        return $query;
-	}
 
 	// tampil data infografik
 	public function show_infografik(){
@@ -27,10 +22,6 @@ class Model_detail_infografik extends CI_Model
 		return $this->db->limit(6)->get('infografik');
 	}
 
-	// vidio
-	public function show_info_halaman_utama1(){
-		$this->db->order_by('tanggal', 'desc');
-		return $this->db->limit(6)->get('vidio');
-	}
+
 
 }

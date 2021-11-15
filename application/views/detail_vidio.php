@@ -27,7 +27,7 @@
                     <!-- konten infografik -->
                     <div class="col-6 col-md-4 mt-5">
                         <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$vidio->id_vidio ?>">
-                            <img src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
+                            <img class="img-responsive " src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" style="object-fit:cover; width: 100%; height: auto;">
                         </a>
                     </div>
                     <!-- akhir konten infografik -->

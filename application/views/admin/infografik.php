@@ -53,7 +53,7 @@
                                             <tr>
                                                 <td><?php echo $no++ ?></td>
                                                 <td style="width: 150px">
-                                                    <img src="<?php echo base_url().'assets/admin/infografik/img_sampul/'.$infografik->gambar_sampul ?>" style="widht:100px; height:100px" class="img-fluid" alt="object-fit:contain;">
+                                                    <img src="<?php echo base_url().'assets/admin/infografik/img_sampul/'.$infografik->gambar_sampul ?>" style="object-fit:cover; width:100%; height:auto;" class="img-fluid" alt="">
                                                 </td>
 												<td style=""><?php echo $infografik->judul ?></td>
 												<td><?php echo $infografik->tanggal ?></td>

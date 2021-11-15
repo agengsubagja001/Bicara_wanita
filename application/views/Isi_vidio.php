@@ -13,7 +13,7 @@
                 <!-- vidio play -->
                 <div class="col-md-8">
                     <div class="row">
-                     <div class="col-md-12" style="width:100%; height:px;">
+                     <div class="col-md-12" style="width:100%; height:auto;">
                         <?php echo $detail->isi_vidio ?>
                      </div> 
                      <div class="col-md-12 mb-2">
@@ -29,92 +29,23 @@
                             <span style="font-family: Poppins;font-style: normal; font-weight: 600; font-size: 20px;">Vidio Terbaru</span>
                         </div>
                         <!-- awal konten rekomndasi -->
-                        <a href="#" style="text-decoration: none;">
+                        
                             <div class="col-md-12">
                                 <?php foreach ($terbaru1 as $new) : ?>
+                                <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$new->id_vidio ?>" style="text-decoration: none;">
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <img style="object-contain:cover; width:100%; height:100px;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $new->gambar_thubnail ?>" alt="">
-                                        
+                                        <img style="margin-top:4px; object-fit:cover; width:100%; height:100px;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $new->gambar_thubnail ?>" alt="">  
                                     </div>
                                     <div class="col-md-4">
                                         <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000;"><?php echo $new->judul ?></span>
                                     </div>
                                 </div>
+                                </a>
                                 <?php endforeach ?>
                             </div>
-                        </a>
+                        
                         <!-- akhir konten rekomendasi -->
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <iframe width="100%"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                        </iframe>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000;">Tutorial Masker Anti Komedo</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <iframe width="100%"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                        </iframe>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000;">Tutorial Masker Anti Komedo</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <iframe width="100%"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                        </iframe>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000;">Tutorial Masker Anti Komedo</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <iframe width="100%"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                        </iframe>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000;">Tutorial Masker Anti Komedo</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" style="text-decoration: none;">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <iframe width="100%"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                        </iframe>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000;">Tutorial Masker Anti Komedo</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                 </div>
                 <!-- akhir vidio rekomendasi -->
