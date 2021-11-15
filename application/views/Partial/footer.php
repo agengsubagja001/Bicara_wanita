@@ -22,15 +22,15 @@
 						</h5>
 						<table>
 							<tr>
-								<td>Alamat</td>
+								<td>Alamat :</td>
 								<td>jl Kihiur no 10</td>
 							</tr>
 							<tr>
-								<td>Telepon</td>
+								<td>Telepon :</td>
 								<td>+6218488430</td>
 							</tr>
 							<tr>
-								<td>Email</td>
+								<td>Email :</td>
 								<td>bicarawanita.id</td>
 							</tr>
 							

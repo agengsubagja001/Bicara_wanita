@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="col-md-10 mt-2 text-left">
                                         <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
-                                        <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
+                                        <div class="mb-2"><span style="overflow: hidden; text-overflow: ellipsis;  display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 text-left" style="margin-top:3px;">
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="col-md-10 mt-2 text-left">
                                         <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
-                                        <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
+                                        <div class="mb-2"><span style="overflow: hidden; text-overflow: ellipsis;  display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 text-left" style="margin-top:3px;">
@@ -84,7 +84,7 @@
                                     </div>
                                     <div class="col-md-10 mt-2 text-left">
                                         <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
-                                        <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
+                                        <div class="mb-2"><span style="overflow: hidden; text-overflow: ellipsis;  display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 text-left" style="margin-top:3px;">
@@ -103,7 +103,7 @@
                                     </div>
                                     <div class="col-md-10 mt-2 text-left">
                                         <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
-                                        <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
+                                        <div class="mb-2"><span style="overflow: hidden; text-overflow: ellipsis;  display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 text-left" style="margin-top:3px;">
@@ -122,7 +122,25 @@
                                     </div>
                                     <div class="col-md-10 mt-2 text-left">
                                         <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
-                                        <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
+                                        <div class="mb-2"><span style="overflow: hidden; text-overflow: ellipsis;  display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 text-left" style="margin-top:3px;">
+                                    <span>Nama Penulis</span>
+                                </div>
+                                <div class="col-md-12">
+                                 <hr>
+                                </div>
+                            </div>
+                        </a><a href="#" style="text-decoration: none; color:black;">
+                            <div class="col-md-12 text-center p-5">
+                                <div class= "row no-gutters">
+                                    <div class="col-md-2">
+                                        <img src="assets/img/ikon.png" class="img-fluid" style="width:70px; height:70px;" alt="">
+                                    </div>
+                                    <div class="col-md-10 mt-2 text-left">
+                                        <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
+                                        <div class="mb-2"><span style="overflow: hidden; text-overflow: ellipsis;  display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 text-left" style="margin-top:3px;">

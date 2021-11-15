@@ -242,7 +242,10 @@
                                     <?php foreach ($show_vidio as $vidio): ?>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column" style="width:100%; height:300;">
                                             <a href="">
-                                                <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
+                                                <img style="width:200px; height:auto;" class="gambar"  src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
+                                                <div class="middle">
+                                                    <div class="text">Play</div>
+                                                </div>
                                             </a>
                                         </div>
                                     <?php endforeach ?>
@@ -252,17 +255,26 @@
                                     <div class="d-flex">
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
                                            <a href="<?php echo base_url('isi_vidio') ?>">
-                                             <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                             <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
+                                             <div class="middle">
+                                                 <div class="text">Play</div>
+                                             </div>
                                            </a>
                                         </div>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
                                             <a href="<?php echo base_url('isi_vidio') ?>">
-                                               <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                               <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
+                                               <div class="middle">
+                                                    <div class="text">Play</div>
+                                               </div>
                                             </a>
                                         </div>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
                                             <a href="<?php echo base_url('isi_vidio') ?>">
-                                             <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                             <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
+                                             <div class="middle">
+                                                  <div class="text">Play</div>
+                                             </div>
                                             </a>
                                         </div>
                                     </div>
@@ -272,17 +284,26 @@
                                         <div class="d-flex">
                                             <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
                                                 <a href="<?php echo base_url('isi_vidio') ?>">
-                                                    <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                                    <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
+                                                    <div class="middle">
+                                                       <div class="text">Play</div>
+                                                    </div>
                                                 </a>
                                             </div>
                                             <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
                                                 <a href="<?php echo base_url('isi_vidio') ?>">
-                                                    <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                                    <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
+                                                    <div class="middle">
+                                                       <div class="text">Play</div>
+                                                    </div>
                                                 </a>
                                             </div>
                                             <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
                                                 <a href="<?php echo base_url('isi_vidio') ?>">
-                                                    <img src="assets/img/foto.png" style="width:100%; height:auto;" alt="">
+                                                    <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
+                                                    <div class="middle">
+                                                      <div class="text">Play</div>
+                                                    </div>
                                                 </a>
                                             </div> 
                                                 
@@ -425,5 +446,43 @@
             }
             
            /* akhir css vidio */
+           /* css thumnil */
+            .gambar {
+                opacity: 1;
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .container:hover .image {
+                opacity: 0.3;
+            }
+
+            .container:hover .middle {
+                opacity: 1;
+            }
+
+            .text {
+                background-color: #F50F0F;
+                color: white;
+                border-radius:40px;
+                font-size: 16px;
+                padding: 16px 32px;
+                
+            }
+           /* css thumnil */
 
     </style>

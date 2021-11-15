@@ -51,7 +51,7 @@
                         </nav>
                     </div>
                     
-                    <a class="nav-link mt-1" href="charts.html">
+                    <a class="nav-link mt-1" href="<?= base_url() ?>penulis/profil"">
                         <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                         Profil
                     </a>

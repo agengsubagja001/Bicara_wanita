@@ -31,9 +31,9 @@
                      <div class="col-md-12 mt-2">
                      <table>
                           <tr>
-                          <td><a href="#"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-facebook-official"></i></button></a></td>
-                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button></a></td>
-                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-wa btn-rounded"><i class="fa fa-whatsapp"></i></button></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px"><i class="fa fa-facebook-official"></i></button></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px"><i class="fa fa-instagram"></i></button></a></td>
+                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-wa btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px"><i class="fa fa-whatsapp"></i></button></a></td>
                           </tr>
                       </table>
                      </div>
@@ -49,15 +49,4 @@
     <div class="fotter" style="position: relative; top: 180px;">
         <?php $this->load->view('partial/footer') ?> 
     </div>   
-</body>
-<!-- css button -->
-<style>
-    .btn.btn-social-icon {
-     width: 50px;
-     height: 50px;
-     padding: 1;
- }
-    .btn.btn-rounded {
-     border-radius: 50px
- }
-</style>    
+</body>  
