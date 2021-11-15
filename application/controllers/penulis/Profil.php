@@ -20,6 +20,14 @@ class Profil extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('penulis/profil');
+		$data['show_profil'] = $this->Model_profil->Show_profil()->result();
+		$this->load->view('penulis/profil',$data);
+	}
+
+	// edit data
+	public function edit($id_akun){
+		$del = array('id_akun' => $id_akun);
+		$data['user'] = $this->Model_blog->edit_data($del,'akun')->result();
+		$this->load->view('penulis/edit_profil',$data);
 	}
 }

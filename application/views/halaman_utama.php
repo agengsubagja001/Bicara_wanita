@@ -151,7 +151,7 @@
                         <?php foreach($show_podcast as $podcast): ?>
                         <!-- awal content podcast -->
                         <div class="col-md-3 mt-3">
-                            <a href="#"><img src="<?php echo base_url().'assets/img_podcast/'. $podcast->gambar ?>" class="img-responsive"  style="width: 100%; height: auto;" alt=""></a>
+                            <a href="<?php echo base_url().'detail_podcast/isi_podcast/'.$podcast->id_podcast ?>"><img src="<?php echo base_url().'assets/img_podcast/'. $podcast->gambar ?>" class="img-responsive"  style="width: 100%; height: auto;" alt=""></a>
                         </div>
                         <!-- akhir content podcast -->
                         <?php endforeach ?>
@@ -241,12 +241,9 @@
                                 <div class="d-flex">
                                     <?php foreach ($show_vidio as $vidio): ?>
                                         <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column" style="width:100%; height:300;">
-                                            <div class="middle">
-                                                  <div class="text">Play</div>
-                                                    <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$vidio->id_vidio ?>">
-                                                        <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
-                                                    </a>
-                                            </div>    
+                                            <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$vidio->id_vidio ?>">
+                                                <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
+                                            </a>
                                         </div>
                                     <?php endforeach ?>
                                 </div>
@@ -278,7 +275,6 @@
                                             </a>
                                         </div>
                                     </div>
-
                                 </div>
                                     <div class="carousel-item ">
                                         <div class="d-flex">

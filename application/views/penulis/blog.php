@@ -54,7 +54,7 @@
                                             <tr>
                                                 <td><?php echo $no++ ?></td>
                                                 <td style="width: 150px">
-                                                    <img src="<?php echo base_url().'assets/penulis/blog/img_Sampul/'. $blog->gambar ?>" style="width:100px; height:100px; object-fit: cover;" class="img-fluid">
+                                                    <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $blog->gambar ?>" style="width:100px; height:100px; object-fit: cover;" class="img-fluid">
                                                 </td>
 												<td style=""><?php echo $blog->judul ?></td>
 												<td><?php echo $blog->date ?></td>

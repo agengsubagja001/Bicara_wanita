@@ -17,7 +17,7 @@
                         <?php echo $detail->isi_vidio ?>
                      </div> 
                      <div class="col-md-12 mb-2">
-                        <span style="font-family: Poppins; font-style: normal; font-weight: 600; font-size: 30px;"><?php echo $detail->judul ?></span>
+                        <span style="font-family: Poppins; font-style: normal; font-weight: 600; font-size: 30px; text-transform: capitalize;"><?php echo $detail->judul ?></span>
                      </div>  
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                                         <img style="margin-top:4px; object-fit:cover; width:100%; height:100px;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $new->gambar_thubnail ?>" alt="">  
                                     </div>
                                     <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000;"><?php echo $new->judul ?></span>
+                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000; text-transform: capitalize;"><?php echo $new->judul ?></span>
                                     </div>
                                 </div>
                                 </a>

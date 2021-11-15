@@ -12,50 +12,41 @@
                 <main>
                     <div class="container-fluid px-4">
                         <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
-                            <nav class="navbar navbar-light bg-light justify-content-between" style="">
-                                <a class="navbar-brand">
-                                    <!-- awal konten profil penulis -->
-                                    <table>
-                                        <tr>
-                                            <td style="width: 150px"><img src="<?php echo base_url().'assets/img/ikon.png' ?>" style="width:100px; height:100px; object-fit: cover;" class="img-fluid"></td>
-                                            <td><span style="color: rgb(0, 0, 0); font-family: Heebo, sans-serif; font-size: 18px;">Ageng Subagja</span></td>
-                                        </tr>
-                                    </table>
-                                    <!-- akhir konten penulis -->
-                                </a>
-                                <a href="<?php echo base_url('penulis/edit_profil') ?>" class="" >
-                                    <button class="btn btn-dark ">Edit Profil</button>
-                                </a>
-                            </nav>
-                            <br>
-                            <center><h1>Konten Kamu</h1></center>
-                            <div class="card-body">
-                                <table class="table table-bordered" id="datatablesSimple" width="100%">
-                                        <thead>
+                            <?php foreach($show_profil as $profil): ?>
+                                <div class="row container">
+                                    <div class="col-md-12">
+                                        <table>
                                             <tr>
-                                                <th scope="col">NO</th>
-												<th scope="col">JUDUL BLOG</th>
-												<th scope="col">TANGGAL LIRIS</th>
+                                                <td><img src="<?php echo base_url().'assets/penulis/p_profil/'. $profil->foto_profil ?>" style="width:100px; height:100px; object-fit: cover;" class="img-fluid"></td>
+                                                <td><span style="margin: 20px;"><?php echo $profil->nama_lengkap ?></span></td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                           <!-- Content pertama-->
-                                            <tr>
-                                                <!-- awal nomer -->
-                                                <td>1</td>
-                                                <!-- akhir nomer -->
-                                                <!-- judul blog -->
-												<td style=""><p>Ketika Kaesang Ajak Nadya Arifta Makan Malam Bersama Raffi Ahmad-Nagita Slavina</p></td>
-                                                <!-- akhir judul blog -->
-                                                <!-- awal tanggal -->
-												<td><p>17/November/2021</p></td>
-                                                <!-- akhir tanggal  -->
-                                            </tr>
-                                            <!-- Akhir kontent pertama -->
-                                        </tbody>
-                                </table>
-                            </div>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-12 mt-5">
+                                        <span>Nama Lengkap</span>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <span style="color:#888;"><?php echo $profil->nama_lengkap ?></span>
+                                    </div>
+                                    <div class="col-md-12 mt-5">
+                                        <span>Biografi</span>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <span style="color:#888;"><?php echo $profil->deskripsi ?></span>
+                                    </div>
+                                    <div class="col-md-12 mt-5">
+                                        <span>No telepon</span>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <span style="color:#888;"><?php echo $profil->no_telepon ?></span>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
+                                        <a href="<?php echo base_url().'profil/profil/edit/'.$profil->id_akun ?>"><button style="width:90px;" class="btn btn-dark">Edit</button></a>
+                                    </div>
+                                </div>  
+                            <?php endforeach ?>
                         </div>
+                      
                     </div>
                 </main>
             </div>

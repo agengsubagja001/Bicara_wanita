@@ -24,7 +24,7 @@
                             <!-- akhir img podcast -->
                             <div class="col-md-6 p-5 mt-5">
                                 <!-- judul podcast -->
-                                <center><h5 class="mb-5"><?php echo $detail->judul ?></h5></center>
+                                <center><h5 class="mb-5" style="text-transform: capitalize;"><?php echo $detail->judul ?></h5></center>
                                 <!-- akhir judul podcast -->
                                 <!-- play podcast -->
                                 <audio controls>
@@ -52,7 +52,7 @@
                                     <!-- akhir img -->
                                     <!-- judul podcast -->
                                     <div class="col-md-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000;"><?php echo $terbaru->judul ?></span>
+                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 18px; color: #000000; text-transform: capitalize;"><?php echo $terbaru->judul ?></span>
                                     </div>
                                     <!-- akhir judul -->
                                 </div>
