@@ -39,13 +39,6 @@
                                         </div>
                                         <br>
                                         <!-- akhir biography -->
-                                        <!-- awal Masukan media sosial -->
-                                        <div class="form-group">
-                                            <label>Media Sosial</label>
-                                            <input type="text" name="nama_brg" class="form-control" placeholder="Contoh faishol_permana">
-                                        </div>
-                                        <br>
-                                        <!-- akhir Masukan media sosial -->
                                         <!-- button simpan -->
                                         <div class="col-md-12 text-center">
                                            <button type="submit" class="btn btn-dark">Simpan</button>

@@ -39,9 +39,9 @@
                      <div class="col-md-12 mt-2">
                      <table>
                           <tr>
-                              <td><a href="https://www.facebook.com/sharer.php?u=<?php echo site_url().'halaman_utama/detail_blog/'.$detail->judul ?>" target="_blank"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded " ><i class="fa fa-facebook-official"></i></button></a></td>
-                              <td><a href="http://www.instagram.com/sharer.php?url=<?php echo site_url().'halaman_utama/detail_blog/'.$detail->id_blog ?>"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button></a></td>
-                              <td><a href="https://wa.me/?text=<?php echo $detail->judul?>%0AKlik%20Untuk%20melihat%20selengkap%20nya%20Kunjungi%20web%20resmi%20kami%20<?php echo site_url().'halaman_utama/detail_blog/'.$detail->id_blog ?>" target="_blank"><button type="button" class="btn btn-social-icon btn-wa btn-rounded"><i class="fa fa-whatsapp"></i></button></a></td>
+                              <td><a href="https://www.facebook.com/sharer.php?u=<?php echo site_url().'halaman_utama/detail_blog/'.$detail->judul ?>" target="_blank"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded " style="width: 50px; height: 50px; padding: 1; border-radius: 50px;" ><i class="fa fa-facebook-official"></i></button></a></td>
+                              <td><a href="http://www.instagram.com/sharer.php?url=<?php echo site_url().'halaman_utama/detail_blog/'.$detail->id_blog ?>"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px;"><i class="fa fa-instagram"></i></button></a></td>
+                              <td><a href="https://wa.me/?text=<?php echo $detail->judul?>%0AKlik%20Untuk%20melihat%20selengkap%20nya%20Kunjungi%20web%20resmi%20kami%20<?php echo site_url().'halaman_utama/detail_blog/'.$detail->id_blog ?>" target="_blank"><button type="button" class="btn btn-social-icon btn-wa btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px;"><i class="fa fa-whatsapp"></i></button></a></td>
                           </tr>
                       </table>
                      </div>
@@ -64,7 +64,6 @@
                     <div class="col-md-6 mt-3">
                         <div class="story">
                             <div class= "row">
-        
                             <div class="col-md-2">
                                 <img src="<?php echo base_url().'assets/penulis/p_profil/'. $data_penulis->foto_profil ?>" class="img-fluid" style="object-fit:cover; width:70px; height:70px;" alt="">
                             </div>
