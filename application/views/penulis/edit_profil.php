@@ -51,18 +51,24 @@
                                         <!-- awal facebook -->
                                         <div class="form-group">
                                             <label>Facebook</label>
-                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Nomer Hp">
+                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Facebook">
                                         </div>
                                         <br>
                                         <!-- akhir facebook -->
-                                        <!-- awal facebook -->
+                                        <!-- awal twiter -->
                                         <div class="form-group">
-                                            <label>Facebook</label>
-                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Nomer Hp">
+                                            <label>twiter</label>
+                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Twiter">
                                         </div>
                                         <br>
-                                        <!-- akhir facebook -->
+                                        <!-- akhir twiter -->
+                                        <!-- awal Medium -->
+                                        <div class="form-group">
+                                            <label>Medium</label>
+                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Medium">
+                                        </div>
                                         <br>
+                                        <!-- akhir medium -->
                                         <!-- button simpan -->
                                         <div class="col-md-12 text-center">
                                            <button type="submit" name="btn_submit" class="btn btn-dark">Simpan</button>

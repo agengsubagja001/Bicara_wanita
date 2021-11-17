@@ -40,6 +40,25 @@
                                     <div class="col-md-12 mt-2">
                                         <span style="color:#888;"><?php echo $profil->no_telepon ?></span>
                                     </div>
+                                    <div class="col-md-12 mt-5">
+                                        <span>Facebook</span>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <span style="color:#888;"><?php echo $profil->no_telepon ?></span>
+                                    </div>
+                                    <div class="col-md-12 mt-5">
+                                        <span>Twiter</span>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <span style="color:#888;"><?php echo $profil->no_telepon ?></span>
+                                    </div>
+                                    <div class="col-md-12 mt-5">
+                                        <span>Medium</span>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <span style="color:#888;"><?php echo $profil->no_telepon ?></span>
+                                    </div>
+                                    
                                     <div class="col-md-12 mt-4">
                                         <a href="<?php echo base_url().'penulis/profil/edit/'.$profil->id_akun ?>"><button style="width:90px;" class="btn btn-dark">Edit</button></a>
                                     </div>

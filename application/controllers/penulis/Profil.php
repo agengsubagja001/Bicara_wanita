@@ -39,6 +39,9 @@ class Profil extends CI_Controller {
 				$id_akun = $this->input->post('id_akun');
 				$no_telepon = $this->input->post('no_telepon');
 				$deskripsi   = $this->input->post('deskripsi');
+				$facebook   = $this->input->post('facebook');
+				$twiter   = $this->input->post('twiter');
+				$medium   = $this->input->post('medium');
 	
 				// Foto
 				// blog
