@@ -180,7 +180,7 @@
                             <div class="story" style="position:relative;padding:20px;width:100%;height:auto;background: #FFFFFF; box-shadow: 0 5px 10px rgb(73 84 100 / 5%); border-radius: 5px;">
                                 <div class= "row">
                                     <div class="col-md-2">
-                                        <img src="assets/img/ikon.png" class="img-fluid" style="width:70px; height:70px;" alt="">
+                                        <img src="assets/img/ikon.png" class="img-fluid" style="width:70px; height:70px; border-radius: 50%;" alt="">
                                     </div>
                                     <div class="col-md-10 mt-2">
                                         <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
@@ -223,180 +223,70 @@
 <!-- awal section 7 vidio -->
     <section>
             <div class="container" style="max-width: 1340px;">
-                <div class="mb-3">
-                   <span style="font-size:30px;font-weight:bold">Vidio</span>
-                </div>
-            </div>
-            <div class="container" style="max-width: 1360px;">
-                <div id="demo" class="carousel slide position-relative" data-ride="carousel">
-                       
-                        <!-- <ul class="carousel-indicators">
-                            <li data-target="#demo" data-slide-to="0" class=""></li>
-                            <li data-target="#demo" data-slide-to="1" class="active"></li>
-                            <li data-target="#demo" data-slide-to="2" class=""></li>
-                        </ul> 
-                         -->
-                        <div class="carousel-inner">
-                                <!-- <div class="carousel-item active">
-                                    <div class="d-flex">
-                                        <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column ">
-                                                <a href="<?php echo base_url('isi_vidio') ?>">
-                                                    <img src="assets/img/foto.png" class="gambar" style="width:100%; height:auto;" alt="">
-                                                    <div class="middle">
-                                                        <div class="text">Play</div>
-                                                    </div>
-                                                </a> 
-                                        </div> 
-                                    </div>
-                                </div>	 -->
-                                <div class="carousel-item active">
-                                    <div class="d-flex">
-                                       <?php foreach ($show_vidio as $vidio): ?>
-                                            <div class="col-lg-4 col-sm-12 col-12 d-flex flex-column" style="width:100%; height:300;">
-                                                <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$vidio->id_vidio ?>">
-                                                    <img style="width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
-                                                </a>
-                                            </div>
-                                       <?php endforeach ?>
-                                    </div>
-                                </div>
+                        <div class="mb-3">
+                            <span style="font-size:30px;font-weight:bold">Vidio</span>
                         </div>
-                </div>
-                <div class="col-md-12 text-right mt-5">
-                    <a href="<?php echo base_url('detail_vidio') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
-                </div>
-            </div>
-             <div class="mb-5"></div>     
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <?php foreach ($show_vidio as $vidio): ?>
+                                        <!-- awal content vidio -->
+                                        <div class="col-md-3 mt-3">
+                                            <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$vidio->id_vidio ?>">
+                                                <img class="img-responsive"  style="width: 100%; height: auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
+                                            </a>
+                                            <div class="middle">
+                                                <div class="text">Play</div>
+                                            </div>
+                                        </div>
+                                        <!-- akhir content vidio -->
+                                    <?php endforeach ?>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-right mt-3">
+                                <a href="<?php echo base_url('detail_vidio') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
+                            </div>
+                        </div>
+                        <div class="mb-5"></div>
+            </div>       
     </section>
 <!-- akhir section 7 vidio -->
 <!-- awal section 8 infografik -->
-    <section class=""  >
-                <div class="container" style="max-width: 1330px;">
-                    <div class="mb-3">
-                            <span style="font-size:30px;font-weight:bold">Infografik</span>
+    <section>        
+        <div class="container" style="max-width: 1340px;">
+                <div class="mb-3">
+                    <span style="font-size:30px;font-weight:bold">infografik</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <?php foreach($show_infografik as $infografik): ?>
+                                <!-- awal content infografik -->
+                                <div class="col-md-4 mt-3">
+                                    <a href="<?php echo base_url().'halaman_utama/artikel_infografik/'.$infografik->id_infografik ?>">
+                                        <img src="<?php echo base_url().'assets/admin/infografik/img_infografik/'. $infografik->gambar_kontent ?>" style="max-width: 100%; max-height: auto; " class="card-img-top" alt="...">
+                                    </a>
+                                </div>
+                                <!-- akhir content podcast -->
+                            <?php endforeach ?>
+                            
                         </div>
                     </div>
+                    <div class="col-md-12 text-right mt-3">
+                        <a href="<?php echo base_url('detail_podcast') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
+                    </div>
                 </div>
-                <div class="container" style="max-width: 1400px;">
-                        <div class="row">
-                            <div class="col-md-12">
-                            
-                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                        <div class="carousel-inner" style=" padding: 2em;">
-                                                <div class="carousel-item active">
-                                                    <div class="cards-wrapper" style=" display: flex; justify-content: center;">
-                                                        <?php foreach($show_infografik as $infografik): ?>
-                                                        <div class="card1">
-                                                            <a href="<?php echo base_url().'halaman_utama/artikel_infografik/'.$infografik->id_infografik ?>">
-                                                                <img src="<?php echo base_url().'assets/admin/infografik/img_infografik/'. $infografik->gambar_kontent ?>" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                            </a>
-                                                        </div>
-                                                        <?php endforeach ?>
-                                                    </div>
-                                                </div>
-                                                <!-- <div class="carousel-item">
-                                                    <div class="cards-wrapper" style=" display: flex; justify-content: center;">
-                                                        <div class="card1">
-                                                            <a href="#">
-                                                            <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                            </a>
-                                                        
-                                                        </div>
-                                                        <div class="card1 d-none d-md-block">
-                                                            <a href="#">
-                                                            <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                            </a>
-                                                        
-                                                        </div>
-                                                        <div class="card1 d-none d-md-block">
-                                                            <a href="#">
-                                                            <img src="assets/img/jokowi.png" style="max-width: 100%; max-height: auto; padding-left: 10px;" class="card-img-top" alt="...">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                                
-                                            <a class="carousel-control-prev" style="background-color: #e1e1e1; width: 5vh; height: 5vh; border-radius: 50%; top: 50%; transform: translateY(-50%);" href="#carouselExampleControls" role="button" data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                            <a class="carousel-control-next" style="background-color: #e1e1e1; width: 5vh; height: 5vh; border-radius: 50%; top: 50%; transform: translateY(-50%);" href="#carouselExampleControls" role="button" data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </div>
-                                    <!-- Akhir Carousel -->
-                                    <div class="col-md-12 text-right mt-5" style="position: relative; right:11px;">
-                                       <a href="<?php echo base_url('detail_infografik') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                </div>            
-
-                    
+                <div class="mb-5"></div>
+        </div>          
     </section>
     <br>
 <!-- akhir section 8 infografik -->
+<!-- awal fotter -->
 <?php $this->load->view('partial/footer') ?> 
-    <style>
-           /* css vidio */
-           .ourworks-box{
-            width: 60%;
-            justify-content: center;
-            text-align: center;
-            }
-            .introduce{
-                height: 250px;
-                background-color:white;
-                box-shadow: 0 3px 10px #5969f642;
-                border-bottom: 4px solid #5969f6;
-                color: black;
-            }
-
-            .introduce:hover{
-                box-shadow: 0 3px 15px #5969f666;
-                border-bottom: 4px solid #B122e5;
-                color: black;
-                text-decoration: none;
-            }
-            .flex-column-1{
-                height: 70%;
-                width: 100%;
-
-            }
-            .flex-column-2{
-                height: 30%;
-                width: 100%;
-                align-items:center;
-            }
-            .text-gray{
-                color: gray;
-            }
-            .pic{
-                height: 70px;
-                width: 70px;
-                margin-left: 20px;
-                border-radius: 50%;
-                transition: all .2s ease-in-out;
-            }
-
-            .introduce:hover .pic{
-                transform: scale(1.1);
-            }
-            .carousel-indicators .active{
-                background-color: #46eeaa;
-            }
-            .carousel-indicators li{
-                background-color: #c8e5ff;
-            }
-            .carousel-indicators{
-                bottom: -50px;
-            }
-            
-           /* akhir css vidio */
-           /* css thumnil */
+<!-- akhir fotter -->
+<style>
+    /* css thumnil */
             .gambar {
                 opacity: 1;
                 display: block;
@@ -434,5 +324,5 @@
                 
             }
            /* css thumnil */
-
-    </style>
+</style>
+        

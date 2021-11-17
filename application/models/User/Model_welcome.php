@@ -20,14 +20,15 @@ class Model_welcome extends CI_Model
 	// tampil data program
 	public function show_program(){
 		$this->db->order_by('tanggal', 'desc');
-		return $this->db->limit(3)->get('program');
+		return $this->db->limit(6)->get('program');
 	}
 
 	// tampil data infografik
 	public function show_infografik(){
 		$this->db->order_by('tanggal', 'desc');
-		return $this->db->limit(6)->get('infografik');
+		return $this->db->limit(3)->get('infografik');
 	}
 	
+
 
 }

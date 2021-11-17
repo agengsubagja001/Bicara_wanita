@@ -48,6 +48,21 @@
                                         </div>
                                         <br>
                                         <!-- akhir nomer hp -->
+                                        <!-- awal facebook -->
+                                        <div class="form-group">
+                                            <label>Facebook</label>
+                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Nomer Hp">
+                                        </div>
+                                        <br>
+                                        <!-- akhir facebook -->
+                                        <!-- awal facebook -->
+                                        <div class="form-group">
+                                            <label>Facebook</label>
+                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Nomer Hp">
+                                        </div>
+                                        <br>
+                                        <!-- akhir facebook -->
+                                        <br>
                                         <!-- button simpan -->
                                         <div class="col-md-12 text-center">
                                            <button type="submit" name="btn_submit" class="btn btn-dark">Simpan</button>

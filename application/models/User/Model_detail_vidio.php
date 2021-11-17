@@ -7,7 +7,7 @@ class Model_detail_vidio extends CI_Model
 	// tampil data vidio di halaman utama
 	public function show_vidio(){
 		$this->db->order_by('tanggal', 'desc');
-		return $this->db->limit(9)->get('vidio');
+		return $this->db->limit(4)->get('vidio');
 	}
 
     // tampil semua vidio di detail vidio 
