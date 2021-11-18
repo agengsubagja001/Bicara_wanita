@@ -50,7 +50,7 @@
                                         <span style="font-weight: 500; font-size: 16px;">Twiter</span>
                                     </div>
                                     <div class="col-md-12 mt-1">
-                                        <span style="color:#777;"><?php echo $profil->twiter ?></span>
+                                        <span style="color:#777;"><?php echo $profil->twitter ?></span>
                                     </div>
                                     <div class="col-md-12 mt-4">
                                         <span style="font-weight: 500; font-size: 16px;">Medium</span>

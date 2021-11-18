@@ -16,14 +16,15 @@
                     </ol>
                     <div class="carousel-inner" style="">
                         <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/10/29/798f1d1e-8208-4ce2-9af4-8301e893a14b.jpg.webp?ect=3g" alt="First slide">
+                            <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/10/29/798f1d1e-8208-4ce2-9af4-8301e893a14b.jpg.webp?ect=3g" alt="First slide">
                         </div>
+                        <?php foreach ($show_banner as $banner): ?>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/10/29/7669d78d-14c5-46b0-af5d-baa6929482dc.jpg.webp?ect=3g" alt="Second slide">
+                            <a href="<?php echo base_url().'halaman_utama/detail_program/'.$banner->id_program ?>">
+                                <img class="d-block w-100" src="<?php echo base_url().'assets/banner/'. $banner->gambar_banner ?>" alt="Second slide">
+                            </a>
                         </div>
-                        <div class="carousel-item">
-                        <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/7/30/74d32a7f-6a2d-49a3-b325-114de4b055c5.jpg.webp?ect=3g" alt="Third slide">
-                        </div>
+                        <?php endforeach ?>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

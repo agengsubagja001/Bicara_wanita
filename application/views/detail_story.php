@@ -28,7 +28,7 @@
                     <span style="font-size:30px; color: #555555;">Post Story mu</span>
                     <div class="row">
                         <div class="col-md-12" style="position: relative; left:-42px;">
-                          <a href="#"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Disini <i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+                          <a href="<?php echo base_url('form_login/login') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Disini <i class="fa fa-pencil" aria-hidden="true"></i></button></a>
                         </div>
                     </div>
                 </div> 

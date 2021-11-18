@@ -10,6 +10,13 @@ class Model_welcome extends CI_Model
 		
 	}
 
+	// tampil data banner
+	public function show_banner(){
+		$data = $this->db->query("SELECT banner.id_banner, banner.judul_banner, banner.gambar_banner, banner.tanggal, program.id_program, program.judul FROM banner INNER JOIN program ON banner.id_program = program.id_program WHERE banner.id_program ORDER BY tanggal DESC LIMIT 6");
+		return $data;
+		
+	}
+
 	// tampil data podcast
 	public function show_podcast(){
 		$this->db->order_by('tanggal', 'desc');

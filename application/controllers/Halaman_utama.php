@@ -6,7 +6,9 @@ class Halaman_utama extends CI_Controller {
 	
 	public function index()
 	{
-		// / untuk menampilkan program
+		// / untuk menampilkan banner
+		$data['show_banner'] = $this->Model_welcome->Show_banner()->result();
+		// / untuk menampilkan infografik
 		$data['show_infografik'] = $this->Model_welcome->Show_infografik()->result();
 		// untuk menampilkan program
 		$data['show_program'] = $this->Model_welcome->Show_program()->result();

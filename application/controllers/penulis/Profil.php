@@ -41,7 +41,7 @@ class Profil extends CI_Controller {
 				$no_telepon = $this->input->post('no_telepon');
 				$deskripsi   = $this->input->post('deskripsi');
 				$facebook   = $this->input->post('facebook');
-				$twiter   = $this->input->post('twiter');
+				$twitter   = $this->input->post('twitter');
 				$medium   = $this->input->post('medium');
 	
 				// Foto
@@ -67,7 +67,7 @@ class Profil extends CI_Controller {
 					'deskripsi'              => $deskripsi,
 					'no_telepon'         	=> $no_telepon,
 					'medium'         	=> $medium,
-					'twiter'         	=> $twiter,
+					'twitter'         	=> $twitter,
 					'facebook'         	=> $facebook,
 					'foto_profil'           => $encrypted
 	   
