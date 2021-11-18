@@ -41,3 +41,15 @@
 <br>
 <!-- footer -->
 <?php $this->load->view('partial/footer') ?> 
+<style>
+    .paralax{
+				background-image: url("<?php echo base_url('assets/img/banner_infografik.png') ?>");
+				min-height: 500px; 
+				width: 100%;
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				/* horizontal-align: middle; */
+			}
+</style>

@@ -42,6 +42,7 @@ class Profil extends CI_Controller {
 				$facebook   = $this->input->post('facebook');
 				$twiter   = $this->input->post('twiter');
 				$medium   = $this->input->post('medium');
+				$pekerjaan   = $this->input->post('pekerjaan');
 	
 				// Foto
 				// blog
@@ -63,9 +64,14 @@ class Profil extends CI_Controller {
 				$data = array(
 					
 					'nama_lengkap'            => $nama_lengkap,
-					'deskripsi'              => $deskripsi,
-					'no_telepon'         	=> $no_telepon,
-					'foto_profil'           => $encrypted
+					'deskripsi'               => $deskripsi,
+					'no_telepon'         	  => $no_telepon,
+					'facebook'         	      => $facebook,
+					'twiter'         	      => $twiter,
+					'medium'         	      => $medium,
+					'pekerjaan'         	  => $pekerjaan,
+					'foto_profil'             => $encrypted
+
 	   
 				);
 

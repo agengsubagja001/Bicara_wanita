@@ -14,15 +14,15 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-                    <div class="carousel-inner" style="">
+                    <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/10/29/798f1d1e-8208-4ce2-9af4-8301e893a14b.jpg.webp?ect=3g" alt="First slide">
+                        <img class="d-block w-100" src="<?php echo base_url('assets/img/kb.png') ?>" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/10/29/7669d78d-14c5-46b0-af5d-baa6929482dc.jpg.webp?ect=3g" alt="Second slide">
+                        <img class="d-block w-100" src="<?php echo base_url('assets/img/nar.png') ?>" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/7/30/74d32a7f-6a2d-49a3-b325-114de4b055c5.jpg.webp?ect=3g" alt="Third slide">
+                        <img class="d-block w-100" src="<?php echo base_url('assets/img/rema.png') ?>" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -274,7 +274,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 text-right mt-3">
-                        <a href="<?php echo base_url('detail_podcast') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
+                        <a href="<?php echo base_url('detail_infografik') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
                     </div>
                 </div>
                 <div class="mb-5"></div>

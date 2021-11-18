@@ -83,4 +83,14 @@
                 
             }
            /* css thumnil */
+           .paralax{
+				background-image: url("<?php echo base_url('assets/img/vidio.png') ?>");
+				min-height: 500px; 
+				width: 100%;
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				/* horizontal-align: middle; */
+			}
 </style>
