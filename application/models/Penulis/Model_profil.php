@@ -5,7 +5,8 @@ class Model_profil extends CI_Model
 {
     // tampil data profil
 	public function show_profil(){
-		$data = $this->db->query("SELECT * FROM `akun` WHERE id_akun = '1'");
+		$query = $this->session->userdata('id_akun');
+		$data = $this->db->query("SELECT * FROM `akun` WHERE id_akun = '$query'");
 		return $data;
 	}
 
@@ -19,5 +20,5 @@ class Model_profil extends CI_Model
 		$this->db->where($where);
 		$this->db->update($table,$data);
 	}	
-
+	
 }

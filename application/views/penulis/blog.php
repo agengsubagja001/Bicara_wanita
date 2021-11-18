@@ -12,18 +12,6 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <!-- <h1 class="mt-4">Tables</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
-                        </ol>
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                                .
-                            </div>
-                        </div> -->
                         <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
                             <div class="card-header">
                                 <nav class="navbar navbar-light bg-light justify-content-between" style="">
@@ -43,7 +31,6 @@
                                                 <th scope="col">FOTO SAMPUL</th>
 												<th scope="col">JUDUL BLOG</th>
 												<th scope="col">TANGGAL LIRIS</th>
-                                                <th scope="col">STATUS</th>
 												<th scope="col">AKSI</th>
                                             </tr>
                                         </thead>
@@ -54,11 +41,10 @@
                                             <tr>
                                                 <td><?php echo $no++ ?></td>
                                                 <td style="width: 150px">
-                                                    <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $blog->gambar ?>" style="width:100px; height:100px; object-fit: cover;" class="img-fluid">
+                                                    <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $blog->gambar ?>" style="width:100%; height:100px; object-fit: cover;" class="img-fluid">
                                                 </td>
 												<td style=""><?php echo $blog->judul ?></td>
 												<td><?php echo $blog->date ?></td>
-                                                <td><span class="badge bg-danger">belum di setujui</span></td>
 												<td style="">
                                                     <a href="<?php echo base_url().'penulis/blog/edit/'.$blog->id_blog ?>" style="margin-top: 4px; padding: 0.25rem 0.5rem;font-size: 0.76563rem;line-height: 1.5;border-radius: 3px;" class="btn btn-warning"><i style="color:white" class="fas fa-pen"></i></a>
                                                     <a href="<?php echo base_url().'penulis/blog/hapus/'.$blog->id_blog ?>" style="margin-top: 4px; padding: 0.25rem 0.5rem;font-size: 0.76563rem;line-height: 1.5;border-radius: 3px;" class="btn btn-danger"><i style="color:white" class="fas fa-trash"></i></a>

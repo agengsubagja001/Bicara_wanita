@@ -9,17 +9,17 @@
                         Dashboard
                     </a>
                     <a class="nav-link collapsed mt-1" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                        layout
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                        Blog
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-static.html">Static Navigation</a>
-                            <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                            <a class="nav-link" href="<?= base_url() ?>admin/blog">Blog Admin</a>
+                            <a class="nav-link" href="<?= base_url() ?>admin/blog_penulis">Blog Penulis</a>
                         </nav>
                     </div>
-                    <a class="nav-link collapsed mt-1" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <!-- <a class="nav-link collapsed mt-1" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                         <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                         Pages
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -49,7 +49,7 @@
                                 </nav>
                             </div>
                         </nav>
-                    </div>
+                    </div> -->
 
                     <a class="nav-link mt-1" href="<?= base_url() ?>admin/kategori">
                         <div class="sb-nav-link-icon"><i class="fab fa-buffer"></i></div>
@@ -75,9 +75,14 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-microphone-alt"></i></i></div>
                         Podcast
                     </a>
-                    <a class="nav-link mt-1" href="<?= base_url() ?>admin/blog">
+                    
+                    <a class="nav-link mt-1" href="<?= base_url() ?>admin/story">
                         <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                        Blog
+                        Story
+                    </a>
+                    <a class="nav-link mt-1" href="<?= base_url() ?>admin/akun_penulis">
+                        <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                        Akun Penulis
                     </a>
                 </div>
             </div>

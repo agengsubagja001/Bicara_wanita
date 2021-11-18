@@ -5,8 +5,15 @@ class Model_blog extends CI_Model
 {
 	// tampil data
 	public function show_data_blog(){
-		$this->db->order_by('date', 'desc');
-		return $this->db->get('blog');
+		$query = $this->session->userdata('id_akun');
+		$data = $this->db->query("SELECT blog.id_blog, blog.judul, blog.gambar, blog.date, akun.id_akun FROM blog INNER JOIN akun ON blog.id_akun = akun.id_akun WHERE blog.id_akun = '$query' ORDER BY date DESC");
+		return $data;
+	}
+
+	// kategori
+	// tampil data semua kategori di halaman edit blog penulis
+	public function show_kategori(){
+		return $this->db->get('kategori');
 	}
 
 	// input data

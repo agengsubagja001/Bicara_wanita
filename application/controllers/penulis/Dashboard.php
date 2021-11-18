@@ -2,6 +2,22 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
+	public function __construct(){
+		parent::__construct();
+
+	if($this->session->userdata('role_id') != '2'){
+			$this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				 Anda Belum Login!
+				 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="true">&times;</span>
+				 </button>
+				</div>');
+				
+				redirect('form_login/login');
+		}
+		// $this->session->userdata('role_id') != '2'
+
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -21,7 +37,7 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 		// untuk menampilkan jumlah blog
-		$data['show_jml'] = $this->Model_dashboard->Show_jml()->result();
+		$data['total_blog'] = $this->Model_dashboard->Show_jml();
 		// untuk menampilkan data blog
 		$data['show_blog'] = $this->Model_dashboard->Show_data_blog()->result();
 		$this->load->view('penulis/dashboard',$data);

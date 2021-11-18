@@ -37,7 +37,7 @@
                     <li class="nav-item" style="margin-left: 510px;">			
 					</li>
 					<li class="nav-item">
-                    <a href="<?php echo base_url('form_login'); ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Masuk</button></a>
+                    <a href="<?php echo base_url('form_login/login'); ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Masuk</button></a>
 					</li>
 				</ul>
 			</div>

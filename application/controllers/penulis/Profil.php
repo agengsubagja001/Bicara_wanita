@@ -21,6 +21,7 @@ class Profil extends CI_Controller {
 	public function index()
 	{
 		$data['show_profil'] = $this->Model_profil->Show_profil()->result();
+		// $this->load->view('penulis/partial/navbar');
 		$this->load->view('penulis/profil',$data);
 	}
 
@@ -65,6 +66,9 @@ class Profil extends CI_Controller {
 					'nama_lengkap'            => $nama_lengkap,
 					'deskripsi'              => $deskripsi,
 					'no_telepon'         	=> $no_telepon,
+					'medium'         	=> $medium,
+					'twiter'         	=> $twiter,
+					'facebook'         	=> $facebook,
 					'foto_profil'           => $encrypted
 	   
 				);

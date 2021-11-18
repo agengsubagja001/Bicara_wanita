@@ -5,9 +5,8 @@ class Model_welcome extends CI_Model
 {
 	// tampil data blog
 	public function show_blog(){
-		// $data = $this->db->query("SELECT akun.nama_lengkap, profil_penulis.deskripsi, profil_penulis.foto_profil, blog.judul, blog.isi, blog.gambar, blog.kategori, blog.date FROM ((detail_blog INNER JOIN akun ON detail_blog.id_akun = akun.id_akun) INNER JOIN profil_penulis ON detail_blog.id_penulis = profil_penulis.id_penulis INNER JOIN blog ON detail_blog.id_blog = blog.id_blog)");
-		$this->db->order_by('date', 'desc');
-		return $this->db->limit(8)->get('blog');
+		$data = $this->db->query("SELECT blog.id_blog, blog.judul, blog.gambar, blog.date, kategori.id_kategori, kategori.kategori FROM blog INNER JOIN kategori ON blog.id_kategori = kategori.id_kategori WHERE blog.id_blog ORDER BY date DESC LIMIT 8");
+		return $data;
 		
 	}
 

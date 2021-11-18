@@ -51,21 +51,21 @@
                                         <!-- awal facebook -->
                                         <div class="form-group">
                                             <label>Facebook</label>
-                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Facebook">
+                                            <input type="text" value="<?php echo $edit->facebook ?>" name="facebook" class="form-control" placeholder="Masukan Facebook">
                                         </div>
                                         <br>
                                         <!-- akhir facebook -->
                                         <!-- awal twiter -->
                                         <div class="form-group">
                                             <label>twiter</label>
-                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Twiter">
+                                            <input type="text" value="<?php echo $edit->twiter ?>" name="twiter" class="form-control" placeholder="Masukan Twiter">
                                         </div>
                                         <br>
                                         <!-- akhir twiter -->
                                         <!-- awal Medium -->
                                         <div class="form-group">
                                             <label>Medium</label>
-                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="no_telepon" class="form-control" placeholder="Masukan Medium">
+                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="medium" class="form-control" placeholder="Masukan Medium">
                                         </div>
                                         <br>
                                         <!-- akhir medium -->

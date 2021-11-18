@@ -11,15 +11,18 @@ class Model_detail_blog extends CI_Model
 
     // tampil blog terbaru
 	public function show_terbaru(){
-		$this->db->order_by('date', 'desc');
-		return $this->db->limit(6)->get('blog');
+		$data = $this->db->query("SELECT blog.id_blog, blog.judul, blog.gambar, blog.date, kategori.id_kategori, kategori.kategori FROM blog INNER JOIN kategori ON blog.id_kategori = kategori.id_kategori WHERE blog.id_blog ORDER BY date DESC LIMIT 6");
+		return $data;
 	}
 
-	// join untuk blog
-	public function join_blog($id_blog){
-		return $this->db->query("SELECT akun.nama_lengkap, akun.deskripsi, akun.foto_profil, blog.judul
-		FROM ((detail_blog
-		INNER JOIN akun ON akun.id_akun = detail_blog.id_akun)
-		INNER JOIN blog ON blog.id_blog = detail_blog.id_blog) WHERE blog.id_blog = '$id_blog'")->row();
+	// join untuk blog dan penulis
+	public function join_penulis($id_blog){
+		return $this->db->query("SELECT blog.id_blog, akun.id_akun, akun.foto_profil, akun.nama_lengkap, akun.deskripsi FROM blog INNER JOIN akun ON blog.id_akun = akun.id_akun WHERE blog.id_blog = '$id_blog'")->row();
+	}
+
+	// join untuk kategori dengan penulis
+	public function join_kategori($id_blog)
+	{
+		return $this->db->query("SELECT blog.id_blog, kategori.id_kategori, kategori.kategori FROM blog INNER JOIN kategori ON blog.id_kategori = kategori.id_kategori WHERE blog.id_blog")->row();
 	}
 }
