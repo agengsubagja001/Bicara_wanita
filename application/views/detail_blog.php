@@ -62,18 +62,20 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-6 mt-3">
-                        <div class="penulis">
-                            <div class= "row">
-                            <div class="col-md-2">
-                                <img src="<?php echo base_url().'assets/penulis/p_profil/'. $data_penulis->foto_profil ?>" class="img-fluid" style="object-fit:cover; width:70px; height:70px;" alt="">
+                        <a style="text-decoration: none; color:black;" href="<?php echo base_url('detail_penulis') ?>">
+                            <div class="penulis">
+                                <div class= "row">
+                                <div class="col-md-2">
+                                    <img src="<?php echo base_url().'assets/penulis/p_profil/'. $data_penulis->foto_profil ?>" class="img-fluid" style="object-fit:cover; width:70px; height:70px;" alt="">
+                                </div>
+                                <div class="col-md-10 mt-2">
+                                    <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;"><?php echo $data_penulis->nama_lengkap ?></span>
+                                    <div class="mb-2"><span><?php echo $data_penulis->deskripsi ?></span></div>
+                                </div>
+                                </div>
+                                
                             </div>
-                            <div class="col-md-10 mt-2">
-                                <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;"><?php echo $data_penulis->nama_lengkap ?></span>
-                                <div class="mb-2"><span><?php echo $data_penulis->deskripsi ?></span></div>
-                            </div>
-                            </div>
-                            
-                        </div>
+                        </a>    
                     </div>
                 </div>
                 <hr>

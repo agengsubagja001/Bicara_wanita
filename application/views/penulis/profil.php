@@ -42,12 +42,12 @@
                                     </div>
                                     <div class="col-md-12 mt-4">
                                         <span style="font-weight: 500; font-size: 16px;">Facebook</span>
-                                    </div>
+                                    </div>                                   
                                     <div class="col-md-12 mt-1">
                                         <span style="color:#777;"><?php echo $profil->facebook ?></span>
                                     </div>
                                     <div class="col-md-12 mt-4">
-                                        <span style="font-weight: 500; font-size: 16px;">Twiter</span>
+                                        <span style="font-weight: 500; font-size: 16px;">Twitter</span>
                                     </div>
                                     <div class="col-md-12 mt-1">
                                         <span style="color:#777;"><?php echo $profil->twitter ?></span>
@@ -58,7 +58,6 @@
                                     <div class="col-md-12 mt-1">
                                         <span style="color:#777;"><?php echo $profil->medium ?></span>
                                     </div>
-                                    
                                     <div class="col-md-12 mt-4">
                                         <a href="<?php echo base_url().'penulis/profil/edit/'.$profil->id_akun ?>"><button style="width:90px;" class="btn btn-dark">Edit</button></a>
                                     </div>

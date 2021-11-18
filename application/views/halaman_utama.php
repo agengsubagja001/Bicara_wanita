@@ -14,7 +14,7 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
-                    <div class="carousel-inner" style="">
+                    <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/10/29/798f1d1e-8208-4ce2-9af4-8301e893a14b.jpg.webp?ect=3g" alt="First slide">
                         </div>
@@ -275,7 +275,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 text-right mt-3">
-                        <a href="<?php echo base_url('detail_podcast') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
+                        <a href="<?php echo base_url('detail_infografik') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>
                     </div>
                 </div>
                 <div class="mb-5"></div>

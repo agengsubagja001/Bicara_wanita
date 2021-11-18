@@ -57,15 +57,15 @@
                                         <!-- akhir facebook -->
                                         <!-- awal twiter -->
                                         <div class="form-group">
-                                            <label>twiter</label>
-                                            <input type="text" value="<?php echo $edit->twiter ?>" name="twiter" class="form-control" placeholder="Masukan Twiter">
+                                            <label>twitter</label>
+                                            <input type="text" value="<?php echo $edit->twitter ?>" name="twitter" class="form-control" placeholder="Masukan Twiter">
                                         </div>
                                         <br>
                                         <!-- akhir twiter -->
                                         <!-- awal Medium -->
                                         <div class="form-group">
                                             <label>Medium</label>
-                                            <input type="text" value="<?php echo $edit->no_telepon ?>" name="medium" class="form-control" placeholder="Masukan Medium">
+                                            <input type="text" value="<?php echo $edit->medium ?>" name="medium" class="form-control" placeholder="Masukan Medium">
                                         </div>
                                         <br>
                                         <!-- akhir medium -->
