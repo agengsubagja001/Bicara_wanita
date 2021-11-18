@@ -90,51 +90,7 @@ class Blog extends CI_Controller {
 			}
         }
 
-	// function tambah data
-	function upload()
-	{
-		if (isset($_POST['btn_submit'])) {
-			$judul = $this->input->post('judul');
-			// $id_blog = $this->input->post('id_blog');
-			$isi   = $this->input->post('isi');
-			$kategori   = $this->input->post('kategori');
-
-			// Foto
-			// blog
-			$foto_icon_brand = $_FILES['gambar']['name'];
-			$icon_tmp = $_FILES['gambar']['tmp_name'];
-			
-			// Format
-			 // cek ekstensi foto
-			 $ekstensiGambarValid = ['jpg','jpeg','png','webp','PNG','JPG'];
-			 $ekstensiGambar = explode('.',$foto_icon_brand);
-			 $ekstensiGambar = strtolower(end($ekstensiGambar));
-			// // GENERAT NAME PHOTO 1\
-			$encrypted = uniqid();
-			$encrypted .= '.';
-			$encrypted .= $ekstensiGambar;
-			// Upload Icon Brand
-			move_uploaded_file($icon_tmp,'assets/penulis/blog/img_sampul/'.$encrypted);
-
-			$dataa = array(
-				// 'id_blog'         => $id_blog,
-				'judul'            => $judul,
-				'isi'              => $isi,
-				'kategori'         => $kategori,
-				'gambar'       => $encrypted,
-   
-			);
-					
-				$this->Model_blog->input_data($dataa, 'blog');
-				$this->session->set_flashdata('success','Action Completed');
-				redirect('penulis/blog');
-				//  redirect('tambah_produk');
-				echo "<script>console.log('berhasil! pindah page')</script>";
-
-		}else{
-
-		}
-	}
+	
 
 	// hapus data
 	public function hapus($id_blog){
@@ -148,6 +104,7 @@ class Blog extends CI_Controller {
 	public function edit($id_blog){
 		$del = array('id_blog' => $id_blog);
 		$data['user'] = $this->Model_blog->edit_data($del,'blog')->result();
+		$data['show_kategori'] = $this->Model_blog->show_kategori()->result();
 		$this->load->view('penulis/edit_blog',$data);
 	}
 
@@ -155,10 +112,11 @@ class Blog extends CI_Controller {
 	public function update(){
 		{
 			if (isset($_POST['btn_submit'])) {
+				$id_akun = $this->input->post('id_akun');
 				$judul = $this->input->post('judul');
 				$id_blog = $this->input->post('id_blog');
 				$isi   = $this->input->post('isi');
-				$kategori   = $this->input->post('kategori');
+				$id_kategori   = $this->input->post('kategori');
 	
 				// Foto
 				// blog
@@ -181,7 +139,8 @@ class Blog extends CI_Controller {
 					
 					'judul'            => $judul,
 					'isi'              => $isi,
-					'kategori'         => $kategori,
+					'id_kategori'         => $id_kategori,
+					'id_akun'         => $id_akun,
 					'gambar'       => $encrypted
 	   
 				);

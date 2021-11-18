@@ -21,14 +21,17 @@
                                         <br>
                                         <div class="col-md-12">
                                             <!-- form login -->
-                                            <form method="post" action="" class="user">
+                                            <?php echo $this->session->flashdata('pesan') ?>
+                                            <form method="post" action="<?php echo base_url('form_login/login') ?>" class="user"  enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <label >Username</label>
                                                     <input required style="width: 100%; height: 40px;" type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Username" name="username">
+                                                    <?php echo form_error('username', '<div class="text-danger small ml-2">','</div'); ?>
                                                 </div>
                                                 <div class="form-group">
                                                     <label >Password</label>
                                                     <input required style="width: 100%; height: 40px;" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password" name="password">
+                                                    <?php echo form_error('password', '<div class="text-danger small ml-2">','</div'); ?>
                                                 </div>
                                                 <a href="#"  style="text-decoration: none; color:black"><label style="font-weight: bold;">Lupa Kata Sandi?</label></a>
                                                 <br>
@@ -42,7 +45,7 @@
                                                                <a href="<?php echo base_url('form_daftar'); ?>"> <button type="button" class="btn btn-outline-danger" style="border: 1px solid #F7476E;">Daftar</button></a>
                                                             </td>
                                                             <td>
-                                                              <a href="#" style="text-decoration: none;"><button type="submit" class="bt1 btn btn-primary" style="border: 1px solid #F7476E; background-color: #F7476E">Masuk</button></a>
+                                                                <button type="submit" class="bt1 btn btn-primary" style="border: 1px solid #F7476E; background-color: #F7476E">Masuk</button>
                                                             </td>
                                                         </tr>
                                                     </table> 
@@ -51,7 +54,8 @@
                                             </form>   
                                             <!-- akhir form login -->
                                             <br>    
-                                        </div>   
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>

@@ -16,23 +16,35 @@
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
+                        <h2>TESTING ID = <?php echo $this->session->userdata('id_akun')  ?></h2>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                             
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body"><span><?php echo $total_blog; ?> BLOG</span></div>
+                                    <div class="card-body"><span><?php echo $total_blog; ?> BLOG ADMIN</span></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="<?php echo base_url('admin/blog') ?>">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             
                             </div>
+                            <!-- blog penulis -->
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-dark text-white mb-4">
+                                    <div class="card-body"><span><?php echo $total_blog_penulis; ?> BLOG PENULIS</span></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- akhir blog penulis -->
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
                                     <div class="card-body"><?php echo $total_program; ?> PROGRAM</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="<?php echo base_url('admin/program') ?>">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -41,7 +53,7 @@
                                 <div class="card bg-success text-white mb-4">
                                     <div class="card-body"><?php echo $total_podcast; ?> PODCAST</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="<?php echo base_url('admin/podcast') ?>">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -50,11 +62,33 @@
                                 <div class="card bg-danger text-white mb-4">
                                     <div class="card-body"><?php echo $total_infografik; ?> INFOGTAFIK</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="<?php echo base_url('admin/infografik') ?>">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- vidio -->
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-info text-white mb-4">
+                                    <div class="card-body"><?php echo $total_vidio; ?> VIDIO</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="<?php echo base_url('admin/vidio') ?>">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- akhir vidio -->
+                            <!-- kategori -->
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-dark text-white mb-4">
+                                    <div class="card-body"><?php echo $total_kategori; ?> kategori</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="<?php echo base_url('admin/kategori') ?>">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- akhir kategori -->
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
@@ -78,18 +112,6 @@
                         </div>
                         <!-- CARD -->
                             <div class="mb-4">
-                                <!-- <h1 class="mt-4">Tables</h1>
-                                <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">Tables</li>
-                                </ol>
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                                        <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                                        .
-                                    </div>
-                                </div> -->
                                 <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
                                     <div class="card-body">
                                         <table class="table table-bordered" id="datatablesSimple" width="100%">
@@ -127,6 +149,12 @@
 
                 <!--footer  -->
                 <?php $this->load->view('admin/partial/footer') ?>
+
+                <?php if ($this->session->flashdata('success')): ?>
+                    <script>
+                        swal("Berhasil Login", "Selamat anda berhasil login ", "success");
+                    </script>
+                <?php endif; ?>
 
             </div>
         </div>

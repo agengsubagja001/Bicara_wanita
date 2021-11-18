@@ -57,8 +57,8 @@
                                         <!-- akhir facebook -->
                                         <!-- awal twiter -->
                                         <div class="form-group">
-                                            <label>Twiter</label>
-                                            <input type="text" value="<?php echo $edit->twiter ?>" name="twiter" class="form-control" placeholder="Masukan Twiter">
+                                            <label>twitter</label>
+                                            <input type="text" value="<?php echo $edit->twitter ?>" name="twitter" class="form-control" placeholder="Masukan Twiter">
                                         </div>
                                         <br>
                                         <!-- akhir twiter -->
@@ -69,13 +69,6 @@
                                         </div>
                                         <br>
                                         <!-- akhir medium -->
-                                        <!-- awal pekerjaan -->
-                                        <div class="form-group">
-                                            <label>Pekerjaan</label>
-                                            <input type="text" value="<?php echo $edit->pekerjaan ?>" name="pekerjaan" class="form-control" placeholder="Masukan Medium">
-                                        </div>
-                                        <br>
-                                        <!-- akhir pekerjaan -->
                                         <!-- button simpan -->
                                         <div class="col-md-12 text-center">
                                            <button type="submit" name="btn_submit" class="btn btn-dark">Simpan</button>

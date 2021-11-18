@@ -25,8 +25,12 @@ class Halaman_utama extends CI_Controller {
 		$this->load->model('Model_detail_blog');
 		$detail = $this->Model_detail_blog->detail_data($id_blog);
 		// menampilkan penulis berdasarkan join
-		$data_penulis = $this->Model_detail_blog->join_blog($id_blog);
+		$data_penulis = $this->Model_detail_blog->join_penulis($id_blog);
 		$data['data_penulis'] = $data_penulis;
+
+		// menampilkan kategori berdasarkan id_blog
+		$detail_kategori = $this->Model_detail_blog->join_kategori($id_blog);
+		$data['detail_kategori']  = $detail_kategori;
 		$data['detail'] = $detail;
 		$data['terbaru'] = $this->Model_detail_blog->Show_terbaru()->result();
 		$this->load->view('detail_blog',$data);

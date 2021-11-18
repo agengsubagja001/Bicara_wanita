@@ -41,7 +41,7 @@
                                                 <!-- input Judul -->
                                                 <div class="col-md-12 p-2">	
                                                     <div class="form-group" style="margin-bottom: 1rem;">
-                                                        <input type="hidden" name="id_blog" value="">
+                                                        <input type="hidden" name="id_akun" value="<?php echo $this->session->userdata('id_akun')  ?>">
                                                         <input type="text" name="judul" value="<?php echo $blog->judul ?>" class="form-control" placeholder="Masukan Judul">
                                                     </div>
                                                 </div>
@@ -72,11 +72,10 @@
                                                         <hr style="widht:100%">
                                                         <label for="kategori">kategori</label>
                                                         <select name="kategori" id="" class="form-control">
-                                                            <option value="<?php echo $blog->kategori ?>"><?php echo $blog->kategori ?></option>
-                                                            <option value="ibu dan anak">Ibu dan anak</option>
-                                                            <option value="Kesehatan">Kesehatan</option>
-                                                            <option value="rumah tangga">Rumah tangga</option>
-                                                            <option value="suami dan istri">suami dan istri</option>
+                                                        <option value="">Pilih Kategori</option>
+                                                            <?php foreach ($show_kategori as $kategori): ?>
+                                                            <option value="<?php echo $kategori->id_kategori ?>"><?php echo $kategori->kategori ?></option>
+                                                            <?php endforeach ?>
                                                         </select>
                                                         <button class="btn btn-dark mt-2" type="submit" name="btn_submit">Posting</button>
                                                     </div>

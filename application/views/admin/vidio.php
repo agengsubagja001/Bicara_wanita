@@ -41,7 +41,7 @@
                                             <tr>
                                                 <th scope="col">NO</th>
                                                 <th scope="col">VIDIO</th>
-                                                <th scope="col">GAMBAR THUMBNAIL</th>
+                                                <!-- <th scope="col">GAMBAR THUMBNAIL</th> -->
 												<th scope="col">JUDUL</th>
 												<th scope="col">TANGGAL LIRIS</th>
 												<th scope="col">AKSI</th>
@@ -53,12 +53,12 @@
                                            <!-- Content pertama-->
                                             <tr>
                                                 <td><?php echo $no++ ?></td>
-                                                <td>
-                                                    <iframe src="<?php echo $vidio->isi_vidio ?>" title="W3Schools Free Online Web Tutorials"></iframe>  
+                                                <td style="width:100px;">
+                                                    <?php echo $vidio->isi_vidio ?>
                                                 </td>
-                                                <td>
+                                                <!-- <td>
                                                     <img style="object-fit:cover; width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="img-fluid">
-                                                </td>
+                                                </td> -->
 												<td style=""><?php echo $vidio->judul ?></td>
 												<td><?php echo $vidio->tanggal ?></td>
 												<td style="">
