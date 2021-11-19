@@ -6,7 +6,11 @@ class Halaman_utama extends CI_Controller {
 	
 	public function index()
 	{
-		// / untuk menampilkan program
+		// / untuk menampilkan story
+		$data['show_story'] = $this->Model_welcome->Show_story()->result();
+		// / untuk menampilkan banner
+		$data['show_banner'] = $this->Model_welcome->Show_banner()->result();
+		// / untuk menampilkan infografik
 		$data['show_infografik'] = $this->Model_welcome->Show_infografik()->result();
 		// untuk menampilkan program
 		$data['show_program'] = $this->Model_welcome->Show_program()->result();
@@ -44,6 +48,16 @@ class Halaman_utama extends CI_Controller {
 		$data['detail'] = $detail;
 		// $data['terbaru'] = $this->Model_detail_program->Show_terbaru()->result();
 		$this->load->view('detail_program',$data);
+	}
+
+	// tampil detail program
+	public function detail_penulis($id_akun)
+	{
+		$this->load->model('Model_welcome');
+		$detail = $this->Model_welcome->detail_penulis($id_akun);
+		$data['detail'] = $detail;
+		// $data['terbaru'] = $this->Model_detail_program->Show_terbaru()->result();
+		$this->load->view('detail_penulis',$data);
 	}
 
 	// tampil detail infografik

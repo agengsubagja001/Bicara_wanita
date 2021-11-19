@@ -9,7 +9,7 @@
             <div class="container-fluid px-4">
                 <!-- kontent -->
                 <center><h1>Tulis Story</h1></center>
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url('pembaca/buat_story/upload') ?>" method="post" enctype="multipart/form-data">
                     <div class="container mt-3">
                         <div class="row">
                             <div class="col-md-12">
@@ -17,7 +17,7 @@
                                     <!-- input Judul -->
                                     <div class="col-md-12 p-2">	
                                         <div class="form-group" style="margin-bottom: 1rem;">
-                                            <input type="hidden" name="id_blog" value="">
+                                            <input type="hidden" name="id_akun" value="<?php echo $this->session->userdata('id_akun') ?>">
                                             <input type="text" name="judul" class="form-control" placeholder="Masukan Judul">
                                         </div>
                                     </div>

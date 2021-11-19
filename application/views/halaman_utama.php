@@ -16,14 +16,15 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img class="d-block w-100" src="<?php echo base_url('assets/img/kb.png') ?>" alt="First slide">
+                            <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/10/29/798f1d1e-8208-4ce2-9af4-8301e893a14b.jpg.webp?ect=3g" alt="First slide">
                         </div>
+                        <?php foreach ($show_banner as $banner): ?>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo base_url('assets/img/nar.png') ?>" alt="Second slide">
+                            <a href="<?php echo base_url().'halaman_utama/detail_program/'.$banner->id_program ?>">
+                                <img class="d-block w-100" src="<?php echo base_url().'assets/banner/'. $banner->gambar_banner ?>" alt="Second slide">
+                            </a>
                         </div>
-                        <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo base_url('assets/img/rema.png') ?>" alt="Third slide">
-                        </div>
+                        <?php endforeach ?>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -176,38 +177,26 @@
                 <div class="col-md-12">
                     <div class="row">
                         <!-- awal content story -->
+                        <?php foreach ($show_story as $story): ?>
                         <div class="col-md-6 mt-3">
+                            <a style="text-decoration: none; color:black;" href="<?php echo base_url().'detail_story/artikel_story/'. $story->id_story ?>">
                             <div class="story" style="position:relative;padding:20px;width:100%;height:auto;background: #FFFFFF; box-shadow: 0 5px 10px rgb(73 84 100 / 5%); border-radius: 5px;">
                                 <div class= "row">
                                     <div class="col-md-2">
                                         <img src="assets/img/ikon.png" class="img-fluid" style="width:70px; height:70px; border-radius: 50%;" alt="">
                                     </div>
                                     <div class="col-md-10 mt-2">
-                                        <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
-                                        <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
+                                        <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;"><?php echo $story->judul_story ?></span>
+                                        <div class="mb-2"><span style="text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;"><?php echo $story->isi_story ?></span></div>
                                     </div>
                                 </div>
                                 <div style="bottom: 15px;margin-top:3%">
-                                    <span>Nama Penulis</span>
+                                    <span><?php echo $story->username ?></span>
                                 </div>
                             </div>
+                            </a>
                         </div>
-                        <div class="col-md-6 mt-3">
-                            <div class="story" style="position:relative;padding:20px;width:100%;height:auto;background: #FFFFFF; box-shadow: 0 5px 10px rgb(73 84 100 / 5%); border-radius: 5px;">
-                                <div class= "row">
-                                <div class="col-md-2">
-                                    <img src="assets/img/ikon.png" class="img-fluid" style="width:70px; height:70px;" alt="">
-                                </div>
-                                <div class="col-md-10 mt-2">
-                                    <span style="font-family: Inter; font-style: normal;font-weight: 600; font-size: 20px; line-height: 29px;">Apakah Hidup Bisa Lebih Mudah</span>
-                                    <div class="mb-2"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum, nibh justo, nisl enim. Amet quam tellus orci fringilla mattis </span></div>
-                                </div>
-                                </div>
-                                <div style="bottom: 15px;margin-top:3%">
-                                    <span>Nama Penulis</span>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach ?>
                         <!-- akhir content story -->
                         <div class="col-md-12 text-right mt-5">
                           <a href="<?php echo base_url('detail_story') ?>"><button type="button" class="btn btn-outline-danger" style=" border: 1px solid #F7476E; border-radius: 10px">Lihat Semua</button></a>

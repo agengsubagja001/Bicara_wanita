@@ -17,4 +17,10 @@ class Model_login extends CI_Model{
 			return array();
 		}
 	}
+
+	// input data daftar
+	public function input_data($data,$table)
+	{
+		$this->db->insert($table,$data);
+	}
 }

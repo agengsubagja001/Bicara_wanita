@@ -62,7 +62,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-6 mt-3">
-                        <a style="text-decoration: none; color:black;" href="<?php echo base_url('detail_penulis') ?>">
+                        <a style="text-decoration: none; color:black;" href="<?php echo base_url().'halaman_utama/detail_penulis/'. $detail->id_akun ?>">
                             <div class="penulis">
                                 <div class= "row">
                                 <div class="col-md-2">

@@ -75,6 +75,11 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-microphone-alt"></i></i></div>
                         Podcast
                     </a>
+
+                    <a class="nav-link mt-1" href="<?= base_url() ?>admin/banner">
+                        <div class="sb-nav-link-icon"><i class="fas fa-microphone-alt"></i></i></div>
+                        Banner event
+                    </a>
                     
                     <a class="nav-link mt-1" href="<?= base_url() ?>admin/story">
                         <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>

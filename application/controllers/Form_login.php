@@ -52,7 +52,7 @@ class Form_login extends CI_Controller {
 					 		redirect('penulis/dashboard');
 							 break;
 
-					case 2 : redirect('halaman_utama');
+					case 3 : redirect('pembaca/dashboard');
 								break;
 					default: break;
 				}
