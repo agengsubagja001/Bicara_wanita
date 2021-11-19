@@ -11,36 +11,36 @@
         <div class="container" style="max-width: 1340px;">
             <div class="row">
                 <!-- vidio play -->
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <div class="row">
                      <div class="col-md-12" style="width:100%; height:auto;">
                         <?php echo $detail->isi_vidio ?>
                      </div> 
-                     <div class="col-md-12 mb-2">
+                     <div class="col-md-10 mb-2">
                         <span style="font-family: Poppins; font-style: normal; font-weight: 600; font-size: 30px; text-transform: capitalize;"><?php echo $detail->judul ?></span>
                      </div>  
                     </div>
                 </div>
                 <!-- akhir vidio play -->
                 <!-- vidio rekomendasi -->
-                <div class="col-md-4 mt-1">
+                <div class="col-md-5 mt-1">
                     <div class="row">
                         <div class="col-md-12" style="position: relative; top: -8px;">
                             <span style="font-family: Poppins;font-style: normal; font-weight: 600; font-size: 20px;">Vidio Terbaru</span>
                         </div>
                         <!-- awal konten rekomndasi -->
                         
-                            <div class="col-md-12">
+                            <div class="col-md-11">
                                 <?php foreach ($terbaru1 as $new) : ?>
                                    <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$new->id_vidio ?>" style="text-decoration: none;">
                                 <div class="row">
-                                    <div class="col-md-8 mt-4">
+                                    <div class="col-md-6 mt-4">
                                         <img class="img-fluid" style="margin-top:4px  width:100%; height:100px;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $new->gambar_thubnail ?>" alt="">
                                         <div class="middle">
                                             <div class="text">Play</div>
                                         </div>  
                                     </div>
-                                    <div class="col-md-4 mt-4">
+                                    <div class="col-md-6 mt-4">
                                         <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000; text-transform: capitalize;"><?php echo $new->judul ?></span>
                                     </div>
                                 </div>
@@ -75,8 +75,8 @@
                 transition: .5s ease;
                 opacity: 0;
                 position: absolute;
-                top: 32%;
-                left: 32%;
+                top: 50%;
+                left: 38%;
                 transform: translate(-40%,-40%);
                 -ms-transform: translate(-40%, -40%);
                 text-align: center;
