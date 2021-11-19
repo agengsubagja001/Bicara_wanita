@@ -11,7 +11,7 @@
                          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Keluar</a>
+							<a class="dropdown-item" href="<?php echo base_url('form_login/logout') ?>">Keluar</a>
 						</div>
 					</li>
                     <li class="nav-item" style="margin-left: 20px;">			

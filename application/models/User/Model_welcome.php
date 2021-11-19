@@ -22,6 +22,12 @@ class Model_welcome extends CI_Model
 		$this->db->order_by('tanggal', 'desc');
 		return $this->db->limit(4)->get('podcast');
 	}
+	// tampil data story
+	public function show_story(){
+		// $query = $this->session->userdata('id_akun');
+		$data = $this->db->query("SELECT story.id_story, story.judul_story, story.isi_story, story.status, story.tanggal, akun.id_akun, akun.username, akun.nama_lengkap FROM story INNER JOIN akun ON story.id_akun = akun.id_akun WHERE story.status = 'PUBLISH' ORDER BY tanggal DESC LIMIT 4");
+		return $data;
+	}
 
 	// tampil data program
 	public function show_program(){
@@ -35,6 +41,11 @@ class Model_welcome extends CI_Model
 		return $this->db->limit(3)->get('infografik');
 	}
 	
+	// tampil detail program
+	public function detail_penulis($id_akun){		
+		$query = $this->db->get_where('akun', array('id_akun' => $id_akun))->row();
+        return $query;
+	}
 
 
 }

@@ -25,6 +25,30 @@ class Story extends CI_Controller {
 		$this->load->view('admin/story',$data);
 	}
 
+	// uplode update data story
+    public function update(){
+		$query = $this->input->post('id_akun');
+        $judul = $this->input->post('judul_story');
+		$id_story = $this->input->post('id_story');
+		$status = $this->input->post('status');
+		$isi_story = $this->input->post('isi_story');
+
+        $data = array(
+            'judul_story'  => $judul,
+			'status'       => $status,
+			'isi_story'    => $isi_story,
+			'id_akun'    => $query
+        );
+
+		$where = array(
+			'id_story' => $id_story
+		);
+
+        $this->Model_storyy->update_data($where,$data,'story');
+        $this->session->set_flashdata('success','Action Completed');
+        redirect('admin/story');
+    }
+
     // upload data
     function upload()
 	{
@@ -68,68 +92,18 @@ class Story extends CI_Controller {
     }
 
 	// hapus data
-	public function hapus($id_blog){
-		$del = array('id_blog' => $id_blog);
-		$this->Model_blog->hapus_data($del,'blog');
+	public function hapus($id_story){
+		$del = array('id_story' => $id_story);
+		$this->Model_storyy->hapus_data($del,'story');
 		$this->session->set_flashdata('success1','Action Completed');
-		redirect('admin/blog');
+		redirect('admin/story');
 	}
 
 	// edit data
-	public function edit($id_blog){
-		$del = array('id_blog' => $id_blog);
-		$data['user'] = $this->Model_blog->edit_data($del,'blog')->result();
-		$this->load->view('admin/edit_blog',$data);
+	public function edit($id_story){
+		$del = array('id_story' => $id_story);
+		$data['priview_story'] = $this->Model_storyy->edit_data($del,'story')->result();
+		$this->load->view('admin/priview',$data);
 	}
 
-	// update data
-	public function update(){
-		{
-			if (isset($_POST['btn_submit'])) {
-				$judul = $this->input->post('judul');
-				$id_blog = $this->input->post('id_blog');
-				$isi   = $this->input->post('isi');
-				$kategori   = $this->input->post('kategori');
-	
-				// Foto
-				// blog
-				$foto_icon_brand = $_FILES['gambar']['name'];
-				$icon_tmp = $_FILES['gambar']['tmp_name'];
-				
-				// Format
-				 // cek ekstensi foto
-				 $ekstensiGambarValid = ['jpg','jpeg','png','webp','PNG','JPG'];
-				 $ekstensiGambar = explode('.',$foto_icon_brand);
-				 $ekstensiGambar = strtolower(end($ekstensiGambar));
-				// // GENERAT NAME PHOTO 1\
-				$encrypted = base64_encode($foto_icon_brand);
-				$encrypted .= '.';
-				$encrypted .= $ekstensiGambar;
-				// Upload Icon Brand
-				move_uploaded_file($icon_tmp,'./assets/img_sampul/'.$encrypted);
-	
-				$data = array(
-					
-					'judul'            => $judul,
-					'isi'              => $isi,
-					'kategori'         => $kategori,
-					'gambar'       => $encrypted
-	   
-				);
-
-				$where = array(
-					'id_blog' => $id_blog
-				);
-						
-					$this->Model_blog->update_data($where,$data, 'blog');
-					$this->session->set_flashdata('success_edit','Action Completed');
-					redirect('admin/blog');
-					//  redirect('tambah_produk');
-					echo "<script>console.log('berhasil! pindah page')</script>";
-	
-			}else{
-	
-			}
-		}
-	}
 }

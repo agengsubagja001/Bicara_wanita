@@ -41,7 +41,7 @@
 												<td style=""><?php echo $story->judul_story ?></td>
 												<td><?php echo $story->tanggal ?></td>
                                                 <td>
-                                                    <span class="badge bg-success">cek<?php echo $story->status ?></span>
+                                                    <span class="badge bg-success"><?php echo $story->status ?></span>
                                                 </td>
                                                 <td>
                                                     <a href="<?php echo base_url().'admin/story/edit/'.$story->id_story ?>" style="margin-top: 4px; padding: 0.25rem 0.5rem;font-size: 0.76563rem;line-height: 1.5;border-radius: 3px;" class="btn btn-warning"><i style="color:white" class="fas fa-pen"></i></a>
