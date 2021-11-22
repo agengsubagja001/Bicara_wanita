@@ -16,7 +16,7 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2021/10/29/798f1d1e-8208-4ce2-9af4-8301e893a14b.jpg.webp?ect=3g" alt="First slide">
+                            <img class="d-block w-100" src="<?php echo base_url('assets/img/banner3.png') ?>" alt="First slide">
                         </div>
                         <?php foreach ($show_banner as $banner): ?>
                         <div class="carousel-item">
@@ -225,7 +225,7 @@
                                                 <img class="img-responsive"  style="width: 100%; height: auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
                                             </a>
                                             <div class="middle">
-                                                <div class="text">Play</div>
+                                                <div class="text"><i class="fa fa-play" aria-hidden="true"></i></div>
                                             </div>
                                         </div>
                                         <!-- akhir content vidio -->
@@ -275,39 +275,28 @@
 <?php $this->load->view('partial/footer') ?> 
 <!-- akhir fotter -->
 <style>
-    /* css thumnil */
-            .gambar {
-                opacity: 1;
-                display: block;
-                width: 100%;
-                height: auto;
+ /* css thumnil */
+            
+ .middle {
                 transition: .5s ease;
-                backface-visibility: hidden;
-            }
-
-            .middle {
-                transition: .5s ease;
-                opacity: 0;
+                opacity: 30%;
                 position: absolute;
+                background-color: #4C4C4C;
                 top: 50%;
                 left: 50%;
+                border-radius:50px;
                 transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
                 text-align: center;
             }
-
-            .container:hover .image {
-                opacity: 0.3;
-            }
-
             .container:hover .middle {
-                opacity: 1;
+                opacity: 80%;
             }
 
             .text {
-                background-color: #F50F0F;
+                background-color: #EB0009;
                 color: white;
-                border-radius:40px;
+                border-radius:50px;
                 font-size: 16px;
                 padding: 16px 32px;
                 

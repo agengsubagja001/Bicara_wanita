@@ -11,48 +11,41 @@
         <div class="container" style="max-width: 1340px;">
             <div class="row">
                 <!-- vidio play -->
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <div class="row">
                      <div class="col-md-12" style="width:100%; height:auto;">
                         <?php echo $detail->isi_vidio ?>
                      </div> 
-                     <div class="col-md-12 mb-2">
+                     <div class="col-md-12 mb-5">
                         <span style="font-family: Poppins; font-style: normal; font-weight: 600; font-size: 30px; text-transform: capitalize;"><?php echo $detail->judul ?></span>
                      </div>  
                     </div>
                 </div>
                 <!-- akhir vidio play -->
                 <!-- vidio rekomendasi -->
-                <div class="col-md-4 mt-1">
-                    <div class="row">
-                        <div class="col-md-12" style="position: relative; top: -8px;">
-                            <span style="font-family: Poppins;font-style: normal; font-weight: 600; font-size: 20px;">Vidio Terbaru</span>
-                        </div>
+                <div class="col-md-5" style="position: relative;bottom:25px;">
                         <!-- awal konten rekomndasi -->
-                        
                             <div class="col-md-12">
                                 <?php foreach ($terbaru1 as $new) : ?>
                                    <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$new->id_vidio ?>" style="text-decoration: none;">
-                                <div class="row">
-                                    <div class="col-md-8 mt-4">
-                                        <img class="img-fluid" style="margin-top:4px  width:100%; height:100px;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $new->gambar_thubnail ?>" alt="">
-                                        <div class="middle">
-                                            <div class="text">Play</div>
-                                        </div>  
+                                    <div class="row row-no-gutters">
+                                        <div class="col-md-7 mt-4">
+                                            <img class="img-fluid" style="margin-top:4px  width:100%;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $new->gambar_thubnail ?>" alt="">
+                                            <div class="middle">
+                                                <div class="text"><i class="fa fa-play" aria-hidden="true"></i></div>
+                                            </div>  
+                                        </div>
+                                        <div class="col-md-5 mt-4">
+                                            <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000; text-transform: capitalize;"><?php echo $new->judul ?></span>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4 mt-4">
-                                        <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000; text-transform: capitalize;"><?php echo $new->judul ?></span>
-                                    </div>
-                                </div>
                                 </a>
                                 <?php endforeach ?>
-                            </div>
-                        
+                            </div>                        
                         <!-- akhir konten rekomendasi -->
                     </div>
                 </div>
                 <!-- akhir vidio rekomendasi -->
-            </div>
         </div>
     </section>
     <div class="fotter" style="position: relative; top: 20px;">
@@ -61,39 +54,28 @@
 
 </body>
 <style>
-    /* * css thumnil */ 
-            .gambar {
-                opacity: 1;
-                display: block;
-                width: 100%;
-                height: auto;
-                transition: .5s ease;
-                backface-visibility: hidden;
-            }
-
+   /* css thumnil */
+            
             .middle {
                 transition: .5s ease;
-                opacity: 0;
+                opacity: 30%;
                 position: absolute;
-                top: 32%;
-                left: 32%;
-                transform: translate(-40%,-40%);
-                -ms-transform: translate(-40%, -40%);
+                background-color: #4C4C4C;
+                top: 50%;
+                left: 50%;
+                border-radius:50px;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
                 text-align: center;
             }
-
-            .container:hover .image {
-                opacity: 0.3;
-            }
-
             .container:hover .middle {
-                opacity: 1;
+                opacity: 80%;
             }
 
             .text {
-                background-color: #F50F0F;
+                background-color: #EB0009;
                 color: white;
-                border-radius:40px;
+                border-radius:50px;
                 font-size: 16px;
                 padding: 16px 32px;
                 

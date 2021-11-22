@@ -30,7 +30,7 @@
                             <img class="img-responsive " src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" style="object-fit:cover; width: 100%; height: auto;">
                         </a>
                         <div class="middle">
-                            <div class="text">Play</div>
+                            <div class="text"><i class="fa fa-play" aria-hidden="true"></i></div>
                         </div>
                     </div>
                     <!-- akhir konten infografik -->
@@ -45,39 +45,28 @@
 <!-- footer -->
 <?php $this->load->view('partial/footer') ?> 
 <style>
-    /* * css thumnil */ 
-            .gambar {
-                opacity: 1;
-                display: block;
-                width: 100%;
-                height: auto;
+      /* css thumnil */
+            
+      .middle {
                 transition: .5s ease;
-                backface-visibility: hidden;
-            }
-
-            .middle {
-                transition: .5s ease;
-                opacity: 0;
+                opacity: 30%;
                 position: absolute;
+                background-color: #4C4C4C;
                 top: 50%;
                 left: 50%;
+                border-radius:50px;
                 transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
                 text-align: center;
             }
-
-            .container:hover .image {
-                opacity: 0.3;
-            }
-
             .container:hover .middle {
-                opacity: 1;
+                opacity: 80%;
             }
 
             .text {
-                background-color: #F50F0F;
+                background-color: #EB0009;
                 color: white;
-                border-radius:40px;
+                border-radius:50px;
                 font-size: 16px;
                 padding: 16px 32px;
                 

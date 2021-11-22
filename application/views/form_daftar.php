@@ -40,8 +40,13 @@
                                         </div>
                                         <br>
                                         <!-- awal button -->
-                                        <div class="col-md-12 text-center">
-                                            <button type="submit" class="bt1 btn btn-primary" style="border: 1px solid #F7476E; background-color: #F7476E">Daftar</button>
+                                        <div class="col-md-12">
+                                            <table style="margin-left: auto; margin-right: auto;">
+                                                <tr>
+                                                    <td style="position:relative; right:5px;"><button type="submit" class="bt1 btn btn-primary" style="border: 1px solid #F7476E; background-color: #F7476E">Daftar</button></td>
+                                                    <td><a href="<?php echo base_url('form_login/login'); ?>"> <button type="button" class="btn btn-outline-danger" style="border: 1px solid #F7476E;">Masuk</button></a></td>
+                                                </tr>
+                                            </table>
                                         </div>
                                         <!-- akhir button -->
                                      </form>

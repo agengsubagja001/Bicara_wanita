@@ -34,7 +34,7 @@
                                             <!-- akhir input judul -->
                                             <div class="col-md-12 p-2">
                                                 <div class="form-group">
-                                                    <input name="vidio" placeholder="masukan link vidio" class="form-control" >
+                                                    <input name="vidio" placeholder="masukan link vidio (atur ukuran widht jadi 100%)" class="form-control" >
                                                 </div>
                                             </div>
                                         </div>
