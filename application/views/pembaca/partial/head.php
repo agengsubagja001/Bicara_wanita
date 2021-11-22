@@ -18,6 +18,17 @@
 
      <!-- CDN CKEDITOR -->
      <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+<style>
+    /* css text destok */
+    @media only screen and (min-width: 992px) {
+        .C1 {
+            transform: translate(-90px);
 
+        }
+    
+    }
+    
+</style>
 </head>
+
 <body>
