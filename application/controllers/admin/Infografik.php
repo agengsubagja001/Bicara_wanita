@@ -20,7 +20,7 @@ class Infografik extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['show_infografik'] = $this->Model_infografik->Show_infografik()->result();
+		$data['show_infografik'] = $this->model_infografik->Show_infografik()->result();
 		$this->load->view('admin/infografik',$data);
 	}
 
@@ -71,7 +71,7 @@ class Infografik extends CI_Controller {
 	
 			);
 					
-				$this->Model_infografik->input_data($dataa, 'infografik');
+				$this->model_infografik->input_data($dataa, 'infografik');
 				$this->session->set_flashdata('success','Action Completed');
 				redirect('admin/infografik');
 
@@ -83,7 +83,7 @@ class Infografik extends CI_Controller {
 	// hapus	
 	public function hapus($id_infografik){
 		$del = array('id_infografik' => $id_infografik);
-		$this->Model_infografik->hapus_data($del,'infografik');
+		$this->model_infografik->hapus_data($del,'infografik');
 		$this->session->set_flashdata('success1','Action Completed');
 		redirect('admin/infografik');
 	}

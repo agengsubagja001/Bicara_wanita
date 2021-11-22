@@ -17,6 +17,19 @@ class Model_welcome extends CI_Model
 		
 	}
 
+	// tampil data banner
+	// public function show_langsung(){
+	// 	$data = $this->db->query("SELECT blog.id_blog, blog.judul, blog.gambar, blog.date, kategori.id_kategori, kategori.kategori FROM blog INNER JOIN kategori ON blog.id_kategori = kategori.id_kategori WHERE kategori.id_kategori ORDER BY date DESC");
+	// 	return $data;
+		
+	// }
+
+	
+	// tampil data kategori
+	public function show_kategori(){
+		return $this->db->get('kategori');
+	}
+
 	// tampil data podcast
 	public function show_podcast(){
 		$this->db->order_by('tanggal', 'desc');

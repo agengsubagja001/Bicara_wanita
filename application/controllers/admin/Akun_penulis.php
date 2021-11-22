@@ -25,7 +25,7 @@ class Akun_penulis extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['show_penulis'] = $this->Model_akun->Show_data_penulis()->result();
+		$data['show_penulis'] = $this->model_akun->Show_data_penulis()->result();
 		$this->load->view('admin/akun_penulis',$data);
 	}
 
@@ -75,7 +75,7 @@ class Akun_penulis extends CI_Controller {
    
 			);
 					
-			$this->Model_akun->input_data_penulis($dataa,'akun');
+			$this->model_akun->input_data_penulis($dataa,'akun');
 			$this->session->set_flashdata('success','Action Completed');
 			redirect('admin/akun_penulis');
 
@@ -88,14 +88,14 @@ class Akun_penulis extends CI_Controller {
     // edit data
     public function edit($id_akun){
 		$del = array('id_akun' => $id_akun);
-		$data['show_edit'] = $this->Model_kategori->edit_data($del,'akun')->result();
+		$data['show_edit'] = $this->model_kategori->edit_data($del,'akun')->result();
 		$this->load->view('admin/akun_penulis',$data);
 	}
 
     // Hapus data
     function hapus($id_akun){
 		$where = array('id_akun' => $id_akun);
-		$this->Model_kategori->hapus_data($where,'akun');
+		$this->model_kategori->hapus_data($where,'akun');
         $this->session->set_flashdata('success1','Action Completed');
 		redirect('admin/akun_penulis');
 	}

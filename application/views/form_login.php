@@ -30,8 +30,9 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label >Password</label>
-                                                    <input required style="width: 100%; height: 40px;" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password" name="password">
+                                                    <input required style="width: 100%; height: 40px;" type="password" class="form-control form-control-user" id="pass" placeholder="Masukkan Password" name="password">
                                                     <?php echo form_error('password', '<div class="text-danger small ml-2">','</div'); ?>
+                                                    <div class="show-password" style="display:flex; align-items:center; margin-top:5px; font-size:13px;"><input onclick="togglePasswordVisibility()" style="margin-right: 4px;" type="checkbox" ><span>Show Password</span></div>
                                                 </div>
                                                 <a href="#"  style="text-decoration: none; color:black"><label style="font-weight: bold;">Lupa Kata Sandi?</label></a>
                                                 <br>
@@ -64,4 +65,17 @@
                 </div>
             </section>
         <!-- akhir form login -->
+
+        <!-- script untuk show password -->
+        <script>
+            const passwordInput = document.getElementById("pass");
+            const togglePasswordVisibility = () => {
+                if (passwordInput.type === "password"){
+                    passwordInput.type = "text";
+                }
+                else{
+                    passwordInput.type = "password";
+                }
+            };
+        </script>
 </body>

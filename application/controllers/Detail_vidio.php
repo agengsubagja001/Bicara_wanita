@@ -7,7 +7,7 @@ class Detail_vidio extends CI_Controller {
 	{
 		
 		// untuk menampilkan vidio semua vidio
-		$data['show_vidio1'] = $this->Model_detail_vidio->Show_vidio1()->result();
+		$data['show_vidio1'] = $this->model_detail_vidio->Show_vidio1()->result();
 		$this->load->view('detail_vidio',$data);
 	}
 	

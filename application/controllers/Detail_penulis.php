@@ -5,7 +5,7 @@ class Detail_penulis extends CI_Controller {
 
 	public function index()
 	{   
-		$data['show_profil'] = $this->Model_profil->Show_profil()->result();
+		$data['show_profil'] = $this->model_profil->Show_profil()->result();
 		$this->load->view('Detail_penulis',$data);
 	}
 }

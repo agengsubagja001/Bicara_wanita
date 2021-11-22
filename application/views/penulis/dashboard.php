@@ -95,7 +95,7 @@
                                                     <tr>
                                                         <td><?php echo $no++ ?></td>
                                                         <td style="width: 150px">
-                                                            <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $blog->gambar ?>" style="object-fit:cover; width:100px; height:100px" class="img-fluid" alt="object-fit:contain;">
+                                                            <img src="<?php echo base_url().'assets/admin/blog/img_sampul/'. $blog->gambar ?>" style="object-fit:cover; width:100px; height:100px" class="img-fluid" alt="object-fit:contain;">
                                                         </td>
                                                         <td style=""><?php echo $blog->judul ?></td>
                                                         <td><?php echo $blog->date ?></td>

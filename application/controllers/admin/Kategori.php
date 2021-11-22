@@ -20,7 +20,7 @@ class Kategori extends CI_Controller {
 	 */
 	public function index()
 	{
-        $data['show_kategori'] = $this->Model_kategori->Show_kategori()->result();
+        $data['show_kategori'] = $this->model_kategori->Show_kategori()->result();
 		$this->load->view('admin/kategori',$data);
 	}
 
@@ -32,7 +32,7 @@ class Kategori extends CI_Controller {
             'kategori'  => $kategori
         );
 
-        $this->Model_kategori->input_data($data,'kategori');
+        $this->model_kategori->input_data($data,'kategori');
         $this->session->set_flashdata('success','Action Completed');
         redirect('admin/kategori');
     }
@@ -40,14 +40,14 @@ class Kategori extends CI_Controller {
     // edit kategori
 	public function edit($id_kategori){
 		$del = array('id_kategori' => $id_kategori);
-		$data['show_edit'] = $this->Model_kategori->edit_data($del,'kategori')->result();
+		$data['show_edit'] = $this->model_kategori->edit_data($del,'kategori')->result();
 		$this->load->view('admin/kategori',$data);
 	}
 
     // Hapus data
     function hapus($id_kategori){
 		$where = array('id_kategori' => $id_kategori);
-		$this->Model_kategori->hapus_data($where,'kategori');
+		$this->model_kategori->hapus_data($where,'kategori');
         $this->session->set_flashdata('success1','Action Completed');
 		redirect('admin/kategori');
 	}

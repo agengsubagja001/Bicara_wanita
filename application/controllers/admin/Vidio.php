@@ -1,4 +1,4 @@
-<?php
+m<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Vidio extends CI_Controller {
@@ -20,7 +20,7 @@ class Vidio extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['show_vidio'] = $this->Model_vidio->Show_vidio()->result();
+		$data['show_vidio'] = $this->model_vidio->Show_vidio()->result();
 		$this->load->view('admin/vidio',$data);
 	}
 
@@ -62,7 +62,7 @@ class Vidio extends CI_Controller {
    
 			);
 					
-				$this->Model_vidio->input_data($dataa, 'vidio');
+				$this->model_vidio->input_data($dataa, 'vidio');
 				$this->session->set_flashdata('success','Action Completed');
 				redirect('admin/vidio');
 
@@ -73,7 +73,7 @@ class Vidio extends CI_Controller {
 
 	public function hapus($id_vidio){
 		$del = array('id_vidio' => $id_vidio);
-		$this->Model_vidio->hapus_data($del,'vidio');
+		$this->model_vidio->hapus_data($del,'vidio');
 		$this->session->set_flashdata('success1','Action Completed');
 		redirect('admin/vidio');
 	}

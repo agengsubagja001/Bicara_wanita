@@ -37,9 +37,9 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 		// untuk menampilkan jumlah blog
-		$data['total_blog'] = $this->Model_dashboard->Show_jml();
+		$data['total_blog'] = $this->model_dashboard->Show_jml();
 		// untuk menampilkan data blog
-		$data['show_blog'] = $this->Model_dashboard->Show_data_blog()->result();
+		$data['show_blog'] = $this->model_dashboard->Show_data_blog()->result();
 		$this->load->view('penulis/dashboard',$data);
 	}
 }

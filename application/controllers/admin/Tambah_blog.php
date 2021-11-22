@@ -20,7 +20,7 @@ class Tambah_blog extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['show_kat'] = $this->Model_kategori->show()->result();
+		$data['show_kat'] = $this->model_kategori->show()->result();
 		$this->load->view('admin/tambah_blog',$data);
 	}
 
@@ -61,7 +61,7 @@ class Tambah_blog extends CI_Controller {
    
 			);
 					
-				$this->Model_blog->input_data($dataa, 'blog');
+				$this->model_blog->input_data($dataa, 'blog');
 				$this->session->set_flashdata('success','Action Completed');
 				redirect('admin/blog');
 				//  redirect('tambah_produk');

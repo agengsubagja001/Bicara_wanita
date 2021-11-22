@@ -19,7 +19,38 @@
          <!-- CDN CKEDITOR -->
          <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
 
-         
+        <!-- jquery remove gambar -->
+         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+         <style>
+             /* css untuk gambar sampul infografik */
+                #pic{
+                    display: none;
+                    }
+                    
+                .newbtn{
+                        cursor: pointer;
+                    }
+                    #blah{
+                max-width:100px;
+                height:100px;
+                margin-top:20px;
+            }
+
+             /* css untuk gambar banner infografik */
+            #picc{
+                    display: none;
+                    }
+                    
+                .newbtnn{
+                        cursor: pointer;
+                    }
+                    #blahh{
+                max-width:100px;
+                height:100px;
+                margin-top:20px;
+            }
+        </style>
         
     </head>
 <body class="sb-nav-fixed">

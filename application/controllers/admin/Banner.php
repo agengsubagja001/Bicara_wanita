@@ -20,8 +20,8 @@ class Banner extends CI_Controller {
 	 */
 	public function index()
 	{
-        $data['show_program'] = $this->Model_banner->Show_program()->result();
-		$data['show_banner'] = $this->Model_banner->Show_banner()->result();
+        $data['show_program'] = $this->model_banner->Show_program()->result();
+		$data['show_banner'] = $this->model_banner->Show_banner()->result();
 		$this->load->view('admin/banner',$data);
 	}
 
@@ -56,7 +56,7 @@ class Banner extends CI_Controller {
    
 			);
 					
-				$this->Model_banner->input_data($dataa, 'banner');
+				$this->model_banner->input_data($dataa, 'banner');
 				$this->session->set_flashdata('success','Action Completed');
 				redirect('admin/banner');
 				//  redirect('tambah_produk');
@@ -70,7 +70,7 @@ class Banner extends CI_Controller {
 	// hapus data
 	public function hapus($id_blog){
 		$del = array('id_blog' => $id_blog);
-		$this->Model_blog->hapus_data($del,'blog');
+		$this->model_blog->hapus_data($del,'blog');
 		$this->session->set_flashdata('success1','Action Completed');
 		redirect('admin/blog');
 	}
@@ -78,7 +78,7 @@ class Banner extends CI_Controller {
 	// edit data
 	public function edit($id_blog){
 		$del = array('id_blog' => $id_blog);
-		$data['user'] = $this->Model_blog->edit_data($del,'blog')->result();
+		$data['user'] = $this->model_blog->edit_data($del,'blog')->result();
 		$this->load->view('admin/edit_blog',$data);
 	}
 
@@ -121,7 +121,7 @@ class Banner extends CI_Controller {
 					'id_blog' => $id_blog
 				);
 						
-					$this->Model_blog->update_data($where,$data, 'blog');
+					$this->model_blog->update_data($where,$data, 'blog');
 					$this->session->set_flashdata('success_edit','Action Completed');
 					redirect('admin/blog');
 					//  redirect('tambah_produk');
