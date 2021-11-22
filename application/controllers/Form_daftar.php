@@ -22,7 +22,7 @@ class Form_daftar extends CI_Controller {
 			'nama_lengkap'      => $nama
         );
 
-        $this->Model_login->input_data($data,'akun');
+        $this->model_login->input_data($data,'akun');
         $this->session->set_flashdata('success','Action Completed');
         redirect('form_login/login');
     }

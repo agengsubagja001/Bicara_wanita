@@ -21,7 +21,7 @@ class Form_login extends CI_Controller {
 
 			
 
-			$auth = $this->Model_login->cek_login();
+			$auth = $this->model_login->cek_login();
 
 			$query = $this->db->query("SELECT * FROM akun WHERE username = '$fuser'");
 

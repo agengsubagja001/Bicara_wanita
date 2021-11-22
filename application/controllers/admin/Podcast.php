@@ -20,7 +20,7 @@ class Podcast extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['show_podcast'] = $this->Model_podcast->Show_podcast()->result();
+		$data['show_podcast'] = $this->model_podcast->Show_podcast()->result();
 		$this->load->view('admin/podcast',$data);
 	}
 
@@ -77,7 +77,7 @@ class Podcast extends CI_Controller {
    
 			);
 					
-				$this->Model_podcast->input_data($dataa, 'podcast');
+				$this->model_podcast->input_data($dataa, 'podcast');
 				$this->session->set_flashdata('success','Action Completed');
 				redirect('admin/podcast');
 
@@ -89,7 +89,7 @@ class Podcast extends CI_Controller {
 	// hapus	
 	public function hapus($id_podcast){
 		$del = array('id_podcast' => $id_podcast);
-		$this->Model_blog->hapus_data($del,'podcast');
+		$this->model_blog->hapus_data($del,'podcast');
 		$this->session->set_flashdata('success1','Action Completed');
 		redirect('admin/podcast');
 	}

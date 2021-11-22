@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('penulis/Model_blog','penulis/Model_profil','penulis/Model_dashboard','user/Model_welcome','user/Model_detail_blog','user/Model_detail_program','user/Model_detail_vidio','user/Model_login','user/Model_detail_infografik','user/Model_detail_podcast','admin/Model_kategori','admin/Model_banner','admin/Model_akun','admin/Model_podcast','admin/Model_vidio','admin/Model_blog','admin/Model_dashboardd','admin/Model_story','admin/Model_program','admin/Model_infografik','pembaca/Model_storyy');
+$autoload['model'] = array('penulis/model_blog','penulis/model_profil','penulis/model_dashboard','user/model_welcome','user/model_detail_blog','user/model_detail_program','user/model_detail_vidio','user/model_login','user/model_detail_infografik','user/model_detail_podcast','admin/model_kategori','admin/model_banner','admin/model_akun','admin/model_podcast','admin/model_vidio','admin/model_blog','admin/model_dashboardd','admin/model_story','admin/model_program','admin/model_infografik','pembaca/model_storyy');

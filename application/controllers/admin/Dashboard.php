@@ -33,21 +33,21 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 		// untuk menampilkan jumlah program
-		$data['total_program'] = $this->Model_dashboardd->jml_program();
+		$data['total_program'] = $this->model_dashboardd->jml_program();
 		// untuk menampilkan jumlah podcast
-		$data['total_podcast'] = $this->Model_dashboardd->jml_podcast();
+		$data['total_podcast'] = $this->model_dashboardd->jml_podcast();
 		// untuk menampilkan jumlah infografik
-		$data['total_infografik'] = $this->Model_dashboardd->jml_infografik();
+		$data['total_infografik'] = $this->model_dashboardd->jml_infografik();
 		// untuk menampilkan jumlah blog
-		$data['total_blog'] = $this->Model_dashboardd->jml_blog();
+		$data['total_blog'] = $this->model_dashboardd->jml_blog();
 		// untuk menampilkan jumlah vidio
-		$data['total_vidio'] = $this->Model_dashboardd->jml_vidio();
+		$data['total_vidio'] = $this->model_dashboardd->jml_vidio();
 		// untuk menampilkan jumlah kategori
-		$data['total_kategori'] = $this->Model_dashboardd->jml_kategori();
+		$data['total_kategori'] = $this->model_dashboardd->jml_kategori();
 		// untuk menampilkan jumlah blog penulis
-		$data['total_blog_penulis'] = $this->Model_dashboardd->jml_blog_penulis();
+		$data['total_blog_penulis'] = $this->model_dashboardd->jml_blog_penulis();
 		// untuk menampilkan data blog
-		$data['show_blog'] = $this->Model_dashboardd->Show_data_blog()->result();
+		$data['show_blog'] = $this->model_dashboardd->Show_data_blog()->result();
 		$this->load->view('admin/dashboard',$data);
 	}
 }

@@ -3,6 +3,9 @@
 
 <!-- navbar -->
 <?php $this->load->view('pembaca/partial/navbar') ?>
+<br>
+<br>
+<br>
 
 <body>
         <main>
@@ -41,4 +44,14 @@
                 <!-- Akhir kontent -->
             </div>
         </main>
+
+        <!-- Script CKEDITOR -->
+        <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );      
+        </script>
+        <!-- AKHIR SCRIPT CKEDITOR -->
 </body>

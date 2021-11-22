@@ -20,7 +20,7 @@ class Profil extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['show_profil'] = $this->Model_profil->Show_profil()->result();
+		$data['show_profil'] = $this->model_profil->Show_profil()->result();
 		// $this->load->view('penulis/partial/navbar');
 		$this->load->view('penulis/profil',$data);
 	}
@@ -28,7 +28,7 @@ class Profil extends CI_Controller {
 	// edit data profil
 	public function edit($id_akun){
 		$del = array('id_akun' => $id_akun);
-		$data['show_edit'] = $this->Model_profil->edit_data($del,'akun')->result();
+		$data['show_edit'] = $this->model_profil->edit_data($del,'akun')->result();
 		$this->load->view('penulis/edit_profil',$data);
 	}
 
@@ -79,7 +79,7 @@ class Profil extends CI_Controller {
 					'id_akun' => $id_akun
 				);
 						
-					$this->Model_profil->update_data($where,$data, 'akun');
+					$this->model_profil->update_data($where,$data, 'akun');
 					$this->session->set_flashdata('success_edit','Action Completed');
 					redirect('penulis/profil');
 					//  redirect('tambah_produk');

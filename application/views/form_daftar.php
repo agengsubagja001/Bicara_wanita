@@ -34,8 +34,9 @@
                                         </div>
                                         <div class="form-group">
                                             <label >Kata Sandi</label>
-                                            <input required style="width: 100%; height: 40px;" type="password" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukkan Kata sandi" name="password">
+                                            <input required style="width: 100%; height: 40px;" type="password" class="form-control form-control-user" id="pass" aria-describedby="emailHelp" placeholder="Masukkan Kata sandi" name="password">
                                             <?php echo form_error('password','<div class="text-danger small ml-2">', '</div>') ?>
+                                            <div class="show-password" style="display:flex; align-items:center; margin-top:5px; font-size:13px;"><input onclick="togglePasswordVisibility()" style="margin-right: 4px;" type="checkbox" ><span>Show Password</span></div>
                                         </div>
                                         <br>
                                         <!-- awal button -->
@@ -54,4 +55,17 @@
         </div>
     </section>
     <!-- akhir section daftar -->
+
+    <!-- script untuk show password -->
+        <script>
+            const passwordInput = document.getElementById("pass");
+            const togglePasswordVisibility = () => {
+                if (passwordInput.type === "password"){
+                    passwordInput.type = "text";
+                }
+                else{
+                    passwordInput.type = "password";
+                }
+            };
+        </script>
 </body>

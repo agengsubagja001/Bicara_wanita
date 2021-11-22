@@ -36,7 +36,7 @@ class Buat_story extends CI_Controller {
 			'status'  => $status
         );
 
-        $this->Model_storyy->input_data($data,'story');
+        $this->model_storyy->input_data($data,'story');
         $this->session->set_flashdata('success','Action Completed');
         redirect('pembaca/dashboard');
     }

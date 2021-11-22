@@ -75,7 +75,7 @@
                                 <div class="bungkus" style=" max-width: 100%;">
                                     <div class="row">
                                         <div class="col-md-6 mt-3">
-                                            <img src="<?php echo base_url().'assets/admin/blog/img_Sampul/'. $show->gambar ?>" style="object-fit:cover; width: 100%; height: auto;" alt="">
+                                            <img src="<?php echo base_url().'assets/admin/blog/img_sampul/'. $show->gambar ?>" style="object-fit:cover; width: 100%; height: auto;" alt="">
                                         </div>
                                         <div class="col-md-6 mt-3">
                                             <table>

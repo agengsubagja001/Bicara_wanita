@@ -5,7 +5,7 @@ class Detail_story extends CI_Controller {
 
 	public function index()
 	{
-		$data['show_story'] = $this->Model_storyy->show_all_story()->result();
+		$data['show_story'] = $this->model_storyy->show_all_story()->result();
 		$this->load->view('detail_story',$data);
 	}
 	
@@ -13,7 +13,7 @@ class Detail_story extends CI_Controller {
 	public function artikel_story($id_story)
 	{
 		$this->load->model('Model_storyy');
-		$detail = $this->Model_storyy->detail_data($id_story);
+		$detail = $this->model_storyy->detail_data($id_story);
 		$data['detail'] = $detail;
 		// $data['terbaru'] = $this->Model_detail_program->Show_terbaru()->result();
 		$this->load->view('artikel_story',$data);

@@ -20,7 +20,7 @@ class Tambah_blog extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['show_kategori'] = $this->Model_kategori->show_kategori()->result();
+		$data['show_kategori'] = $this->model_kategori->show_kategori()->result();
 		$this->load->view('penulis/tambah_blog',$data);
 	}
 
@@ -61,7 +61,7 @@ class Tambah_blog extends CI_Controller {
    
 			);
 					
-				$this->Model_blog->input_data($dataa, 'blog');
+				$this->model_blog->input_data($dataa, 'blog');
 				$this->session->set_flashdata('success','Action Completed');
 				redirect('penulis/blog');
 				//  redirect('tambah_produk');

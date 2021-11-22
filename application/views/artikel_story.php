@@ -30,7 +30,7 @@
                                     <table>
                                         <tr>
                                             <td><a href="https://www.facebook.com/sharer.php?u=<?php echo base_url().'detail_story/artikel_story/'. $detail->judul_story ?>"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px"><i class="fa fa-facebook-official"></i></button></a></td>
-                                            <td><a href="#"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px"><i class="fa fa-instagram"></i></button></a></td>
+                                            <td><a href="https://twitter.com/intent/tweet?text=<?php echo $detail->judul_story?>%0AKlik%20Untuk%20melihat%20selengkap%20nya%20Kunjungi%20web%20resmi%20kami%20<?php echo base_url().'detail_story/artikel_story/'. $detail->id_story ?>"><button type="button" class="btn btn-social-icon btn-twitter btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px"><i class="fa fa-twitter"></i></button></a></td>
                                             <td><a href="https://wa.me/?text=<?php echo $detail->judul_story?>%0AKlik%20Untuk%20melihat%20selengkap%20nya%20Kunjungi%20web%20resmi%20kami%20<?php echo base_url().'detail_story/artikel_story/'. $detail->id_story ?>"><button type="button" class="btn btn-social-icon btn-wa btn-rounded" style="width: 50px; height: 50px; padding: 1; border-radius: 50px"><i class="fa fa-whatsapp"></i></button></a></td>
                                         </tr>
                                     </table>

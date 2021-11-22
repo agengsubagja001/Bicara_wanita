@@ -18,7 +18,7 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		$data['show_story'] = $this->Model_storyy->show_story_pembaca()->result();
+		$data['show_story'] = $this->model_storyy->show_story_pembaca()->result();
 		$this->load->view('pembaca/dashboard',$data);
 	}
 } 

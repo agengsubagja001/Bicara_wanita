@@ -20,7 +20,7 @@ class Program extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['show_program'] = $this->Model_program->Show_program()->result();
+		$data['show_program'] = $this->model_program->Show_program()->result();
 		$this->load->view('admin/program',$data);
 	}
 
@@ -71,7 +71,7 @@ class Program extends CI_Controller {
    
 			);
 					
-				$this->Model_program->input_data($dataa, 'program');
+				$this->model_program->input_data($dataa, 'program');
 				$this->session->set_flashdata('success','Action Completed');
 				redirect('admin/program');
 
@@ -83,7 +83,7 @@ class Program extends CI_Controller {
 	// hapus	
 	public function hapus($id_program){
 		$del = array('id_program' => $id_program);
-		$this->Model_program->hapus_data($del,'program');
+		$this->model_program->hapus_data($del,'program');
 		$this->session->set_flashdata('success1','Action Completed');
 		redirect('admin/program');
 	}

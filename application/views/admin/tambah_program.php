@@ -28,7 +28,7 @@
                         <!-- kontent -->
                         <nav class="mt-3 navbar navbar-light bg-light justify-content-between" style="background-color: #dfe5f1!important;}">
                             <a class="navbar-brand">
-                                <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">ADD PROGRAM</b>
+                                <b style="margin-left:20px; left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">ADD PROGRAM</b>
                             </a>
                         </nav>
                         <form action="<?php echo base_url(). 'admin/program/upload/'?>" method="post" enctype="multipart/form-data">

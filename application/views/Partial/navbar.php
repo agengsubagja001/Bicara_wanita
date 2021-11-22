@@ -28,10 +28,9 @@
 						 Lainnya
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Ibu Dan Anak</a>
-							<a class="dropdown-item" href="#">Kesehatan</a>
-							<a class="dropdown-item" href="#">Lifestyle</a>
-							<a class="dropdown-item" href="#">Fashion</a>
+							<?php foreach($show_kategori as $kategori): ?>
+								<a class="dropdown-item" value="<?php echo $kategori->id_kategori ?>" href="<?php echo base_url().'halaman_utama/detail_kategori/'. $kategori->id_kategori ?>"><?php echo $kategori->kategori ?></a>
+							<?php endforeach ?>
 						</div>
 					</li>
                     <li class="nav-item" style="margin-left: 510px;">			

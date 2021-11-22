@@ -21,7 +21,7 @@ class Story extends CI_Controller {
 	public function index()
 	{
         // $data['show_program'] = $this->Model_banner->Show_program()->result();
-		$data['show_story'] = $this->Model_story->Show_story()->result();
+		$data['show_story'] = $this->model_story->Show_story()->result();
 		$this->load->view('admin/story',$data);
 	}
 
@@ -44,7 +44,7 @@ class Story extends CI_Controller {
 			'id_story' => $id_story
 		);
 
-        $this->Model_storyy->update_data($where,$data,'story');
+        $this->model_storyy->update_data($where,$data,'story');
         $this->session->set_flashdata('success','Action Completed');
         redirect('admin/story');
     }
@@ -80,7 +80,7 @@ class Story extends CI_Controller {
    
 			);
 					
-				$this->Model_banner->input_data($dataa, 'banner');
+				$this->model_banner->input_data($dataa, 'banner');
 				$this->session->set_flashdata('success','Action Completed');
 				redirect('admin/banner');
 				//  redirect('tambah_produk');
@@ -94,7 +94,7 @@ class Story extends CI_Controller {
 	// hapus data
 	public function hapus($id_story){
 		$del = array('id_story' => $id_story);
-		$this->Model_storyy->hapus_data($del,'story');
+		$this->model_storyy->hapus_data($del,'story');
 		$this->session->set_flashdata('success1','Action Completed');
 		redirect('admin/story');
 	}
@@ -102,7 +102,7 @@ class Story extends CI_Controller {
 	// edit data
 	public function edit($id_story){
 		$del = array('id_story' => $id_story);
-		$data['priview_story'] = $this->Model_storyy->edit_data($del,'story')->result();
+		$data['priview_story'] = $this->model_storyy->edit_data($del,'story')->result();
 		$this->load->view('admin/priview',$data);
 	}
 
