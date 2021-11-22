@@ -19,6 +19,7 @@
          <!-- CDN CKEDITOR -->
          <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
 
+        <!-- jquery remove gambar -->
          <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
          <style>
