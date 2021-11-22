@@ -3,6 +3,9 @@
 
 <!-- navbar -->
 <?php $this->load->view('pembaca/partial/navbar') ?>
+<br>
+<br>
+<br>
 <body>
         <div class="container" style="max-width: 1340px;">
             <div class="row justify-content-center">
@@ -22,7 +25,7 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <span style="font-size: 25px; font-weight: bold; color: #000;">Story Mu</span> 
+                            <span style="font-size: 25px; font-weight: bold; color: #000;">Your Story</span> 
                         </div>
                     </div>
                 </div>

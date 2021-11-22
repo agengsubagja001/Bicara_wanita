@@ -3,7 +3,9 @@
 
 <!-- navbar -->
 <?php $this->load->view('pembaca/partial/navbar') ?>
-
+<br>
+<br>
+<br>
 <body>
         <main>
             <div class="container-fluid px-4">

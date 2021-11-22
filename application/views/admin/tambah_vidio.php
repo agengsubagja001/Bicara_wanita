@@ -46,7 +46,7 @@
                                             <!-- akhir input judul -->
                                             <div class="col-md-12 p-2">
                                                 <div class="form-group">
-                                                    <textarea name="vidio" placeholder="masukan link vidio" cols="30" rows="10"></textarea>
+                                                    <textarea name="vidio" placeholder="masukan link vidio (atur ukuran widht jadi 100%)" cols="30" rows="10"></textarea>
                                                 </div>
                                             </div>
                                         </div>

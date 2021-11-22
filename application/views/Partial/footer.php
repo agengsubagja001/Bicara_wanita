@@ -70,9 +70,9 @@
 						</h5>
 						<table>
 							<tr>
-							  <td><a href="#"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded " style="background: #FFD4E5;"><i class="fa fa-facebook-official"></i></button></a></td>
-                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded" style="background: #FFD4E5;"><i class="fa fa-instagram "></i></button></a></td>
-                              <td><a href="#"><button type="button" class="btn btn-social-icon btn-wa btn-rounded" style="background: #FFD4E5;"><i class="fa fa-whatsapp"></i></button></a></td>
+							  <td><a href="https://www.facebook.com/Bicaranita"><button type="button" class="btn btn-social-icon btn-facebook btn-rounded " style="background: #FFD4E5;"><i class="fa fa-facebook-official"></i></button></a></td>
+                              <td><a href="https://www.instagram.com/bicarawanita.id/"><button type="button" class="btn btn-social-icon btn-instagram btn-rounded" style="background: #FFD4E5;"><i class="fa fa-instagram "></i></button></a></td>
+                              <td><a href="https://api.whatsapp.com/send?phone=6281939123456"><button type="button" class="btn btn-social-icon btn-wa btn-rounded" style="background: #FFD4E5;"><i class="fa fa-whatsapp"></i></button></a></td>
 							</tr>	
 						</table>
 					</div>
