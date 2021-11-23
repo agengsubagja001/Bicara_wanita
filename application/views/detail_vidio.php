@@ -68,7 +68,7 @@
                 color: white;
                 border-radius:50px;
                 font-size: 16px;
-                padding: 20px 32px;
+                padding: 23px 23px;
                 width: 70px;
                 height:70px;
                 text-align: center;

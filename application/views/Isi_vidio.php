@@ -77,7 +77,7 @@
                 color: white;
                 border-radius:50px;
                 font-size: 16px;
-                padding: 20px 32px;
+                padding: 22px 22px;
                 width: 70px;
                 height:70px;
                 text-align: center;
