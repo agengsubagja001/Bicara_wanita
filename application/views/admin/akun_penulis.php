@@ -11,7 +11,7 @@
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-4 mb-5">
                         <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
                             <div class="card-header">
                                 <nav class="navbar navbar-light bg-light justify-content-between" style="">
@@ -44,7 +44,7 @@
 												<td style="text-transform:capitalize;"><?php echo $penulis->nama_lengkap ?></td>
                                                 <td style="text-transform:capitalize;"><?php echo $penulis->deskripsi ?></td>
 												<td style="">
-                                                    <a href="<?php echo base_url().'admin/akun_penulis/edit/'.$penulis->id_akun ?>" style="margin-top: 4px; padding: 0.25rem 0.5rem;font-size: 0.76563rem;line-height: 1.5;border-radius: 3px;" class="btn btn-warning"><i style="color:white" class="fas fa-pen"></i></a>
+                                                    <!-- <a href="<?php echo base_url().'admin/akun_penulis/edit/'.$penulis->id_akun ?>" style="margin-top: 4px; padding: 0.25rem 0.5rem;font-size: 0.76563rem;line-height: 1.5;border-radius: 3px;" class="btn btn-warning"><i style="color:white" class="fas fa-pen"></i></a> -->
                                                     <a href="<?php echo base_url().'admin/akun_penulis/hapus/'.$penulis->id_akun ?>" style="margin-top: 4px; padding: 0.25rem 0.5rem;font-size: 0.76563rem;line-height: 1.5;border-radius: 3px;" class="btn btn-danger"><i style="color:white" class="fas fa-trash"></i></a>
                                                 </td>
                                             </tr>
@@ -65,42 +65,46 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Foto Profil</label>
-                                        <input type="file" class="form-control" name="foto_profil" id="recipient-name">
+                                    <div class="mb-3 text-center">
+                                        <label class=newbtn>
+                                            <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 180px;object-fit: contain;">
+                                            <input id="pic" name="foto_profil" class="pis" onchange="readURL(this);" type="file" >
+                                            <br>
+                                            <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih foto profil</span>
+                                        </label>
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nama Lengkap</label>
-                                        <input type="text" class="form-control" name="nama_lengkap" id="recipient-name">
+                                        <input type="text" class="form-control" placeholder="Masukan nama lengkap" name="nama_lengkap" id="recipient-name">
                                     </div>
                                     
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Username</label>
-                                        <input type="text" class="form-control" name="username" id="recipient-name">
+                                        <input type="text" placeholder="Masukan Username" class="form-control" name="username" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Deskripsi</label>
-                                        <input type="text" class="form-control" name="deskripsi" id="recipient-name">
+                                        <input type="text" class="form-control" placeholder="Masukan deskripsi singkat penulis" name="deskripsi" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">No Telepon</label>
-                                        <input type="text" class="form-control" name="no_telepon" id="recipient-name">
+                                        <input type="text" placeholder="Masukan no telepon" class="form-control" name="no_telepon" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">facebook</label>
-                                        <input type="text" class="form-control" name="facebook" id="recipient-name">
+                                        <input type="text" placeholder="Masukan link akun facebook" class="form-control" name="facebook" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Twitter</label>
-                                        <input type="text" class="form-control" name="twitter" id="recipient-name">
+                                        <input type="text" placeholder="Masukan link akun twitter" class="form-control" name="twitter" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Medium</label>
-                                        <input type="text" class="form-control" name="medium" id="recipient-name">
+                                        <input type="text" placeholder="Masukan link akun medium" class="form-control" name="medium" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Password</label>
-                                        <input type="password" class="form-control" name="password" id="recipient-name">
+                                        <input type="password" placeholder="Masukan password" class="form-control" name="password" id="recipient-name">
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -160,6 +164,27 @@
                     </script>
                 <?php endif; ?>
                 <!--akhir sweetalert -->
+
+                 <!-- Script untuk gambar foto profil-->
+                 <script>
+                    $('.newbtn').bind("click" , function () {
+                        $('#pic').click();
+                    });
+                    
+                    function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#blah')
+                                            .attr('src', e.target.result);
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                </script>
+                <!-- Akhir Script -->
                 
             </div>
         </div>

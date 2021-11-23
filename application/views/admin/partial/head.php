@@ -22,6 +22,9 @@
         <!-- jquery remove gambar -->
          <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+          <!-- favicon -->
+        <link rel="icon" href="<?php echo base_url('favicon.ico'); ?>" sizes="16x16" />
+
          <style>
              /* css untuk gambar sampul infografik */
                 #pic{
@@ -32,8 +35,8 @@
                         cursor: pointer;
                     }
                     #blah{
-                max-width:100px;
-                height:100px;
+                width:100%;
+                height:auto;
                 margin-top:20px;
             }
 
@@ -46,8 +49,8 @@
                         cursor: pointer;
                     }
                     #blahh{
-                max-width:100px;
-                height:100px;
+                width:100%;
+                height:auto;
                 margin-top:20px;
             }
         </style>

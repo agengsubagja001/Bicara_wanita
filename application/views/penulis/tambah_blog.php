@@ -11,7 +11,7 @@
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-4 mt-4">
                         <!-- kontent -->
                         <nav class="navbar navbar-light bg-light justify-content-between" style="background-color: #dfe5f1!important;}">
                             <a class="navbar-brand">
@@ -47,10 +47,11 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-12 text-center">
-                                                    <label for="newbtn">
-                                                        <span id="blah">Gambar</span>
+                                                    <label class=newbtn>
+                                                        <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
+                                                        <input id="pic" name="gambar" class="pis" onchange="readURL(this);" type="file" >
                                                         <br>
-                                                        <input name="gambar" type="file" class="form-control">
+                                                        <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar sampul</span>
                                                     </label>
                                                 </div>
                                                 <div class="col-md-12">
@@ -87,6 +88,26 @@
                     } );      
                 </script>
                 <!-- AKHIR SCRIPT CKEDITOR -->
+
+                <!-- Script untuk gambar sampul-->
+                <script>
+                    $('.newbtn').bind("click" , function () {
+                        $('#pic').click();
+                    });
+                    
+                    function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#blah')
+                                            .attr('src', e.target.result);
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                </script>
                 
             </div>
         </div>

@@ -5,6 +5,8 @@ class Detail_kategori extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Detail_kategori');
+		// / untuk menampilkan kategori
+		$data['show_kategori'] = $this->model_welcome->Show_kategori()->result();
+		$this->load->view('Detail_kategori',$data);
 	}
 } 

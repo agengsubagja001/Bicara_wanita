@@ -10,6 +10,13 @@ class Model_banner extends CI_Model
 		return $data;
     }
 
+	// hapus banner
+	// hapus
+	public function hapus_data1($del,$table){
+		$this->db->where($del);
+		$this->db->delete($table);
+	}
+
     // tampil data semua program
 	public function show_program(){
 		return $this->db->get('program');

@@ -60,20 +60,24 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-12 text-center">
-                                                    <label for="newbtn">
-                                                        <span id="blah">Gambar Sampul</span>
+                                                    <label class=newbtn>
+                                                        <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
+                                                        <input id="pic" name="gambar_sampul" class="pis" onchange="readURL(this);" type="file" >
                                                         <br>
-                                                        <input name="gambar_sampul" type="file" class="form-control">
+                                                        <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar sampul</span>
                                                     </label>
                                                 </div>
                                                 <div class="col-md-12 text-center">
                                                     <hr style="widht:100%">
-                                                    <label for="newbtn">
-                                                        <span id="blah">Gambar Kontent</span>
-                                                        <br>
-                                                        <input name="gambar_konten" type="file" class="form-control">
-                                                    </label>
-                                                    <button class="btn btn-dark mt-2" type="submit" name="btn_submit1">Posting</button>
+                                                        <label class=newbtnn>
+                                                            <img id="blahh" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
+                                                            <input id="picc" name="gambar_konten" class="piss" onchange="readURLL(this);" type="file" >
+                                                            <br>
+                                                            <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar kontent</span>
+                                                        </label>
+                                                        <div class="col-md-12">
+                                                            <button class="btn btn-dark mt-2" type="submit" name="btn_submit1">Posting</button>
+                                                        </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -98,6 +102,48 @@
                     } );      
                 </script>
                 <!-- AKHIR SCRIPT CKEDITOR -->
+
+                 <!-- Script untuk gambar sampul-->
+                 <script>
+                    $('.newbtn').bind("click" , function () {
+                        $('#pic').click();
+                    });
+                    
+                    function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#blah')
+                                            .attr('src', e.target.result);
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                </script>
+                <!-- Akhir Script -->
+
+                  <!-- Script untuk gambar banner-->
+                  <script>
+                    $('.newbtnn').bind("click" , function () {
+                        $('#picc').click();
+                    });
+                    
+                    function readURLL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#blahh')
+                                            .attr('src', e.target.result);
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                </script>
+                <!-- Akhir Script -->
                 
             </div>
         </div>

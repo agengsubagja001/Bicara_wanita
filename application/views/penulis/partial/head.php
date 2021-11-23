@@ -19,6 +19,28 @@
          <!-- CDN CKEDITOR -->
          <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
 
+          <!-- favicon -->
+        <link rel="icon" href="<?php echo base_url('favicon.ico'); ?>" sizes="16x16" />
+
+         <!-- jquery remove gambar -->
+         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <style>
+             /* css untuk gambar sampul infografik */
+                #pic{
+                    display: none;
+                    }
+                    
+                .newbtn{
+                        cursor: pointer;
+                    }
+                    #blah{
+                width:100%;
+                height:auto;
+                margin-top:20px;
+            }
+        </style>
+
          
         
     </head>

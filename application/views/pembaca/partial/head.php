@@ -18,8 +18,10 @@
 
      <!-- CDN CKEDITOR -->
      <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+     
      <!-- favicon -->
     <link rel="icon" href="<?php echo base_url('favicon.ico'); ?>" sizes="16x16" />
+
 <style>
     /* css text destok */
     @media only screen and (min-width: 992px) {
@@ -31,6 +33,7 @@
     }
     
 </style>
+
 </head>
 
 <body>

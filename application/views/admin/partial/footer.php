@@ -1,7 +1,7 @@
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid px-4">
                 <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Agenng Subagja 2021</div>
+                    <div class="text-muted">Copyright &copy; Ageng Subagja 2021</div>
                     <!-- <div>
                         <a href="#">Privacy Policy</a>
                         &middot;
@@ -19,6 +19,7 @@
         <script src="<?= base_url() ?>panel_admin/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="<?= base_url() ?>panel_admin/js/datatables-simple-demo.js"></script>
+        <script src="<?= base_url() ?>panel_admin/js/datatables-simple-demoo.js"></script>
 
     </body>
 </html>

@@ -68,11 +68,11 @@ class Banner extends CI_Controller {
     }
 
 	// hapus data
-	public function hapus($id_blog){
-		$del = array('id_blog' => $id_blog);
-		$this->model_blog->hapus_data($del,'blog');
+	public function hapus($id_banner){
+		$del = array('id_banner' => $id_banner);
+		$this->model_banner->hapus_data1($del,'banner');
 		$this->session->set_flashdata('success1','Action Completed');
-		redirect('admin/blog');
+		redirect('admin/banner');
 	}
 
 	// edit data

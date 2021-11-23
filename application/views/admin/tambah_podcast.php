@@ -11,19 +11,7 @@
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
-                        <!-- <h1 class="mt-4">Tables</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
-                        </ol>
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                                .
-                            </div>
-                        </div> -->
+                    <div class="container-fluid px-4 mt-4 mb-4">
 
                         <!-- kontent -->
                         <nav class="navbar navbar-light bg-light justify-content-between" style="background-color: #dfe5f1!important;}">
@@ -60,17 +48,18 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-12 text-center">
-                                                    <label for="newbtn">
-                                                        <span id="blah">Gambar</span>
+                                                    <label class=newbtn>
+                                                        <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
+                                                        <input id="pic" name="gambar" class="pis" onchange="readURL(this);" type="file" >
                                                         <br>
-                                                        <input name="gambar" type="file" class="form-control">
+                                                        <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar sampul</span>
                                                     </label>
                                                 </div>
                                                 <!-- podcast -->
                                                 <hr class="mt-4" style="widht:100%">
                                                 <div class="col-md-12 text-center">
                                                     <label for="newbtn">
-                                                        <span id="blah">podcast</span>
+                                                        <span id="blah">File MP3 Podcast</span>
                                                         <br>
                                                         <input name="audio" type="file" class="form-control">
                                                     </label>
@@ -110,6 +99,27 @@
                     } );      
                 </script>
                 <!-- AKHIR SCRIPT CKEDITOR -->
+
+                <!-- Script untuk gambar sampul-->
+                <script>
+                    $('.newbtn').bind("click" , function () {
+                        $('#pic').click();
+                    });
+                    
+                    function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#blah')
+                                            .attr('src', e.target.result);
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                </script>
+                <!-- Akhir Script -->
                 
             </div>
         </div>

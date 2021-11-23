@@ -271,13 +271,15 @@
     </section>
     <br>
 <!-- akhir section 8 infografik -->
+
 <!-- awal fotter -->
 <?php $this->load->view('partial/footer') ?> 
 <!-- akhir fotter -->
+
 <style>
  /* css thumnil */
             
- .middle {
+        .middle {
                 transition: .5s ease;
                 opacity: 30%;
                 position: absolute;

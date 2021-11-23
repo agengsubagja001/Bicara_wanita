@@ -49,7 +49,7 @@
                                             <div class="row">
                                                 <div class="col-md-12 text-center">
                                                     <label class=newbtn>
-                                                        <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 180px;object-fit: contain;">
+                                                        <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
                                                         <input id="pic" name="gambar_sampul" class="pis" onchange="readURL(this);" type="file" >
                                                         <br>
                                                         <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar sampul</span>
@@ -61,7 +61,7 @@
                                                         <br>
                                                         <input name="gambar_infografik" type="file" class="form-control"> -->
                                                         <label class=newbtnn>
-                                                            <img id="blahh" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 180px;object-fit: contain;">
+                                                            <img id="blahh" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
                                                             <input id="picc" name="gambar_infografik" class="piss" onchange="readURLL(this);" type="file" >
                                                             <br>
                                                             <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar banner</span>

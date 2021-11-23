@@ -48,10 +48,11 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-12 text-center">
-                                                    <label for="newbtn">
-                                                        <span id="blah">gambar thumbnail</span>
+                                                    <label class=newbtn>
+                                                        <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
+                                                        <input id="pic" name="gambar_tubnail" class="pis" onchange="readURL(this);" type="file" >
                                                         <br>
-                                                        <input name="gambar_tubnail" type="file" class="form-control">
+                                                        <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar thumbnail</span>
                                                     </label>
                                                 </div>
                                                 <div class="col-md-12">

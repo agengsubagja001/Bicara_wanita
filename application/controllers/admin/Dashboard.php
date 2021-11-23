@@ -32,6 +32,8 @@ class Dashboard extends CI_Controller {
 	 */
 	public function index()
 	{
+		// untuk menampilkan jumlah story
+		$data['total_story'] = $this->model_dashboardd->jml_story();
 		// untuk menampilkan jumlah program
 		$data['total_program'] = $this->model_dashboardd->jml_program();
 		// untuk menampilkan jumlah podcast
@@ -46,8 +48,10 @@ class Dashboard extends CI_Controller {
 		$data['total_kategori'] = $this->model_dashboardd->jml_kategori();
 		// untuk menampilkan jumlah blog penulis
 		$data['total_blog_penulis'] = $this->model_dashboardd->jml_blog_penulis();
-		// untuk menampilkan data blog
+		// untuk menampilkan data blog penulis
 		$data['show_blog'] = $this->model_dashboardd->Show_data_blog()->result();
+		// untuk menampilkan data blog admin
+		$data['show_blog_admin'] = $this->model_dashboardd->Show_data_blog_admin()->result();
 		$this->load->view('admin/dashboard',$data);
 	}
 }

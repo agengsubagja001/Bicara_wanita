@@ -67,13 +67,17 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Gambar Banner</label>
-                                        <input type="file" class="form-control" name="gambar_banner" id="recipient-name">
+                                    <div class="mb-3 text-center">
+                                        <label class=newbtn>
+                                            <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
+                                            <input id="pic" name="gambar_banner" class="pis" onchange="readURL(this);" type="file" >
+                                            <br>
+                                            <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar banner</span>
+                                        </label>
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Judul Banner</label>
-                                        <input type="text" class="form-control" name="judul" id="recipient-name">
+                                        <input type="text" placeholder="Masukan judul banner" class="form-control" name="judul" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="kategori" class="col-form-label">Pilih Program</label>
@@ -131,6 +135,26 @@
 
                 <!-- akhir sweetalert edit -->
                 
+                 <!-- Script untuk gambar sampul-->
+                 <script>
+                    $('.newbtn').bind("click" , function () {
+                        $('#pic').click();
+                    });
+                    
+                    function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#blah')
+                                            .attr('src', e.target.result);
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                </script>
+                <!-- Akhir Script -->
             </div>
         </div>
         

@@ -9,8 +9,8 @@
 					<div class="col-md-3 " style="position: relative; left:20px;">
 						<!-- Content -->
 						<h5 class="text-white fw-bold" style="font-weight: bold;"><i class="fas fa-gem me-3"></i>TENTANG KAMI</h5>
-						<p class="text-white" style="color: #f7f7f9e0!important; letter-spacing: 1px;">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga id possimus perspiciatis laudantium suscipit doloremque ea delectus, blanditiis numquam officiis amet dolor alias eos. Pariatur nemo quos saepe voluptatem.
+						<p class="text-white" style="text-transform:capitalize; color: #f7f7f9e0!important; letter-spacing: 1px;">
+						Bicara Wanita merupakan webiste yang membicarakan hal ehwal wanita secara menyeluruh. Mengadakan ceramah, latihan, bengkel, seminar dan sebagainya berkaitan wanita dan kewanitaan
 						</p>
 					</div>
 					<!-- Grid column -->

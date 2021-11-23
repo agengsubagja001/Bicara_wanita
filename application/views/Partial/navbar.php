@@ -27,7 +27,7 @@
 						<a class="nav-link dropdown-toggle"  style="font-family: Prata; font-style: normal; font-weight: normal; font-size: 20px; color: #000000;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						 Lainnya
 						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<div class="drop mb-3 dropdown-menu"  aria-labelledby="navbarDropdown">
 							<?php foreach($show_kategori as $kategori): ?>
 								<a class="dropdown-item" value="<?php echo $kategori->id_kategori ?>" href="<?php echo base_url().'halaman_utama/detail_kategori/'. $kategori->id_kategori ?>"><?php echo $kategori->kategori ?></a>
 							<?php endforeach ?>
