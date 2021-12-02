@@ -11,12 +11,12 @@
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4 mt-5">
+                    <div class="container-fluid px-4 mt-5 mb-4">
 
                         <!-- kontent -->
                         <nav class="navbar navbar-light bg-light justify-content-between" style="background-color: #dfe5f1!important;}">
                             <a class="navbar-brand">
-                                <b style="margin-left: 14px; left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">PRIVIEW</b>
+                                <b style="margin-left: 14px; left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">PRIVIEW STORY</b>
                             </a>
                         </nav>
 
@@ -57,10 +57,18 @@
                                                             <span style="text-transform:capitalize;" class="badge bg-danger"><?php echo $priview->status ?></span>
                                                         </label>
                                                     </div>
+                                                    <div class="col-md-12 text-center">
+                                                        <label class=newbtn>
+                                                            <img id="blah" src="<?php echo base_url().'assets/story/img_story/'. $priview->gambar ?>" style="width: 100%; object-fit: cover;">
+                                                            <input id="pic" name="gambar" class="pis" onchange="readURL(this);" type="hidden" >
+                                                            <br>
+                                                            <span style="font-style: italic;color:#555;font-size:13px">Review foto sampul</span>
+                                                        </label>
+                                                    </div>
                                                     <div class="col-md-12">
                                                         <hr style="widht:100%">
                                                         <!-- <label for="kategori">VALIDASI</label> -->
-                                                        <select name="status" id="" class="form-control">
+                                                        <select required name="status" id="" class="form-control">
                                                             <option value="">Pilih Validasi</option>
                                                             <option value="PUBLISH">PUBLISH</option>
                                                             <option value="TIDAK LOLOS PUBLISH">TIDAK LOLOS PUBLISH</option>
@@ -91,6 +99,27 @@
                     } );      
                 </script>
 	            <!-- AKHIR SCRIPT CKEDITOR -->
+
+                 <!-- Script untuk gambar sampul-->
+                 <script>
+                    $('.newbtn').bind("click" , function () {
+                        $('#pic').click();
+                    });
+                    
+                    function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#blah')
+                                            .attr('src', e.target.result);
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                </script>
+                <!-- Akhir Script -->
                 
             </div>
         </div>

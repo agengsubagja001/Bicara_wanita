@@ -2,13 +2,10 @@
 <?php $this->load->view('partial/head'); ?>
 <!-- navbar -->
 <?php $this->load->view('partial/navbar'); ?>
-<br>
-<br>
-<br>
-<br>
+
 <body>
     <section>
-        <div class="container" style="max-width: 1340px;">
+        <div class="isvi container" style="max-width: 1340px;">
             <div class="row">
                 <!-- vidio play -->
                 <div class="col-md-7">
@@ -16,8 +13,8 @@
                      <div class="col-md-12" style="width:100%; height:auto;">
                         <?php echo $detail->isi_vidio ?>
                      </div> 
-                     <div class="col-md-12 mb-5">
-                        <span style="font-family: Poppins; font-style: normal; font-weight: 600; font-size: 30px; text-transform: capitalize;"><?php echo $detail->judul ?></span>
+                     <div class="jdvid col-md-12 mb-5">
+                        <span style=""><?php echo $detail->judul ?></span>
                      </div>  
                     </div>
                 </div>
@@ -29,13 +26,13 @@
                                 <?php foreach ($terbaru1 as $new) : ?>
                                    <a href="<?php echo base_url().'halaman_utama/isi_vidio/'.$new->id_vidio ?>" style="text-decoration: none;">
                                     <div class="row row-no-gutters">
-                                        <div class="col-md-7 mt-4">
+                                        <div class="gvid col-md-7">
                                             <img class="img-fluid" style="margin-top:4px  width:100%;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $new->gambar_thubnail ?>" alt="">
                                             <div class="middle">
                                                 <div class="text"><i class="fa fa-play" aria-hidden="true"></i></div>
                                             </div>  
                                         </div>
-                                        <div class="col-md-5 mt-4">
+                                        <div class="jvid col-md-5">
                                             <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 15px; color: #000000; text-transform: capitalize;"><?php echo $new->judul ?></span>
                                         </div>
                                     </div>

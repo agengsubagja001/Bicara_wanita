@@ -9,7 +9,7 @@
                         Dashboard
                     </a>
                     <a class="nav-link collapsed mt-1" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fab fa-blogger-b"></i></div>
                         Blog
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
@@ -50,12 +50,19 @@
                     </a>
                     
                     <a class="nav-link mt-1" href="<?= base_url() ?>admin/story">
-                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                         Story
                     </a>
                     <a class="nav-link mt-1" href="<?= base_url() ?>admin/akun_penulis">
                         <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                         Akun Penulis
+                    </a>
+                    <a class="nav-link mt-1" href="<?= base_url() ?>admin/profil">
+                        <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                        Profil
+                    </a>
+                    <a class="nav-link mt-1" href="<?php echo base_url('form_login/logout') ?>">
+                        <button class="btn btn-white" style="width:200px; background-color:#fff;">Logout</button>
                     </a>
                 </div>
             </div>

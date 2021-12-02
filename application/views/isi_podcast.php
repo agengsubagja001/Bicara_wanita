@@ -2,14 +2,10 @@
 <?php $this->load->view('partial/head'); ?>
 <!-- navbar -->
 <?php $this->load->view('partial/navbar'); ?>
-<br>
-<br>
-<br>
-<br>
 <body>
     <section>
         <div class="container" style="max-widht:1340px;">
-            <div class="row">
+            <div class="aud row">
                 <div class="col-md-8">
                     <div class="audio" style=" width: 100%;  background: #FFFFFF; height: auto; box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.07);border-radius: 20px;">
                         <div class="row">

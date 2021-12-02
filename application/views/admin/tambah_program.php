@@ -11,7 +11,7 @@
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-4 mb-4">
                         <!-- <h1 class="mt-4">Tables</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -28,7 +28,7 @@
                         <!-- kontent -->
                         <nav class="mt-3 navbar navbar-light bg-light justify-content-between" style="background-color: #dfe5f1!important;}">
                             <a class="navbar-brand">
-                                <b style="margin-left:20px; left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">ADD PROGRAM</b>
+                                <b style="margin-left:20px; left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">ADD PROGRAM</b>
                             </a>
                         </nav>
                         <form action="<?php echo base_url(). 'admin/program/upload/'?>" method="post" enctype="multipart/form-data">
@@ -40,13 +40,13 @@
                                             <div class="col-md-12 p-2">	
                                                 <div class="form-group" style="margin-bottom: 1rem;">
                                                     <input type="hidden" name="id_blog" value="">
-                                                    <input type="text" name="judul" class="form-control" placeholder="Masukan Judul">
+                                                    <input required type="text" name="judul" class="form-control" placeholder="Masukan Judul">
                                                 </div>
                                             </div>
                                             <!-- akhir input judul -->
                                             <div class="col-md-12 p-2">
                                                 <div class="form-group">
-                                                    <textarea name="isi" id="editor" cols="30" rows="10"></textarea>
+                                                    <textarea required name="isi" placeholder="Masukan isi" id="editor" cols="30" rows="10"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -61,19 +61,19 @@
                                             <div class="row">
                                                 <div class="col-md-12 text-center">
                                                     <label class=newbtn>
-                                                        <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
-                                                        <input id="pic" name="gambar_sampul" class="pis" onchange="readURL(this);" type="file" >
+                                                        <img id="blah" src="<?php echo base_url('assets/img_temp/sampul_program.png') ?>" style="width: 100%;object-fit: contain;">
+                                                        <input required id="pic" name="gambar_sampul" class="pis" onchange="readURL(this);" type="file" >
                                                         <br>
-                                                        <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar sampul</span>
+                                                        <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar sampul ukuran (945 X 630)</span>
                                                     </label>
                                                 </div>
                                                 <div class="col-md-12 text-center">
                                                     <hr style="widht:100%">
                                                         <label class=newbtnn>
-                                                            <img id="blahh" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
-                                                            <input id="picc" name="gambar_konten" class="piss" onchange="readURLL(this);" type="file" >
+                                                            <img id="blahh" src="<?php echo base_url('assets/img_temp/program.png') ?>" style="width: 100%;object-fit: contain;">
+                                                            <input required id="picc" name="gambar_konten" class="piss" onchange="readURLL(this);" type="file" >
                                                             <br>
-                                                            <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar kontent</span>
+                                                            <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar program ukuran (4895 X 1539)</span>
                                                         </label>
                                                         <div class="col-md-12">
                                                             <button class="btn btn-dark mt-2" type="submit" name="btn_submit1">Posting</button>

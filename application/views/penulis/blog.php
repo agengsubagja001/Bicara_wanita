@@ -11,12 +11,12 @@
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-4 mb-4">
                         <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
                             <div class="card-header">
                                 <nav class="navbar navbar-light bg-light justify-content-between" style="">
                                     <a class="navbar-brand">
-                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST BLOG</b>
+                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST BLOG</b>
                                     </a>
                                     <a href="<?php echo base_url('penulis/tambah_blog') ?>" class="" >
                                         <button class="btn btn-dark " style="width: 140px;">Tambah Baru</button>

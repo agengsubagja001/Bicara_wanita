@@ -16,7 +16,7 @@
                             <div class="card-header">
                                 <nav class="navbar navbar-light bg-light justify-content-between" style="">
                                     <a class="navbar-brand">
-                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">AKUN PENULIS</b>
+                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">AKUN PENULIS</b>
                                     </a>
                                         <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 140px;">Tambah Baru</button>
                                 </nav>
@@ -68,43 +68,43 @@
                                     <div class="mb-3 text-center">
                                         <label class=newbtn>
                                             <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 180px;object-fit: contain;">
-                                            <input id="pic" name="foto_profil" class="pis" onchange="readURL(this);" type="file" >
+                                            <input id="pic" required name="foto_profil" class="pis" onchange="readURL(this);" type="file" >
                                             <br>
                                             <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih foto profil</span>
                                         </label>
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Nama Lengkap</label>
-                                        <input type="text" class="form-control" placeholder="Masukan nama lengkap" name="nama_lengkap" id="recipient-name">
+                                        <input required type="text" class="form-control" placeholder="Masukan nama lengkap" name="nama_lengkap" id="recipient-name">
                                     </div>
                                     
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Username</label>
-                                        <input type="text" placeholder="Masukan Username" class="form-control" name="username" id="recipient-name">
+                                        <input required type="text" placeholder="Masukan Username" class="form-control" name="username" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Deskripsi</label>
-                                        <input type="text" class="form-control" placeholder="Masukan deskripsi singkat penulis" name="deskripsi" id="recipient-name">
+                                        <input required type="text" class="form-control" placeholder="Masukan deskripsi singkat penulis" name="deskripsi" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">No Telepon</label>
-                                        <input type="text" placeholder="Masukan no telepon" class="form-control" name="no_telepon" id="recipient-name">
+                                        <input required type="text" placeholder="Masukan no telepon" class="form-control" name="no_telepon" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">facebook</label>
-                                        <input type="text" placeholder="Masukan link akun facebook" class="form-control" name="facebook" id="recipient-name">
+                                        <input required type="text" placeholder="Masukan link akun facebook" class="form-control" name="facebook" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Twitter</label>
-                                        <input type="text" placeholder="Masukan link akun twitter" class="form-control" name="twitter" id="recipient-name">
+                                        <input required type="text" placeholder="Masukan link akun twitter" class="form-control" name="twitter" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Medium</label>
-                                        <input type="text" placeholder="Masukan link akun medium" class="form-control" name="medium" id="recipient-name">
+                                        <input required type="text" placeholder="Masukan link akun medium" class="form-control" name="medium" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Password</label>
-                                        <input type="password" placeholder="Masukan password" class="form-control" name="password" id="recipient-name">
+                                        <input required type="password" placeholder="Masukan password" class="form-control" name="password" id="recipient-name">
                                     </div>
                                 </div>
                                 <div class="modal-footer">

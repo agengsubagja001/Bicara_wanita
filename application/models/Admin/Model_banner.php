@@ -39,4 +39,16 @@ class Model_banner extends CI_Model
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
+
+	// tampil semua data program di halaman edit banner admin
+	public function show()
+	{
+		return $this->db->get('program');
+	}
+
+	// update data
+	function update_data($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
 }

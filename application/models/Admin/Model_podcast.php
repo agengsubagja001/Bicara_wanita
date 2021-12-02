@@ -21,4 +21,14 @@ class Model_podcast extends CI_Model
 		$this->db->delete($table);
 	}
 
+	// update data
+	function update_data($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
+	
+	// edit data
+	function edit_data($del,$table){		
+		return $this->db->get_where($table,$del);
+	}
 }

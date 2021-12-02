@@ -40,4 +40,48 @@ class Buat_story extends CI_Controller {
         $this->session->set_flashdata('success','Action Completed');
         redirect('pembaca/dashboard');
     }
+
+	function upload1()
+	{
+		if (isset($_POST['btn_submit'])) {
+			$status = "sedang di proses";
+			$judul = $this->input->post('judul');
+			$id_akun = $this->input->post('id_akun');
+			$isi = $this->input->post('isi');
+
+			// Foto
+			// blog
+			$foto_icon_brand = $_FILES['gambar']['name'];
+			$icon_tmp = $_FILES['gambar']['tmp_name'];
+			
+			// Format
+			 // cek ekstensi foto
+			 $ekstensiGambarValid = ['jpg','jpeg','png','webp','PNG','JPG'];
+			 $ekstensiGambar = explode('.',$foto_icon_brand);
+			 $ekstensiGambar = strtolower(end($ekstensiGambar));
+			// // GENERAT NAME PHOTO 1\
+			$encrypted = uniqid();
+			$encrypted .= '.';
+			$encrypted .= $ekstensiGambar;
+			// Upload Icon Brand
+			move_uploaded_file($icon_tmp,'assets/story/img_story/'.$encrypted);
+
+			$data = array(
+				'judul_story'   => $judul,
+				'id_akun'       => $id_akun,
+				'isi_story'     => $isi,
+				'status'        => $status,
+				'gambar'        => $encrypted,
+				
+   
+			);
+					
+			$this->model_storyy->input_data($data,'story');
+			$this->session->set_flashdata('success','Action Completed');
+			redirect('pembaca/dashboard');
+
+		}else{
+
+		}
+	}
 } 

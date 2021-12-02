@@ -1,4 +1,4 @@
-ukuran image artikel: 945X630
+ukuran image blog sampul: 945X630
 ukuran image program: 4895X1539
 ukuran banner program carrusol 1500x500
 ukuran image podcast 1280X720

@@ -19,13 +19,13 @@
     <!-- awal section konten infografik -->
         <section>
             <div class="container" style="max-width: 1340px;" >
-                <div class="mb-3">
-                   <span style="font-size:30px;font-weight:bold">Infografik</span>
+                <div class="ifg mb-2 mt-4" style="">
+                   <span style="">Infografik</span>
                 </div> 
                 <div class="row">
                     <?php foreach ($show_infografik as $infografik): ?>
                     <!-- konten infografik -->
-                    <div class="col-6 col-md-4 mt-5">
+                    <div class="col-6 col-md-4 mt-3">
                         <a href="<?php echo base_url().'detail_infografik/artikel_infografik/'.$infografik->id_infografik ?>">
                             <img src="<?php echo base_url().'assets/admin/infografik/img_infografik/'. $infografik->gambar_kontent ?>" style="max-width: 100%; max-height: auto;" alt="">
                         </a>

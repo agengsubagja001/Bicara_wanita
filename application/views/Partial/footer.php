@@ -1,22 +1,22 @@
-<div class="container" style="max-width: 1640px; font-size:15px">
+<div class="foot container" style="max-width: 1640px; font-size:15px">
 		<footer class="text-center text-lg-start bg-primary" style="background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;">
 			<!-- Section: Links  -->
 			<section class="pt-3" style="background: #F7476E; ">
 				
 				<div class="container text-left text-White;" style="max-width: 1440px;">
 				<!-- Grid row -->
-				<div class="row mt-3" style="color: #fff;">		
-					<div class="col-md-3 " style="position: relative; left:20px;">
+				<div class="container row mt-3" style="margin: auto;color: #fff;">		
+					<div class="col-md-3 " style="position: relative;">
 						<!-- Content -->
 						<h5 class="text-white fw-bold" style="font-weight: bold;"><i class="fas fa-gem me-3"></i>TENTANG KAMI</h5>
-						<p class="text-white" style="text-transform:capitalize; color: #f7f7f9e0!important; letter-spacing: 1px;">
+						<p class="text-white" style="text-transform:capitalize; color: #f7f7f9e0!important; letter-spacing: 0.5px;">
 						Bicara Wanita merupakan webiste yang membicarakan hal ehwal wanita secara menyeluruh. Mengadakan ceramah, latihan, bengkel, seminar dan sebagainya berkaitan wanita dan kewanitaan
 						</p>
 					</div>
 					<!-- Grid column -->
 
 					<!-- Grid column -->
-					<div class="col-md-3" style="position: relative; left:20px;">
+					<div class="col-md-3 mb-3" style="position: relative;">
 						<h5 class="text-White fw-bold" style="font-weight: bold;">
 							Kontak
 						</h5>
@@ -39,7 +39,7 @@
 					<!-- Grid column -->
 
 					<!-- Grid column Toko -->
-					<div class="col-md-3" style="position: relative; left:20px;">
+					<div class="col-md-3 mb-3" style="position: relative; ">
 						<h5 class="text-White fw-bold" style="font-weight: bold;">
 							KATEGORI	
 						</h5>
@@ -64,7 +64,7 @@
 							</tr>
 						</table>
 					</div>
-					<div class="col-md-3" style="position: relative; left:20px;">
+					<div class="col-md-3 mb-3" style="position: relative; ">
 						<h5 class="text-White fw-bold" style="font-weight: bold;">
 							Ikuti Kami Juga	
 						</h5>
@@ -81,13 +81,13 @@
 				</div>
 			</section>
 			<!-- Section: Links  -->
-			<!-- Copyright -->
-			<div class="container" style="max-width: 1640px; background: #F7476E; ">
-				<div class="text-white text-center p-4" style="background-color:#F7476E; font-size:15px; font-style: normal; ">
-					© 2021 Copyright:
-					<a class="text-white" href="#" style="font-weight: 600;">Bicarawanita</a>
+				<!-- Copyright -->
+				<div class="foott container" style="max-width: 1640px; background: #F7476E;">
+					<div class="text-white text-center p-4" style="background-color:#F7476E; font-size:15px; font-style: normal; ">
+						© 2021 Copyright:
+						<a class="text-white" href="#" style="font-weight: 600;">Bicarawanita</a>
+					</div>
 				</div>
-			</div>
 			</footer>
 </div>
 

@@ -16,7 +16,7 @@
                             <div class="card-header">
                                 <nav class="navbar navbar-light bg-light justify-content-between" style="">
                                     <a class="navbar-brand">
-                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST BANNER</b>
+                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST BANNER</b>
                                     </a>
                                         <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 140px;">Tambah Baru</button>
                                 </nav>
@@ -70,18 +70,18 @@
                                     <div class="mb-3 text-center">
                                         <label class=newbtn>
                                             <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
-                                            <input id="pic" name="gambar_banner" class="pis" onchange="readURL(this);" type="file" >
+                                            <input required id="pic" name="gambar_banner" class="pis" onchange="readURL(this);" type="file" >
                                             <br>
                                             <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar banner</span>
                                         </label>
                                     </div>
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">Judul Banner</label>
-                                        <input type="text" placeholder="Masukan judul banner" class="form-control" name="judul" id="recipient-name">
+                                        <input required type="text" placeholder="Masukan judul banner" class="form-control" name="judul" id="recipient-name">
                                     </div>
                                     <div class="mb-3">
                                         <label for="kategori" class="col-form-label">Pilih Program</label>
-                                        <select name="program" id="" class="form-control">
+                                        <select required name="program" id="" class="form-control">
                                         <option value="">Pilih Program</option>
                                             <?php foreach($show_program as $program): ?>
                                             <option value="<?php echo $program->id_program ?>"><?php echo $program->judul ?></option>

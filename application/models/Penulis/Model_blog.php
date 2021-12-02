@@ -27,6 +27,12 @@ class Model_blog extends CI_Model
 		$this->db->delete($table);
 	}
 
+	// tampil semua data kategori di halaman edit blog admin
+	public function show()
+	{
+        return $this->db->get('kategori');
+    }
+
 	// edit data
 	function edit_data($del,$table){		
 		return $this->db->get_where($table,$del);

@@ -24,11 +24,11 @@
                                 .
                             </div>
                         </div> -->
-                        <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
+                        <div class="mt-4 mb-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
                             <div class="card-header">
                                 <nav class="navbar navbar-light bg-light justify-content-between" style="">
                                     <a class="navbar-brand">
-                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST VIDIO</b>
+                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST VIDIO</b>
                                     </a>
                                     <a href="<?php echo base_url('admin/tambah_vidio') ?>" class="" >
                                         <button class="btn btn-dark " style="width: 140px;">Tambah Baru</button>
@@ -40,7 +40,7 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">NO</th>
-                                                <th scope="col">VIDIO</th>
+                                                <th scope="col">FOTO THUMBNAIL</th>
                                                 <!-- <th scope="col">GAMBAR THUMBNAIL</th> -->
 												<th scope="col">JUDUL</th>
 												<th scope="col">TANGGAL LIRIS</th>
@@ -53,8 +53,8 @@
                                            <!-- Content pertama-->
                                             <tr>
                                                 <td><?php echo $no++ ?></td>
-                                                <td style="width:100px;">
-                                                    <?php echo $vidio->isi_vidio ?>
+                                                <td>
+                                                    <img style="width:200px; height:auto; object-fit:cover;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="">
                                                 </td>
                                                 <!-- <td>
                                                     <img style="object-fit:cover; width:200px; height:auto;" src="<?php echo base_url().'assets/admin/vidio/gambar_tubnail/'. $vidio->gambar_thubnail ?>" alt="img-fluid">

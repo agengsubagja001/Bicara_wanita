@@ -2,27 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Akun_penulis extends CI_Controller {
-//    public function __construct()
-//    {
-//        parent::__construct();
-//        $this->load->model('model_akun');
-//    }
+	public function __construct(){
+		parent::__construct();
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	if($this->session->userdata('role_id') != '1'){
+			$this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				 Anda Belum Login!
+				 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="true">&times;</span>
+				 </button>
+				</div>');
+				redirect('form_login/login');
+		}
+	}
+	
 	public function index()
 	{
 		$data['show_penulis'] = $this->model_akun->Show_data_penulis()->result();
@@ -35,6 +28,9 @@ class Akun_penulis extends CI_Controller {
 	{
 		if (isset($_POST['btn_submit'])) {
 			$role_id = "2";
+			$permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+			$id_akun = substr(str_shuffle($permitted_chars), 0, 6);
+
 			$nama_lengkap = $this->input->post('nama_lengkap');
 			$username     = $this->input->post('username');
 			$deskripsi     = $this->input->post('deskripsi');
@@ -62,6 +58,7 @@ class Akun_penulis extends CI_Controller {
 			move_uploaded_file($icon_tmp,'assets/penulis/p_profil/'.$encrypted);
 
 			$dataa = array(
+				'id_akun'      => $id_akun,
 				'role_id'      => $role_id,
 				'nama_lengkap' => $nama_lengkap,
 				'username'     => $username,

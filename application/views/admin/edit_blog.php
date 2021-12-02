@@ -11,18 +11,18 @@
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-4 mt-4">
                        
 
                         <!-- kontent -->
                         <nav class="navbar navbar-light bg-light justify-content-between" style="background-color: #dfe5f1!important;}">
                             <a class="navbar-brand">
-                                <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">ADD BLOG</b>
+                                <b style="margin-left:20px; left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">EDIT BLOG</b>
                             </a>
                         </nav>
 
                         <?php foreach($user as $blog) : ?>
-                            <form action="<?php echo base_url(). 'admin/blog/update'?>" method="post" enctype="multipart/form-data">
+                            <form action="<?php echo base_url(). 'admin/blog/update1'?>" method="post" enctype="multipart/form-data">
                                 <div class="container mt-3">
                                     <div class="row">
                                         <div class="col-md-8">
@@ -30,14 +30,15 @@
                                                 <!-- input Judul -->
                                                 <div class="col-md-12 p-2">	
                                                     <div class="form-group" style="margin-bottom: 1rem;">
-                                                        <input type="hidden" name="id_blog" value="">
+                                                        <input type="hidden" name="id_akun" value="<?php echo $this->session->userdata('id_akun')  ?>">
+                                                        <input type="hidden" name="id_blog" value="<?php echo $blog->id_blog ?>" class="form-control" placeholder="Masukan Judul">
                                                         <input type="text" name="judul" value="<?php echo $blog->judul ?>" class="form-control" placeholder="Masukan Judul">
                                                     </div>
                                                 </div>
                                                 <!-- akhir input judul -->
                                                 <div class="col-md-12 p-2">
                                                     <div class="form-group">
-                                                        <textarea name="isi" id="editor" value="<?php echo $blog->isi ?>" cols="30" rows="10"></textarea>
+                                                        <textarea name="isi" id="editor" value="" cols="30" rows="10"><?php echo $blog->isi ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -51,21 +52,22 @@
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-md-12 text-center">
-                                                        <label for="newbtn">
-                                                            <span id="blah">Gambar</span>
+                                                        <label class=newbtn>
+                                                            <!-- <img id="blah" src="<?php echo base_url().'assets/admin/blog/img_sampul/'. $blog->gambar ?>" name="gambar" style="width: 100%;object-fit: contain;"> -->
+                                                            <!-- <input type="hidden" id="pic" name="gambar" value="<?php echo $blog->gambar ?>"  class="pis" onchange="readURL(this);" type="file" > -->
                                                             <br>
-                                                            <input name="gambar" value="<?php echo $blog->gambar ?>" type="file" class="form-control">
+                                                            <!-- <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar sampul</span> -->
                                                         </label>
+                                                        
                                                     </div>
                                                     <div class="col-md-12">
                                                         <hr style="widht:100%">
-                                                        <label for="kategori">kategori</label>
+                                                        <label class="mb-1" style="text-transform:capitalize;" for="kategori">kategori</label>
                                                         <select name="kategori" id="" class="form-control">
-                                                            <option value="<?php echo $blog->kategori ?>"><?php echo $blog->kategori ?></option>
-                                                            <option value="ibu dan anak">Ibu dan anak</option>
-                                                            <option value="Kesehatan">Kesehatan</option>
-                                                            <option value="rumah tangga">Rumah tangga</option>
-                                                            <option value="suami dan istri">suami dan istri</option>
+                                                            <option value="">Pilih Kategori</option>
+                                                            <?php foreach ($show as $kategori): ?>
+                                                            <option value="<?php echo $kategori->id_kategori ?>"><?php echo $kategori->kategori ?></option>
+                                                            <?php endforeach ?>
                                                         </select>
                                                         <button class="btn btn-dark mt-2" type="submit" name="btn_submit">Posting</button>
                                                     </div>
@@ -93,6 +95,27 @@
                     } );      
                 </script>
 	            <!-- AKHIR SCRIPT CKEDITOR -->
+
+                  <!-- Script untuk gambar sampul-->
+                  <script>
+                    $('.newbtn').bind("click" , function () {
+                        $('#pic').click();
+                    });
+                    
+                    function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#blah')
+                                            .attr('src', e.target.result);
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                </script>
+                <!-- Akhir Script -->
                 
             </div>
         </div>

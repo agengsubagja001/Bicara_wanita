@@ -6,7 +6,7 @@ class Model_storyy extends CI_Model
 	// tampil data story di panel story
 	public function show_story_pembaca(){
 		$query = $this->session->userdata('id_akun');
-		$data = $this->db->query("SELECT story.id_story, story.judul_story, story.isi_story, story.status, story.tanggal, akun.id_akun, akun.nama_lengkap FROM story INNER JOIN akun ON story.id_akun = akun.id_akun WHERE story.id_akun = '$query' ORDER BY tanggal DESC");
+		$data = $this->db->query("SELECT story.id_story, story.gambar, story.judul_story, story.isi_story, story.status, story.tanggal, akun.id_akun, akun.nama_lengkap FROM story INNER JOIN akun ON story.id_akun = akun.id_akun WHERE story.id_akun = '$query' ORDER BY tanggal DESC");
 		return $data;
 	}
 

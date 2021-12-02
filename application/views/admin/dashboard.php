@@ -121,91 +121,101 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- CARD -->
-                            <div class="mb-4">
-                                <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
-                                    <div class="card-header">
-                                        <nav class="navbar navbar-light bg-light justify-content-between" style="">
-                                            <a class="navbar-brand">
-                                                <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST BLOG ADMIN</b>
-                                            </a>
-                                        </nav>
-                                    </div>
-                                    <div class="card-body">
-                                        <table class="table table-bordered" id="datatablesSimple" width="100%">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">NO</th>
-                                                        <th scope="col">FOTO SAMPUL</th>
-                                                        <th scope="col">JUDUL BLOG</th>
-                                                        <th scope="col">TANGGAL LIRIS</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                
-                                                    <?php $no = 1; foreach($show_blog_admin as $blog) : ?>
-                                                    <!-- Content pertama-->
-                                                    <tr>
-                                                        <td><?php echo $no++ ?></td>
-                                                        <td style="width: 150px">
-                                                            <img src="<?php echo base_url().'assets/admin/blog/img_sampul/'. $blog->gambar ?>" style="object-fit:cover; width:100%; height:auto;" class="img-fluid" alt="">
-                                                        </td>
-                                                        <td style=""><?php echo $blog->judul ?></td>
-                                                        <td><?php echo $blog->date ?></td>
-                                                    </tr>
-                                                    <!-- Akhir kontent pertama -->
-                                                    <?php endforeach ?>
-                                                </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        <!-- AKHIR CARD -->
-
-                        <!-- CARD -->
-                            <div class="mb-4">
-                                <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
-                                    <div class="card-header">
-                                        <nav class="navbar navbar-light bg-light justify-content-between" style="">
-                                            <a class="navbar-brand">
-                                                <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST BLOG PENULIS</b>
-                                            </a>
-                                        </nav>
-                                    </div>
-                                    <div class="card-body">
-                                        <table class="table table-bordered" id="datatablesSimple1" width="100%">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">NO</th>
-                                                        <th scope="col">FOTO SAMPUL</th>
-                                                        <th scope="col">JUDUL BLOG</th>
-                                                        <th scope="col">PENULIS</th>
-                                                        <th scope="col">TANGGAL LIRIS</th>
-                                                       
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                
-                                                    <?php $no = 1; foreach($show_blog as $blog) : ?>
-                                                    <!-- Content pertama-->
-                                                    <tr>
-                                                        <td><?php echo $no++ ?></td>
-                                                        <td style="width: 150px">
-                                                            <img src="<?php echo base_url().'assets/admin/blog/img_sampul/'. $blog->gambar ?>" style="object-fit:cover; width:100%; height:auto;" class="img-fluid" alt="">
-                                                        </td>
-                                                        <td style=""><?php echo $blog->judul ?></td>
-                                                        <td style=""><?php echo $blog->nama_lengkap ?></td>
-                                                        <td><?php echo $blog->date ?></td>
-                                                    </tr>
-                                                    <!-- Akhir kontent pertama -->
-                                                    <?php endforeach ?>
-                                                </tbody>
-                                        </table>
+                        
+                        <!-- card list blog -->
+                        <div class="row">
+                            <!-- card list blog admin -->
+                            <div class="col-md-6">
+                                <!-- CARD -->
+                                <div class="mb-4">
+                                    <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
+                                        <div class="card-header">
+                                            <nav class="navbar navbar-light bg-light justify-content-between" style="">
+                                                <a class="navbar-brand">
+                                                    <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST BLOG ADMIN</b>
+                                                </a>
+                                            </nav>
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table table-bordered" id="datatablesSimple" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">NO</th>
+                                                            <th scope="col">FOTO SAMPUL</th>
+                                                            <th scope="col">JUDUL BLOG</th>
+                                                            <th scope="col">TANGGAL LIRIS</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    
+                                                        <?php $no = 1; foreach($show_blog_admin as $blog) : ?>
+                                                        <!-- Content pertama-->
+                                                        <tr>
+                                                            <td><?php echo $no++ ?></td>
+                                                            <td style="width: 150px">
+                                                                <img src="<?php echo base_url().'assets/admin/blog/img_sampul/'. $blog->gambar ?>" style="object-fit:cover; width:100%; height:auto;" class="img-fluid" alt="">
+                                                            </td>
+                                                            <td style=""><?php echo $blog->judul ?></td>
+                                                            <td><?php echo $blog->date ?></td>
+                                                        </tr>
+                                                        <!-- Akhir kontent pertama -->
+                                                        <?php endforeach ?>
+                                                    </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
+                                <!-- AKHIR CARD -->
                             </div>
-                        <!-- AKHIR CARD -->
+
+                            <!-- card list blog penulis -->
+                            <div class="col-md-6">
+                                <!-- CARD -->
+                                <div class="mb-4">
+                                    <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
+                                        <div class="card-header">
+                                            <nav class="navbar navbar-light bg-light justify-content-between" style="">
+                                                <a class="navbar-brand">
+                                                    <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST BLOG PENULIS</b>
+                                                </a>
+                                            </nav>
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table table-bordered" id="datatablesSimple1" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">NO</th>
+                                                            <th scope="col">FOTO SAMPUL</th>
+                                                            <th scope="col">JUDUL BLOG</th>
+                                                            <th scope="col">PENULIS</th>
+                                                            <th scope="col">TANGGAL LIRIS</th>
+                                                        
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    
+                                                        <?php $no = 1; foreach($show_blog as $blog) : ?>
+                                                        <!-- Content pertama-->
+                                                        <tr>
+                                                            <td><?php echo $no++ ?></td>
+                                                            <td style="width: 150px">
+                                                                <img src="<?php echo base_url().'assets/admin/blog/img_sampul/'. $blog->gambar ?>" style="object-fit:cover; width:100%; height:auto;" class="img-fluid" alt="">
+                                                            </td>
+                                                            <td style=""><?php echo $blog->judul ?></td>
+                                                            <td style=""><?php echo $blog->nama_lengkap ?></td>
+                                                            <td><?php echo $blog->date ?></td>
+                                                        </tr>
+                                                        <!-- Akhir kontent pertama -->
+                                                        <?php endforeach ?>
+                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- AKHIR CARD -->
+                            </div>
+                        </div>
+                        <!--akhir card list blog -->
                     </div>
                 </main>
 

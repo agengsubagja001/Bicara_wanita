@@ -11,12 +11,12 @@
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-4 mb-4">
                         <div class="mt-4" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
                             <div class="card-header">
                                 <nav class="navbar navbar-light bg-light justify-content-between" style="">
                                     <a class="navbar-brand">
-                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST KATEGORI</b>
+                                        <b style=" left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">LIST KATEGORI</b>
                                     </a>
                                         <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 140px;">Tambah Baru</button>
                                 </nav>
@@ -38,7 +38,6 @@
                                                 <td style="width:100px;"><?php echo $no++ ?></td>
 												<td><?php echo $kategori->kategori ?></td>
 												<td style="">
-                                                    <a href="<?php echo base_url().'admin/kategori/edit/'.$kategori->id_kategori ?>" style="margin-top: 4px; padding: 0.25rem 0.5rem;font-size: 0.76563rem;line-height: 1.5;border-radius: 3px;" class="btn btn-warning"><i style="color:white" class="fas fa-pen"></i></a>
                                                     <a href="<?php echo base_url().'admin/kategori/hapus/'.$kategori->id_kategori ?>" style="margin-top: 4px; padding: 0.25rem 0.5rem;font-size: 0.76563rem;line-height: 1.5;border-radius: 3px;" class="btn btn-danger"><i style="color:white" class="fas fa-trash"></i></a>
                                                 </td>
                                             </tr>
@@ -61,7 +60,7 @@
                                 <div class="modal-body">
                                     <div class="mb-3">
                                         <label for="recipient-name" class="col-form-label">kategori</label>
-                                        <input type="text" class="form-control" name="kategori" id="recipient-name">
+                                        <input required type="text" class="form-control" name="kategori" id="recipient-name">
                                     </div>
                                 </div>
                                 <div class="modal-footer">

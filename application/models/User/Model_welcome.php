@@ -17,12 +17,15 @@ class Model_welcome extends CI_Model
 		
 	}
 
-	// tampil data banner
-	// public function show_langsung(){
-	// 	$data = $this->db->query("SELECT blog.id_blog, blog.judul, blog.gambar, blog.date, kategori.id_kategori, kategori.kategori FROM blog INNER JOIN kategori ON blog.id_kategori = kategori.id_kategori WHERE kategori.id_kategori ORDER BY date DESC");
-	// 	return $data;
+
+	// tampil data blog berdasarkan kategori
+	public function data_kategori(){
+		// id kategori
+		$id_kat = $_GET['id'];
+		$data = $this->db->query("SELECT blog.id_blog, blog.judul, blog.gambar, blog.date, kategori.id_kategori, kategori.kategori FROM blog INNER JOIN kategori ON blog.id_kategori = kategori.id_kategori WHERE kategori.id_kategori = '$id_kat' ORDER BY date DESC LIMIT 16");
+		return $data;
 		
-	// }
+	}
 
 	
 	// tampil data kategori
@@ -38,7 +41,7 @@ class Model_welcome extends CI_Model
 	// tampil data story
 	public function show_story(){
 		// $query = $this->session->userdata('id_akun');
-		$data = $this->db->query("SELECT story.id_story, story.judul_story, story.isi_story, story.status, story.tanggal, akun.id_akun, akun.username, akun.nama_lengkap FROM story INNER JOIN akun ON story.id_akun = akun.id_akun WHERE story.status = 'PUBLISH' ORDER BY tanggal DESC LIMIT 4");
+		$data = $this->db->query("SELECT story.id_story, story.judul_story, story.isi_story, story.status, story.tanggal, akun.id_akun, akun.username, akun.nama_lengkap FROM story INNER JOIN akun ON story.id_akun = akun.id_akun WHERE story.status = 'PUBLISH' ORDER BY tanggal DESC LIMIT 2");
 		return $data;
 	}
 
@@ -59,6 +62,9 @@ class Model_welcome extends CI_Model
 		$query = $this->db->get_where('akun', array('id_akun' => $id_akun))->row();
         return $query;
 	}
+
+
+	
 
 
 }

@@ -3,21 +3,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Podcast extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	public function __construct(){
+		parent::__construct();
+
+	if($this->session->userdata('role_id') != '1'){
+			$this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				 Anda Belum Login!
+				 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="true">&times;</span>
+				 </button>
+				</div>');
+				redirect('form_login/login');
+		}
+	}
+	
 	public function index()
 	{
 		$data['show_podcast'] = $this->model_podcast->Show_podcast()->result();
@@ -92,5 +91,36 @@ class Podcast extends CI_Controller {
 		$this->model_blog->hapus_data($del,'podcast');
 		$this->session->set_flashdata('success1','Action Completed');
 		redirect('admin/podcast');
+	}
+
+	// edit data
+	public function edit($id_podcast){
+		$del = array('id_podcast' => $id_podcast);
+		$data['podcast'] = $this->model_program->edit_data($del,'podcast')->result();
+		$this->load->view('admin/edit_podcast',$data);
+	}
+
+	//  update data
+	public function update(){
+		$judul = $this->input->post('judul');
+		$id_podcast = $this->input->post('id_podcast');
+		// $isi   = $this->input->post('isi');
+	
+
+        $data = array(
+			'judul'            => $judul,
+			// 'isi'              => $isi,
+			'id_podcast'    => $id_podcast
+        );
+
+		$where = array(
+			'id_podcast' => $id_podcast
+		);
+
+       	
+		$this->model_program->update_data($where,$data, 'podcast');
+		$this->session->set_flashdata('success_edit','Action Completed');
+		redirect('admin/podcast');
+
 	}
 }

@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Halaman_utama extends CI_Controller {
 
+	public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('model_komentar');
+        date_default_timezone_set("Asia/Jakarta");
+    }
+
 	
 	public function index()
 	{
@@ -25,13 +32,109 @@ class Halaman_utama extends CI_Controller {
 		$this->load->view('halaman_utama',$data);
 	}
 
+	// fungsi untuk menampilkan detail kategori
+	public function detail_kategori()
+	{
+		$data['show_sehat'] = $this->model_welcome->data_kategori()->result();
+		$data['show_kategori'] = $this->model_welcome->Show_kategori()->result();
+		$this->load->view('detail_kategori', $data);
+	}
+
 	// tampil detail blog
 	public function detail_blog($id_blog)
 	{
+		// login komentar
+
+		$permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+		$id_komentar = substr(str_shuffle($permitted_chars), 0, 4);
+
+		include_once APPPATH . "../vendor/autoload.php";
+		$google_client = new Google_Client();
+
+		$google_client->setClientId('912597414091-onf92rv8dgpnslkep43eu9m2nfn6d5em.apps.googleusercontent.com'); //Define your ClientID
+
+		$google_client->setClientSecret('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'); //Define your Client Secret Key
+
+		$google_client->setRedirectUri('http://localhost/Bicara_wanita/halaman_utama'); //Define your Redirect Uri
+
+		$google_client->addScope('email');
+
+		$google_client->addScope('profile');
+
+		if(isset($_GET["code"]))
+		{
+		$token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+
+				if(!isset($token["error"]))
+				{
+					$google_client->setAccessToken($token['access_token']);
+
+					$this->session->set_userdata('access_token', $token['access_token']);
+
+					$google_service = new Google_Service_Oauth2($google_client);
+
+					$data = $google_service->userinfo->get();
+
+					$current_datetime = date('Y-m-d H:i:s');
+
+					if($this->model_komentar->is_already_register($data['email']))
+					{
+					//update data
+					$user_data = array(
+					// 'id_akun' => $id_komentar
+					'nama' => $data['given_name'],
+					'email' => $data['email'],
+					'foto'=> $data['picture'],
+					'tanggal'  => $current_datetime
+					 // 'last_name'  => $data['family_name'],
+					// 'profile_picture'=> $data['picture'],
+					// 'waktu_update' => $current_datetime,
+					
+					);
+
+					$this->model_komentar->update_user_data($user_data, $data['email']);
+					}
+					else
+					{
+						//insert data
+						$user_data = array(
+							'id_akun' => $data['id'],
+							// 'id_akun' => $id_komentar,
+							'nama' => $data['given_name'],
+							'email' => $data['email'],
+							'foto'=> $data['picture'],
+							'tanggal'  => $current_datetime
+						);
+
+					$this->model_komentar->insert_user_data($user_data);
+					}
+					$this->session->set_userdata('user_data', $user_data);
+				}
+		}
+			$login_button = '';
+			if(!$this->session->userdata('access_token'))
+				{
+					$login_button = '<a href="'.$google_client->createAuthUrl().'"><div class="col-md-12 text-right">
+					<button style="margin: 5px; background: #F7476E; border-radius: 15px; border: 1px solid #F7476E; color: #FFFFFF;" type="submit" name="submit" value="Login">komentar</buuton>
+				 </div></a>';
+					$data['login_button'] = $login_button;
+					
+					echo '<script>console.log("keluar"); </script>';
+					// $this->load->view('detail_blog', $data);
+					// $this->load->view('daftar', $data);
+				}
+				else
+				{
+					echo '<script>console.log("masuk"); </script>';
+					
+					// $this->load->view('https.google.com');
+				}
+
 		$this->load->model('Model_detail_blog');
 		// / untuk menampilkan kategori
 		$data['show_kategori'] = $this->model_welcome->Show_kategori()->result();
 		$detail = $this->model_detail_blog->detail_data($id_blog);
+		$data['detail'] = $detail;
 		// menampilkan penulis berdasarkan join
 		$data_penulis = $this->model_detail_blog->join_penulis($id_blog);
 		$data['data_penulis'] = $data_penulis;
@@ -39,8 +142,8 @@ class Halaman_utama extends CI_Controller {
 		// menampilkan kategori berdasarkan id_blog
 		$detail_kategori = $this->model_detail_blog->join_kategori($id_blog);
 		$data['detail_kategori']  = $detail_kategori;
-		$data['detail'] = $detail;
 		$data['terbaru'] = $this->model_detail_blog->Show_terbaru()->result();
+		echo '<script>console.log("masuk"); </script>';
 		$this->load->view('detail_blog',$data);
 	}
 
@@ -69,15 +172,6 @@ class Halaman_utama extends CI_Controller {
 		$this->load->view('detail_penulis',$data);
 	}
 
-	// tampil detail kategori
-	// public function detail_kategori($id_kategori)
-	// {
-	// 	$this->load->model('Model_welcome');
-	// 	$data['show_langsung'] = $this->Model_welcome->show_langsung($id_kategori);
-	// 	// $data['terbaru'] = $this->Model_detail_program->Show_terbaru()->result();
-	// 	$this->load->view('detail_kategori',$data);
-	// }
-
 	// tampil detail infografik
 	public function artikel_infografik($id_infografik)
 	{
@@ -101,7 +195,7 @@ class Halaman_utama extends CI_Controller {
 		$data['detail'] = $detail;
 		// untuk menampilkan di halaman utama
 		$data['terbaru1'] = $this->Model_detail_vidio->show_vidio_terbaru()->result();
-		$this->load->view('Isi_vidio',$data);
+		$this->load->view('isi_vidio',$data);
 	}
 
 	// convert timestap ke tanggal indo pada blog
@@ -143,5 +237,149 @@ class Halaman_utama extends CI_Controller {
 		$this->db->order_by('date', 'desc');
 		return $this->db->limit(8)->get('blog');
 	}
+	
+	// login komentar
+	public function login()
+	{
+		$permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+        $id_user = substr(str_shuffle($permitted_chars), 0, 5);
+
+
+		include_once APPPATH . "../vendor/autoload.php";
+		  $google_client = new Google_Client();
+		  $google_client->setClientId('912597414091-onf92rv8dgpnslkep43eu9m2nfn6d5em.apps.googleusercontent.com'); //masukkan ClientID anda 
+		  $google_client->setClientSecret('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'); //masukkan Client Secret Key anda
+		  $google_client->setRedirectUri('http://localhost/Bicara_wanita/halaman_utama/detail_blog/login'); //Masukkan Redirect Uri anda
+		  $google_client->addScope('email');
+		  $google_client->addScope('profile');
+
+		  if(isset($_GET["code"]))
+		  {
+		   $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+		   if(!isset($token["error"]))
+		   {
+		    $google_client->setAccessToken($token['access_token']);
+		    $this->session->set_userdata('access_token', $token['access_token']);
+		    $google_service = new Google_Service_Oauth2($google_client);
+		    $data = $google_service->userinfo->get();
+		    $current_datetime = date('Y-m-d H:i:s');
+		    $user_data = array(
+		      'first_name' => $data['given_name'],
+		      'last_name'  => $data['family_name'],
+		      'email_address' => $data['email'],
+		      'profile_picture'=> $data['picture'],
+		      'updated_at' => $current_datetime
+		     );
+		    $this->session->set_userdata('user_data', $data);
+		   }									
+		  }
+		  $login_button = '';
+		  if(!$this->session->userdata('access_token'))
+		  {
+		  	
+		   $login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="https://1.bp.blogspot.com/-gvncBD5VwqU/YEnYxS5Ht7I/AAAAAAAAAXU/fsSRah1rL9s3MXM1xv8V471cVOsQRJQlQCLcBGAsYHQ/s320/google_logo.png" /></a>';
+		   $data['login_button'] = $login_button;
+		   $this->load->view('google_login', $data);
+		  }
+		  else
+		  {
+		  	// uncomentar kode dibawah untuk melihat data session email
+		  	// echo json_encode($this->session->userdata('access_token')); 
+		  	// echo json_encode($this->session->userdata('user_data'));
+		   echo "Login success";
+		  }
+	}
+
+	public function login1()
+    {
+        $type_akun = "OTOMATIS";
+        $role = "2";
+
+        $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+        $id_komentar = substr(str_shuffle($permitted_chars), 0, 8);
+
+        include_once APPPATH . "../vendor/autoload.php";
+        $google_client = new Google_Client();
+
+        $google_client->setClientId('912597414091-onf92rv8dgpnslkep43eu9m2nfn6d5em.apps.googleusercontent.com'); //Define your ClientID
+
+        $google_client->setClientSecret('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'); //Define your Client Secret Key
+
+        $google_client->setRedirectUri('http://localhost/Bicara_wanita/halaman_utama/detail_blog'); //Define your Redirect Uri
+
+        $google_client->addScope('email');
+
+        $google_client->addScope('profile');
+
+        if(isset($_GET["code"]))
+        {
+        $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+
+                if(!isset($token["error"]))
+                {
+                    $google_client->setAccessToken($token['access_token']);
+
+                    $this->session->set_userdata('access_token', $token['access_token']);
+
+                    $google_service = new Google_Service_Oauth2($google_client);
+
+                    $data = $google_service->userinfo->get();
+
+                    $current_datetime = date('Y-m-d H:i:s');
+
+                    if($this->model_komentar->Is_already_register($data['email']))
+                    {
+                    //update data
+                    $user_data = array(
+					// 'id_akun_komentar' => $id_komentar,
+                    'nama' => $data['given_name'],
+                    'email' => $data['email'],
+					'foto'=> $data['picture'],
+                    'tanggal'  => $current_datetime
+					 // 'last_name'  => $data['family_name'],
+                    // 'profile_picture'=> $data['picture'],
+                    // 'waktu_update' => $current_datetime,
+					
+                    );
+
+                    $this->model_komentar->Update_user_data($user_data, $data['email']);
+                    }
+                    else
+                    {
+                    //insert data
+                    $user_data = array(
+                   	'id_akun' => $id_komentar,
+                    'nama' => $data['given_name'],
+                    'email' => $data['email'],
+					'foto'=> $data['picture'],
+                    'tanggal'  => $current_datetime
+                    );
+
+                    $this->model_komentar->Insert_user_data($user_data);
+                    }
+                    $this->session->set_userdata('user_data', $user_data);
+                }
+        }
+            $login_button = '';
+            if(!$this->session->userdata('access_token'))
+                {
+                    $login_button = '<a href="'.$google_client->createAuthUrl().'"><div class="col-md-12 text-right">
+					<button style="margin: 5px; background: #F7476E; border-radius: 15px; border: 1px solid #F7476E; color: #FFFFFF;" type="submit" name="submit" value="Login">login</buuton>
+				 </div></a>';
+                    $data['login_button'] = $login_button;
+                    
+                    echo '<script>console.log("keluar"); </script>';
+                    $this->load->view('detail_blog', $data);
+                    // $this->load->view('daftar', $data);
+                }
+                else
+                {
+                    echo '<script>console.log("masuk"); </script>';
+                    
+                    $this->load->view('google_login');
+                }
+    }
+
+	
 
 }

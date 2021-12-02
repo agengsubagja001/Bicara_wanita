@@ -20,9 +20,10 @@ class Model_detail_blog extends CI_Model
 		return $this->db->query("SELECT blog.id_blog, akun.id_akun, akun.foto_profil, akun.nama_lengkap, akun.deskripsi FROM blog INNER JOIN akun ON blog.id_akun = akun.id_akun WHERE blog.id_blog = '$id_blog'")->row();
 	}
 
-	// join untuk kategori dengan penulis
+	// join untuk kategori dengan blog
 	public function join_kategori($id_blog)
 	{
-		return $this->db->query("SELECT blog.id_blog, kategori.id_kategori, kategori.kategori FROM blog INNER JOIN kategori ON blog.id_kategori = kategori.id_kategori WHERE blog.id_blog")->row();
+		return $this->db->query("SELECT blog.id_blog, kategori.id_kategori, kategori.kategori FROM blog INNER JOIN kategori ON blog.id_kategori = kategori.id_kategori WHERE blog.id_blog = '$id_blog'")->row();
 	}
+	
 }

@@ -2,8 +2,6 @@
 <?php $this->load->view('partial/head'); ?>
 <!-- navbar -->
 <?php $this->load->view('partial/navbar'); ?>
-<br>
-<br>
 <body>
     <!--awal section story -->
         <section>
@@ -12,19 +10,24 @@
                     <div class="row">
                         <!-- judul  -->
                         <div class="col-md-12 text-center mt-5">
-                            <h1 style="text-transform:capitalize; font-family: Poppins; font-style: normal; font-weight: bold; font-size: 32px; color: #333333;"><?php echo $detail->judul_story ?></h1>
+                            <h1 class="jdlsty" style=""><?php echo $detail->judul_story ?></h1>
                         </div>
                         <!-- akhir judul -->
+                        <!-- gambar -->
+                        <div class="col-md-12 text-center mt-3">
+                            <img src="<?php echo base_url().'assets/story/img_story/'. $detail->gambar ?>" style="object-fit:cover; width: 80%; height: auto" alt="">
+                        </div>
+                        <!-- gambar -->
                         <!-- awal konten artikel Story -->
-                        <div class="col-md-12 mt-5">
-                            <p style="text-transform:capitalize; white-space: pre-wrap; color: rgba(0,0,0,.8); font-size: .875rem; overflow: hidden; text-overflow: ellipsis; line-height: 1.875rem;"><?php echo $detail->isi_story ?></p>
+                        <div class="col-md-12 mt-2" style="line-height: 1.875em; color: #444;">
+                            <p style="text-transform:capitalize; white-space: pre-wrap; font-size: .875rem; overflow: hidden; text-overflow: ellipsis; line-height: 1.875rem;"><?php echo $detail->isi_story ?></p>
                         </div>
                         <div class="col-md-12 mt-5">
                             <a href="#" style="text-transform:capitalize; text-decoration: none; color:white; padding:1px;  "><button type="button" style=" border: 1px solid #F7476E; background: #F7476E; border-radius: 10px ">Story</a>
                         </div>
                         <!-- conten bagikan -->
                         <div class="col-md-2 mt-4">
-                            <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 24px;">Bagikan</span>
+                            <span style="font-family: Poppins; font-style: normal; font-weight: normal; font-size: 20px;">Bagikan</span>
                             <div class="row">
                                 <div class="col-md-12 mt-2">
                                     <table>

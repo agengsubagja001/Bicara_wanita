@@ -11,12 +11,12 @@
 
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-4 mb-4">
 
                         <!-- kontent -->
                         <nav class="mt-3 navbar navbar-light bg-light justify-content-between" style="background-color: #dfe5f1!important;}">
                             <a class="navbar-brand">
-                                <b style="margin-left:20px; left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 25px; line-height: 37px; display: flex; align-items: center; color: #666;">ADD INFOGRAFIK</b>
+                                <b style="margin-left:20px; left: 439px; top: 128px; font-family: Poppins; font-style: normal; font-weight: 500; font-size: 20px; line-height: 37px; display: flex; align-items: center; color: #666;">ADD INFOGRAFIK</b>
                             </a>
                         </nav>
                         <form action="<?php echo base_url(). 'admin/infografik/upload/'?>" method="post" enctype="multipart/form-data">
@@ -28,13 +28,13 @@
                                             <div class="col-md-12 p-2">	
                                                 <div class="form-group" style="margin-bottom: 1rem;">
                                                     <input type="hidden" name="id_blog" value="">
-                                                    <input type="text" name="judul" class="form-control" placeholder="Masukan Judul">
+                                                    <input required type="text" name="judul" class="form-control" placeholder="Masukan Judul">
                                                 </div>
                                             </div>
                                             <!-- akhir input judul -->
                                             <div class="col-md-12 p-2">
                                                 <div class="form-group">
-                                                    <textarea name="isi" id="editor" cols="30" rows="10"></textarea>
+                                                    <textarea name="isi" required placeholder="Masukan isi" id="editor" cols="30" rows="10"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -49,22 +49,19 @@
                                             <div class="row">
                                                 <div class="col-md-12 text-center">
                                                     <label class=newbtn>
-                                                        <img id="blah" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
-                                                        <input id="pic" name="gambar_sampul" class="pis" onchange="readURL(this);" type="file" >
+                                                        <img id="blah" src="<?php echo base_url('assets/img_temp/sampul_infografik.png') ?>" style="width: 100%;object-fit: contain;">
+                                                        <input required id="pic" name="gambar_sampul" class="pis" onchange="readURL(this);" type="file" >
                                                         <br>
-                                                        <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar sampul</span>
+                                                        <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar sampul ukuran (945 X 630)</span>
                                                     </label>
                                                 </div>
                                                 <div class="col-md-12 text-center">
                                                     <hr style="widht:100%">
-                                                        <!-- <span id="blah">Gambar infografik</span>
-                                                        <br>
-                                                        <input name="gambar_infografik" type="file" class="form-control"> -->
                                                         <label class=newbtnn>
-                                                            <img id="blahh" src="<?php echo base_url('assets/img/img.png') ?>" style="width: 100%;object-fit: contain;">
-                                                            <input id="picc" name="gambar_infografik" class="piss" onchange="readURLL(this);" type="file" >
+                                                            <img id="blahh" src="<?php echo base_url('assets/img_temp/infografik.png') ?>" style="width: 100%;object-fit: contain;">
+                                                            <input required id="picc" name="gambar_infografik" class="piss" onchange="readURLL(this);" type="file" >
                                                             <br>
-                                                            <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar banner</span>
+                                                            <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih gambar banner infografik ukuran (400 X 711)</span>
                                                         </label>
                                                         <div class="col-md-12 ">
                                                             <button class="btn btn-dark mt-2" type="submit" name="btn_submit">Posting</button> 

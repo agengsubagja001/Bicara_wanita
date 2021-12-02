@@ -11,19 +11,26 @@
             <?php $this->load->view('penulis/partial/sidebar') ?>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <div class="container-fluid px-4 mb-4">
                     <center><h1>Edit Profil</h1></center>
                         <div class="mt-4 p-5" style="box-shadow: 0 5px 10px rgb(73 84 100 / 5%);border-color: transparent;padding:15px;border-radius:10px">
                           <div class="row">
                             <div class="col-md-12">
                                     <?php foreach($show_edit as $edit): ?>
-                                    <form action="<?php echo base_url(). 'penulis/profil/update';?>" method="post" enctype="multipart/form-data">
+                                    <form action="<?php echo base_url(). 'penulis/profil/update1';?>" method="post" enctype="multipart/form-data">
                                         <div class="col-md-12 mb-4 text-center">
                                             <!-- awal masukan foto -->
                                             <div class="form-group">
-                                                <label for="exampleFormControlFile1">Upload Foto Profil</label>
+                                                <label class=newbtn>
+                                                    <img id="blah" src="<?php echo base_url().'assets/penulis/p_profil/'. $edit->foto_profil ?>" style="width: 200px;object-fit: cover; height:Auto;">
+                                                    <input type="hidden" id="pic" name="foto_profil" value="<?php echo $edit->foto_profil ?>"  class="pis" onchange="readURL(this);" type="file" >
+                                                    <br>
+                                                    <span style="font-style: italic;color:#555;font-size:13px">Klik untuk memilih Foto profil</span>
+                                                    <input type="hidden" name="id_akun" value="<?php echo $edit->id_akun ?>">
+                                                </label>
+                                                <!-- <label for="exampleFormControlFile1">Upload Foto Profil</label>
                                                 <input type="file" name="foto_profil" value="<?php echo $edit->foto_profil ?>" class="form-control-file" id="exampleFormControlFile1">
-                                                <input type="hidden" name="id_akun" value="<?php echo $edit->id_akun ?>">
+                                                <input type="hidden" name="id_akun" value="<?php echo $edit->id_akun ?>"> -->
                                             </div>
                                             <!-- akhir masukan foto -->
                                         </div>
@@ -81,6 +88,30 @@
                         </div>
                     </div>
                 </main>
+
+                <!-- footer -->
+                <?php $this->load->view('penulis/partial/footer') ?>
+
+                <!-- Script untuk gambar sampul-->
+                <script>
+                    $('.newbtn').bind("click" , function () {
+                        $('#pic').click();
+                    });
+                    
+                    function readURL(input) {
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        $('#blah')
+                                            .attr('src', e.target.result);
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                }
+                            }
+                </script>
+                <!-- Akhir Script -->
             </div>
         </div>
         
